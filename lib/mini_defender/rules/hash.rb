@@ -10,6 +10,6 @@ class MiniDefender::Rules::Hash < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The #{attribute} field must be a hash."
+    "The field must be an object."
   end
 end

@@ -15,8 +15,21 @@ class MiniDefender::Rule
     false
   end
 
+  # Instruct the validator to stop validation for the current attribute
+  # when the first error is encountered
   def bails?
     false
+  end
+
+  # Instructs the validator to stop validation for all rules for the current attribute
+  def stops?
+    false
+  end
+
+  # @param [MiniDefender::Validator] validator
+  # @return [Boolean]
+  def active?(validator)
+    true
   end
 
   def coerce(value)
@@ -25,14 +38,14 @@ class MiniDefender::Rule
 
   # @param [Object] attribute
   # @param [Object] value
-  # @param [Validation::Validator] validator
+  # @param [MiniDefender::Validator] validator
   def passes?(attribute, value, validator)
     raise NotImplementedError, 'Please use a concrete rule.'
   end
 
   # @param [Object] attribute
   # @param [Object] value
-  # @param [Validation::Validator] validator
+  # @param [MiniDefender::Validator] validator
   def message(attribute, value, validator)
     raise NotImplementedError, 'Please use a concrete rule.'
   end

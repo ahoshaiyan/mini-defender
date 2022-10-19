@@ -1,30 +1,29 @@
 # frozen_string_literal: true
 
-class MiniDefender::Rules::Max < MiniDefender::Rule
-  def initialize(max)
+class MiniDefender::Rules::Between < MiniDefender::Rule
+  def initialize(min, max)
+    @min = min
     @max = max
   end
 
   def self.signature
-    'max'
+    'between'
   end
 
   def self.make(args)
-    self.new(args[0].to_i)
+    self.new(args[0].to_i, args[1].to_i)
   end
 
   def passes?(attribute, value, validator)
     case value
     when String, Array, Hash
-      value.length <= @max
-    when Numeric
-      value <= @max
+      @min <= value.length && value.length <= @max
     else
       false
     end
   end
 
   def message(attribute, value, validator)
-    "The value length must be less than or equal to #{@max}."
+    "The value length must be between #{@min} and #{@max}."
   end
 end

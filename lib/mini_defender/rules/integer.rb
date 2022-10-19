@@ -14,6 +14,6 @@ class MiniDefender::Rules::Integer < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The #{attribute} field must be an integer."
+    "The value must be an integer."
   end
 end

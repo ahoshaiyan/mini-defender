@@ -14,6 +14,6 @@ class MiniDefender::Rules::Required < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "This #{attribute} field is required."
+    "This field is required."
   end
 end

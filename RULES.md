@@ -1,36 +1,32 @@
 # Rules
 
-- [ ] Accepted
-- [ ] Accepted If
-- [ ] Active URL
-- [ ] After (Date)
-- [ ] After Or Equal (Date)
-- [ ] Alpha
-- [ ] Alpha Dash
-- [ ] Alpha Numeric
-- [ ] Array
-- [ ] Bail
-- [ ] Before (Date)
-- [ ] Before Or Equal (Date)
-- [ ] Between
-- [ ] Boolean
-- [ ] Confirmed
-- [ ] Current Password
-- [ ] Date
-- [ ] Date Equals
-- [ ] Date Format
-- [ ] Declined
-- [ ] Declined If
-- [ ] Different
-- [ ] Digits
-- [ ] Digits Between
-- [ ] Dimensions (Image Files)
+- [x] Accepted
+- [X] Accepted If
+- [x] After (Date)
+- [x] After Or Equal (Date)
+- [x] Alpha
+- [x] Alpha Dash
+- [x] Alpha Numeric
+- [x] Array
+- [x] Bail
+- [x] Before (Date)
+- [x] Before Or Equal (Date)
+- [x] Between
+- [x] Boolean
+- [x] Confirmed
+- [x] Date
+- [x] Date Equals
+- [x] Date Format
+- [x] Declined
+- [x] Declined If
+- [x] Different
+- [x] Digits
+- [x] Digits Between
 - [ ] Distinct
 - [ ] Doesnt Start With
 - [ ] Doesnt End With
 - [ ] Email
 - [ ] Ends With
-- [ ] Enum
 - [ ] Exclude
 - [ ] Exclude If
 - [ ] Exclude Unless

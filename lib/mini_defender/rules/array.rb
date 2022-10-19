@@ -10,6 +10,6 @@ class MiniDefender::Rules::Array < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The #{attribute} field must be an array."
+    "The field must be an array."
   end
 end

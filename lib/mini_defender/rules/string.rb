@@ -10,6 +10,6 @@ class MiniDefender::Rules::String < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The #{attribute} field must be a string."
+    "The value must be a string."
   end
 end

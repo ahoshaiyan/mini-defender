@@ -23,6 +23,6 @@ class MiniDefender::Rules::Size < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The #{attribute} field length must be equal to #{@size}."
+    "The value length must be equal to #{@size}."
   end
 end
