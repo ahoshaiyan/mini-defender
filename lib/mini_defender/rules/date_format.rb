@@ -2,7 +2,7 @@
 
 require 'time'
 
-class MiniDefender::Rules::Date < MiniDefender::Rule
+class MiniDefender::Rules::DateFormat < MiniDefender::Rule
   def initialize(format)
     raise ArgumentError, 'Format must be a string' unless format.is_a?(String)
     raise ArgumentError, 'Format is required for this rule' if format.empty?

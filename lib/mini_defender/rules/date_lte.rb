@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'date_eq'
+
 class MiniDefender::Rules::DateLte < MiniDefender::Rules::DateEq
   def self.signature
     'date_lte'

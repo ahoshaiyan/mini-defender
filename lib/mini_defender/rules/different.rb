@@ -8,6 +8,10 @@ class MiniDefender::Rules::Different < MiniDefender::Rule
     @other_field = other_field
   end
 
+  def self.signature
+    'different'
+  end
+
   def self.make(args)
     self.new(args[0])
   end

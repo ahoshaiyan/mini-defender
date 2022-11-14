@@ -2,13 +2,18 @@
 
 class MiniDefender::Rule
   def self.signature
-    raise NotImplementedError, 'Please use a concrete rule.'
+    raise NotImplementedError, 'Use a concrete implementation.'
   end
 
   # @param [Array] args Set of positional arguments
   # @return [MiniDefender::Rule]
   def self.make(args)
     self.new
+  end
+
+  # @return [Boolean]
+  def self.available?
+    true
   end
 
   def implicit?
@@ -40,13 +45,13 @@ class MiniDefender::Rule
   # @param [Object] value
   # @param [MiniDefender::Validator] validator
   def passes?(attribute, value, validator)
-    raise NotImplementedError, 'Please use a concrete rule.'
+    raise NotImplementedError, 'Use a concrete implementation.'
   end
 
   # @param [Object] attribute
   # @param [Object] value
   # @param [MiniDefender::Validator] validator
   def message(attribute, value, validator)
-    raise NotImplementedError, 'Please use a concrete rule.'
+    raise NotImplementedError, 'Use a concrete implementation.'
   end
 end

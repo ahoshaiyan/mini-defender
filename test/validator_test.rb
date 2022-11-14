@@ -93,7 +93,7 @@ class ValidatorTest < Minitest::Test
       {
         'address' => 'required|hash',
         'address.streets' => 'required|array|size:3',
-        'address.streets.*' => 'required|string'
+        'address.streets.*' => 'required|integer|distinct'
       },
       {
         'address' => {
@@ -103,5 +103,17 @@ class ValidatorTest < Minitest::Test
     )
 
     assert v.passes?
+    pp v.coerced
+  end
+
+  def test_should_return_neighbors_of_key_in_array
+    v = MiniDefender::Validator.new(
+      {},
+      {
+        'address' => {
+          'streets' => ['1', '2', '3']
+        }
+      }
+    )
   end
 end

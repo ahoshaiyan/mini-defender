@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class MiniDefender::Rules::AlphaDash < MiniDefender::Rules::DateEq
+class MiniDefender::Rules::AlphaDash < MiniDefender::Rule
   def self.signature
     'alpha_dash'
   end

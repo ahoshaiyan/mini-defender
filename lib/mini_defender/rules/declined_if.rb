@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'declined'
+
 class MiniDefender::Rules::DeclinedIf < MiniDefender::Rules::Declined
   def initialize(target, value)
     raise ArgumentError, 'Target must be a string' unless target.is_a?(String)
