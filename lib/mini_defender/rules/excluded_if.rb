@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'declined'
-
-class MiniDefender::Rules::DeclinedIf < MiniDefender::Rules::Declined
+class MiniDefender::Rules::ExcludedIf < MiniDefender::Rule
   def initialize(target, value)
     raise ArgumentError, 'Target must be a string' unless target.is_a?(String)
 
@@ -11,7 +9,7 @@ class MiniDefender::Rules::DeclinedIf < MiniDefender::Rules::Declined
   end
 
   def self.signature
-    'declined_if'
+    'excluded_if'
   end
 
   def self.make(args)
@@ -20,7 +18,11 @@ class MiniDefender::Rules::DeclinedIf < MiniDefender::Rules::Declined
     self.new(args[0], args[1])
   end
 
-  def active?(validator)
-    validator.dig(@target) == @value
+  def excluded?(validator)
+    validator.data.key?(@target) && validator.data[@target] == @value
+  end
+
+  def passes?(attribute, value, validator)
+    true
   end
 end

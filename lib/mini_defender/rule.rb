@@ -37,6 +37,12 @@ class MiniDefender::Rule
     true
   end
 
+  # @param [MiniDefender::Validator]
+  # @return [Boolean]
+  def excluded?(validator)
+    false
+  end
+
   def coerce(value)
     value
   end

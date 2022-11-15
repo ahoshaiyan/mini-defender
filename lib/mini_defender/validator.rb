@@ -26,7 +26,9 @@ module MiniDefender
       data_rules.each do |k, rule_set|
         @errors[k] = []
 
+        value_included = true
         required = rule_set.any? { |r| r.implicit? }
+
         unless @data.key?(k)
           @errors[k] << 'The field is missing' if required
           next
@@ -36,12 +38,14 @@ module MiniDefender
         rule_set.each do |rule|
           next unless rule.active?(self)
 
+          value_included &= !rule.excluded?(self)
+
           unless rule.passes?(k, value, self)
             @errors[k] << rule.message(k, value, self)
           end
         end
 
-        if @errors[k].empty?
+        if @errors[k].empty? && value_included
           @validated[k] = value
           @coerced[k] = rule_set.inject(value) { |coerced, rule| rule.coerce(coerced) }
         end
@@ -75,10 +79,6 @@ module MiniDefender
     def coerced
       validate! if @errors.nil?
       @coerced
-    end
-
-    def dig(key)
-      @digger.dig(@data, key)
     end
 
     # @return [Hash]

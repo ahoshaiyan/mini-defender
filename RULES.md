@@ -22,19 +22,19 @@
 - [x] Different
 - [x] Digits
 - [x] Digits Between
-- [ ] Distinct
-- [ ] Doesnt Start With
-- [ ] Doesnt End With
-- [ ] Email
-- [ ] Ends With
-- [ ] Exclude
-- [ ] Exclude If
-- [ ] Exclude Unless
-- [ ] Exclude With
-- [ ] Exclude Without
-- [ ] Exists (Database)
-- [ ] File
-- [ ] Filled
+- [x] Distinct
+- [x] Doesnt Start With
+- [x] Doesnt End With
+- [x] Email
+- [x] Ends With
+- [x] Exclude
+- [x] Exclude If
+- [x] Exclude Unless
+- [x] Exclude With
+- [x] Exclude Without
+- [x] Exists (Database)
+- [x] File
+- [x] Filled
 - [ ] Greater Than
 - [ ] Greater Than Or Equal
 - [ ] Image (File)
@@ -75,8 +75,8 @@
 - [ ] Same
 - [ ] Size
 - [ ] Sometimes
-- [ ] Starts With
-- [ ] String
+- [x] Starts With
+- [x] String
 - [ ] Timezone
 - [ ] Unique (Database)
 - [ ] URL
