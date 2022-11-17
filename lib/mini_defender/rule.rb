@@ -16,7 +16,9 @@ class MiniDefender::Rule
     true
   end
 
-  def implicit?
+  # @param [MiniDefender::Validator] validator
+  # @return [Boolean]
+  def implicit?(validator)
     false
   end
 

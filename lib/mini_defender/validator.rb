@@ -27,7 +27,7 @@ module MiniDefender
         @errors[k] = []
 
         value_included = true
-        required = rule_set.any? { |r| r.implicit? }
+        required = rule_set.any? { |r| r.implicit?(self) }
 
         unless @data.key?(k)
           @errors[k] << 'The field is missing' if required

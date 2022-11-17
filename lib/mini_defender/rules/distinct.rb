@@ -5,9 +5,6 @@ class MiniDefender::Rules::Distinct < MiniDefender::Rule
     'distinct'
   end
 
-  # @param [Object] attribute
-  # @param [Object] value
-  # @param [MiniDefender::Validator] validator
   def passes?(attribute, value, validator)
     validator
       .neighbors(attribute)
@@ -15,9 +12,6 @@ class MiniDefender::Rules::Distinct < MiniDefender::Rule
       .none? { |_, v| v == value }
   end
 
-  # @param [Object] attribute
-  # @param [Object] value
-  # @param [MiniDefender::Validator] validator
   def message(attribute, value, validator)
     'The value should be unique.'
   end

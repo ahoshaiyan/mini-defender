@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-class MiniDefender::Rules::File < MiniDefender::Rule
+class MiniDefender::Rules::Prohibited < MiniDefender::Rule
   def self.signature
-    'file'
+    'prohibited'
   end
 
   def passes?(attribute, value, validator)
-    value.is_a?(ActionDispatch::Http::UploadedFile)
+    value.blank?
   end
 
   def message(attribute, value, validator)
-    "The field should be a file."
+    "This field is prohibited."
   end
 end

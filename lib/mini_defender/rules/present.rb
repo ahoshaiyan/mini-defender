@@ -1,15 +1,19 @@
 # frozen_string_literal: true
 
-class MiniDefender::Rules::File < MiniDefender::Rule
+class MiniDefender::Rules::Present < MiniDefender::Rule
   def self.signature
-    'file'
+    'present'
+  end
+
+  def implicit?(validator)
+    true
   end
 
   def passes?(attribute, value, validator)
-    value.is_a?(ActionDispatch::Http::UploadedFile)
+    true
   end
 
   def message(attribute, value, validator)
-    "The field should be a file."
+    "The field should be present."
   end
 end

@@ -35,57 +35,58 @@
 - [x] Exists (Database)
 - [x] File
 - [x] Filled
-- [ ] Greater Than
-- [ ] Greater Than Or Equal
-- [ ] Image (File)
-- [ ] In
-- [ ] In Array
-- [ ] Integer
-- [ ] IP Address
-- [ ] JSON
-- [ ] Less Than
-- [ ] Less Than Or Equal
-- [ ] MAC Address
-- [ ] Max
-- [ ] Max Digits
-- [ ] MIME Types
-- [ ] MIME Type By File Extension
-- [ ] Min
-- [ ] Min Digits
-- [ ] Multiple Of
-- [ ] Not In
-- [ ] Not Regex
-- [ ] Nullable
-- [ ] Numeric
-- [ ] Password
-- [ ] Present
+- [x] Greater Than
+- [x] Greater Than Or Equal
+- [x] Image (File)
+- [x] In
+- [x] In Array
+- [x] Integer
+- [x] IPv4 Address
+- [x] IPv6 Address
+- [x] JSON
+- [x] Less Than
+- [x] Less Than Or Equal
+- [x] MAC Address
+- [x] Max
+- [x] Max Digits
+- [x] MIME Types
+- [-] MIME Type By File Extension
+- [x] Min
+- [x] Min Digits
+- [-] Multiple Of
+- [x] Not In
+- [x] Not Regex
+- [?] Nullable
+- [x] Numeric
+- [-] Password
+- [?] Present
 - [ ] Prohibited
 - [ ] Prohibited If
 - [ ] Prohibited Unless
 - [ ] Prohibits
-- [ ] Regular Expression
-- [ ] Required
-- [ ] Required If
-- [ ] Required Unless
-- [ ] Required With
-- [ ] Required With All
-- [ ] Required Without
-- [ ] Required Without All
-- [ ] Required Array Keys
-- [ ] Same
-- [ ] Size
+- [x] Regular Expression
+- [x] Required
+- [x] Required If
+- [x] Required Unless
+- [x] Required With
+- [x] Required With All
+- [x] Required Without
+- [x] Required Without All
+- [x] Required Array Keys
+- [-] Same
+- [x] Size
 - [ ] Sometimes
 - [x] Starts With
 - [x] String
-- [ ] Timezone
-- [ ] Unique (Database)
-- [ ] URL
-- [ ] UUID
-- [ ] UUID v1
-- [ ] UUID v2
-- [ ] UUID v3
-- [ ] UUID v4
-- [ ] Luhn Number
-- [ ] National ID
-- [ ] Credit Card
-- [ ] Valid Card Expiration
+- [x] Timezone
+- [x] Unique (Database)
+- [x] URL
+- [x] UUID
+- [x] UUID v1
+- [x] UUID v2
+- [x] UUID v3
+- [x] UUID v4
+- [x] Luhn Number
+- [x] National ID
+- [x] Credit Card
+- [x] Valid Card Expiration
