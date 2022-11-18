@@ -33,7 +33,7 @@ class RulesExpanderTest < Minitest::Test
 
   def test_should_generate_multiple_rules_for_arrays
     expander = MiniDefender::RulesExpander.new
-    expanded_rules = expander.expand(@rules, @data)
+    expanded_rules = expander.expand(@rules, @data.flatten_keys(keep_roots: true))
 
     expected = {
       'username' => 'required|string',

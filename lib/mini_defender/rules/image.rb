@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'action_dispatch'
+
 class MiniDefender::Rules::Image < MiniDefender::Rule
   MIMES = %w[image/jpeg image/png image/gif image/bmp image/png image/svg+xml image/webp]
 

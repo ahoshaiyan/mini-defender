@@ -21,6 +21,6 @@ class MiniDefender::Rules::AcceptedIf < MiniDefender::Rules::Accepted
   end
 
   def active?(validator)
-    validator.dig(@target) === @value
+    validator.data[@target] === @value
   end
 end

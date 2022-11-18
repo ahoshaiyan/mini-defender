@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'action_dispatch'
 require_relative 'size'
 
 class MiniDefender::Rules::GreaterThan < MiniDefender::Rules::Size

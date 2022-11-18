@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'action_dispatch'
+
 class MiniDefender::Rules::Required < MiniDefender::Rule
   def self.signature
     'required'

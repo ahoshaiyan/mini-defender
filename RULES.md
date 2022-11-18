@@ -59,11 +59,11 @@
 - [?] Nullable
 - [x] Numeric
 - [-] Password
-- [?] Present
-- [ ] Prohibited
-- [ ] Prohibited If
-- [ ] Prohibited Unless
-- [ ] Prohibits
+- [x] Present
+- [x] Prohibited
+- [x] Prohibited If
+- [x] Prohibited Unless
+- [?] Prohibits
 - [x] Regular Expression
 - [x] Required
 - [x] Required If

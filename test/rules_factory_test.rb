@@ -16,7 +16,7 @@ class RulesFactoryTest < Minitest::Test
     assert_kind_of MiniDefender::Rules::String, result[1]
     assert_kind_of MiniDefender::Rules::Max, result[2]
 
-    assert_equal 255, result[2].instance_variable_get('@max')
+    assert_equal 255, result[2].instance_variable_get('@size')
   end
 
   def test_factory_should_init_textual_rules_in_an_array_rule_set
@@ -34,6 +34,6 @@ class RulesFactoryTest < Minitest::Test
     assert_kind_of MiniDefender::Rules::String, result[1]
     assert_kind_of MiniDefender::Rules::Max, result[2]
 
-    assert_equal 255, result[2].instance_variable_get('@max')
+    assert_equal 255, result[2].instance_variable_get('@size')
   end
 end

@@ -21,6 +21,6 @@ class MiniDefender::Rules::DeclinedIf < MiniDefender::Rules::Declined
   end
 
   def active?(validator)
-    validator.dig(@target) == @value
+    validator.data[@target] == @value
   end
 end

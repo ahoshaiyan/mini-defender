@@ -10,10 +10,8 @@ class MiniDefender::Rules::Confirmed < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
-    @found, confirmation = validator.dig("#{attribute}_confirmation")
-    return false unless found
-
-    value == confirmation
+    key = "#{attribute}_confirmation"
+    (@found = validator.data.key?(key)) && value == validator.data[key]
   end
 
   def message(attribute, value, validator)

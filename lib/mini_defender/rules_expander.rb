@@ -7,7 +7,7 @@ module MiniDefender
     # @return [Hash]
     def expand(rules, flat_data)
       rules
-        .map{ |k, v| [Regexp.compile('\A' + k.gsub(/\*/, '\d+') + '\Z'), v] }.to_h
+        .map { |k, v| [Regexp.compile('\A' + k.gsub(/\*/, '\d+') + '\Z'), v] }.to_h
         .map { |p, set|
           data_rules = flat_data.filter { |k, _| p.match? k }.map { |k, _| [k, set] }
           data_rules.length > 0 ? data_rules : [[p.source.gsub(/\\[AZ]/, '').gsub('\d+', '0'), set]]

@@ -35,6 +35,7 @@ class ValidatorTest < Minitest::Test
   end
 
   def test_should_report_errors_for_invalid_data_4
+    FileUtils.cp
     v = MiniDefender::Validator.new(
       {
         'address' => 'required|hash',
@@ -44,7 +45,7 @@ class ValidatorTest < Minitest::Test
     )
 
     assert v.fails?
-    assert_equal 1, v.errors.length
+    assert_equal 2, v.errors.length
   end
 
   def test_should_report_errors_for_invalid_data_5
@@ -58,7 +59,7 @@ class ValidatorTest < Minitest::Test
     )
 
     assert v.fails?
-    assert_equal 2, v.errors.length
+    assert_equal 3, v.errors.length
   end
 
   def test_should_report_errors_for_invalid_data_6

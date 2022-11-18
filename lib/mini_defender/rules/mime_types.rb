@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'action_dispatch'
+
 class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   def initialize(types)
     unless types.is_a?(Array) && types.all?{ |t| t.is_a?(String) }

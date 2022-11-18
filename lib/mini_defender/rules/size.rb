@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'action_dispatch'
+
 class MiniDefender::Rules::Size < MiniDefender::Rule
   def initialize(size)
     raise ArgumentError, 'Size must be an integer.' unless size.is_a?(Integer)

@@ -17,8 +17,8 @@ class MiniDefender::Rules::Different < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
-    @found, @other = validator.dig(@other_field)
-    @found && value == other
+    @found, @other = validator.data.key?(@other_field), validator.data[@other_field]
+    @found && value == @other
   end
 
   def message(attribute, value, validator)
