@@ -2,7 +2,7 @@
 
 module Enumerable
   def flatten_keys(keep_roots: false)
-    flatten_keys_recurse(self, keep_roots:)
+    flatten_keys_recurse(self, keep_roots: keep_roots)
   end
 
   private
@@ -21,7 +21,7 @@ module Enumerable
       result[k] = v if keep_roots
 
       if v.is_a?(Enumerable)
-        flatten_keys_recurse(v, keep_roots:).each do |sub_key, sub_v|
+        flatten_keys_recurse(v, keep_roots: keep_roots).each do |sub_key, sub_v|
           result["#{k}.#{sub_key}"] = sub_v
         end
       else
