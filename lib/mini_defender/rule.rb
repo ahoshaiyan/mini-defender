@@ -22,6 +22,18 @@ class MiniDefender::Rule
     false
   end
 
+  # @param [MiniDefender::Validator] validator
+  # @return [Boolean]
+  def defaults?(validator)
+    false
+  end
+
+  # @param [MiniDefender::Validator] validator
+  # @return [?Object]
+  def default_value(validator)
+    nil
+  end
+
   # Instruct the validator to stop validation for the current attribute
   # when the first error is encountered
   def bails?

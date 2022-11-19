@@ -5,6 +5,7 @@ PATH
       actionpack (>= 6.0)
       activemodel (>= 6.0)
       activesupport (>= 6.0)
+      countries
 
 GEM
   remote: https://rubygems.org/
@@ -31,6 +32,8 @@ GEM
       tzinfo (~> 2.0)
     builder (3.2.4)
     concurrent-ruby (1.1.10)
+    countries (5.2.0)
+      unaccent (~> 0.3)
     crass (1.0.6)
     erubi (1.11.0)
     i18n (1.12.0)
@@ -53,6 +56,7 @@ GEM
     rake (13.0.6)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    unaccent (0.4.0)
 
 PLATFORMS
   arm64-darwin-21

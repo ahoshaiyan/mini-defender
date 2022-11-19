@@ -7,6 +7,7 @@ require_relative 'mini_defender/rules'
 require_relative 'mini_defender/rules_expander'
 require_relative 'mini_defender/rules_factory'
 require_relative 'mini_defender/validation_error'
+require_relative 'mini_defender/validates_input'
 
 # Extensions to Ruby Core
 require_relative 'mini_defender/extensions/enumerable'

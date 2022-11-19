@@ -2,6 +2,6 @@
 
 require 'test_helper'
 
-class GreaterThanOrEqualTest < Minitest::Test
+class FileRuleTest < Minitest::Test
 
 end

@@ -14,7 +14,6 @@ class MiniDefender::Rules::ExpiryDate < MiniDefender::Rule
 
     matches = /(\d{2})\s*\/\s*(\d{2,4})/.match(value.strip)
     return false unless matches
-    pp matches
 
     @month = matches[1].to_i
     @year = matches[2].to_i

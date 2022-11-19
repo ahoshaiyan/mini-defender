@@ -35,7 +35,6 @@ class ValidatorTest < Minitest::Test
   end
 
   def test_should_report_errors_for_invalid_data_4
-    FileUtils.cp
     v = MiniDefender::Validator.new(
       {
         'address' => 'required|hash',
@@ -104,7 +103,6 @@ class ValidatorTest < Minitest::Test
     )
 
     assert v.passes?
-    pp v.coerced
   end
 
   def test_should_return_neighbors_of_key_in_array

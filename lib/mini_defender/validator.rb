@@ -29,6 +29,12 @@ module MiniDefender
         value_included = true
         required = rule_set.any? { |r| r.implicit?(self) }
 
+        if !@data.key?(k) && !@data[k].blank?
+          rule_set.filter{ |r| r.defaults?(self) }.each do |r|
+            @data[k] = r.default_value(self)
+          end
+        end
+
         unless @data.key?(k)
           @errors[k] << 'The field is missing' if required
           next
