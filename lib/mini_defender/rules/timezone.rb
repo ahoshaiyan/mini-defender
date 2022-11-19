@@ -8,7 +8,7 @@ class MiniDefender::Rules::Timezone < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
-    value.is_a?(value) && !!TZInfo::Timezone.get(value)
+    value.is_a?(String) && !!TZInfo::Timezone.get(value)
   rescue TZInfo::InvalidTimezoneIdentifier
     false
   end

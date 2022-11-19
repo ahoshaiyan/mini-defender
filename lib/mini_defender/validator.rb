@@ -19,9 +19,19 @@ module MiniDefender
 
       @errors = {}
 
-      data_rules = @expander.expand(@rules, @data).to_h do |k, set|
+      data_rules = @rules.to_h do |k, set|
         [k, @factory.init_set(set)]
       end
+
+      data_rules.each do |k, set|
+        if !@data.key?(k) || @data[k].blank?
+          set.filter{ |r| r.defaults?(self) }.each do |r|
+            @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
+          end
+        end
+      end
+
+      data_rules = @expander.expand(data_rules, @data)
 
       data_rules.each do |k, rule_set|
         @errors[k] = []
@@ -29,9 +39,9 @@ module MiniDefender
         value_included = true
         required = rule_set.any? { |r| r.implicit?(self) }
 
-        if !@data.key?(k) && !@data[k].blank?
+        if !@data.key?(k) || @data[k].blank?
           rule_set.filter{ |r| r.defaults?(self) }.each do |r|
-            @data[k] = r.default_value(self)
+            @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
           end
         end
 
