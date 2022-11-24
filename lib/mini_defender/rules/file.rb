@@ -7,11 +7,11 @@ class MiniDefender::Rules::File < MiniDefender::Rule
     'file'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(ActionDispatch::Http::UploadedFile)
   end
 
-  def message(attribute, value, validator)
-    "The field should be a file."
+  def message(_attribute, _value, _validator)
+    'The field should be a file.'
   end
 end

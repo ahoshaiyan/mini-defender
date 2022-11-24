@@ -5,11 +5,11 @@ class MiniDefender::Rules::Prohibited < MiniDefender::Rule
     'prohibited'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.blank?
   end
 
-  def message(attribute, value, validator)
-    "This field is prohibited."
+  def message(_attribute, _value, _validator)
+    'This field is prohibited.'
   end
 end

@@ -23,11 +23,11 @@ class MiniDefender::Rules::Luhn < MiniDefender::Rule
     value.to_s
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(String) && self.class.valid_luhn?(value)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The value must be a valid Luhn string.'
   end
 end

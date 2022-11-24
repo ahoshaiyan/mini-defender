@@ -16,11 +16,11 @@ class MiniDefender::Rules::Boolean < MiniDefender::Rule
     end
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(TrueClass) || value.is_a?(FalseClass) || [1, 0, '1', '0'].include?(value)
   end
 
-  def message(attribute, value, validator)
-    "The value must be a boolean."
+  def message(_attribute, _value, _validator)
+    'The value must be a boolean.'
   end
 end

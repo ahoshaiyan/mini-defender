@@ -13,11 +13,11 @@ class MiniDefender::Rules::CountryCode < MiniDefender::Rule
     value.strip.upcase
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(String) && COUNTRIES.include?(value.strip.upcase)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The value must be a valid ISO3166 country code.'
   end
 end

@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class MimeTypesTest < Minitest::Test
-
 end

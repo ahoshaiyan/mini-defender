@@ -9,11 +9,11 @@ class MiniDefender::Rules::Integer < MiniDefender::Rule
     value.to_i
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(Integer) || value.is_a?(String) && value.match?(/^\d+$/)
   end
 
-  def message(attribute, value, validator)
-    "The value must be an integer."
+  def message(_attribute, _value, _validator)
+    'The value must be an integer.'
   end
 end

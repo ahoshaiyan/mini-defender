@@ -7,13 +7,13 @@ class MiniDefender::Rules::Date < MiniDefender::Rule
     'date'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     parse_date(value).is_a?(Time)
   rescue ArgumentError
     false
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The given value is not a valid date.'
   end
 

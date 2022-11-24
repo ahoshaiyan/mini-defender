@@ -7,11 +7,11 @@ class MiniDefender::Rules::Declined < MiniDefender::Rule
     'declined'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     !value.nil? && ALLOWED_VALUES.include?(value)
   end
 
-  def message(attribute, value, validator)
-    "Must be declined."
+  def message(_attribute, _value, _validator)
+    'Must be declined.'
   end
 end

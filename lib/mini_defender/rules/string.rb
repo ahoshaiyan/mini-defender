@@ -5,11 +5,11 @@ class MiniDefender::Rules::String < MiniDefender::Rule
     'string'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(String)
   end
 
-  def message(attribute, value, validator)
-    "The value must be a string."
+  def message(_attribute, _value, _validator)
+    'The value must be a string.'
   end
 end

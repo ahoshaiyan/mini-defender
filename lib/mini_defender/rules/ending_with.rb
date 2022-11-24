@@ -17,11 +17,11 @@ class MiniDefender::Rules::EndingWith < MiniDefender::Rule
     new(args)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     @fragments.any? { |f| value.to_s.end_with?(f) }
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     if @fragments.length == 1
       "The value should end with #{@fragments[0]}."
     else

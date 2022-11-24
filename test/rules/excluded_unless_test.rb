@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class ExcludedUnlessTest < Minitest::Test
-
 end

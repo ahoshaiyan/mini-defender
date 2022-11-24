@@ -24,10 +24,10 @@ module MiniDefender
       end
 
       data_rules.each do |k, set|
-        if !@data.key?(k) || @data[k].blank?
-          set.filter{ |r| r.defaults?(self) }.each do |r|
-            @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
-          end
+        next unless !@data.key?(k) || @data[k].blank?
+
+        set.filter { |r| r.defaults?(self) }.each do |r|
+          @data.merge!({ k => r.default_value(self) }.flatten_keys(keep_roots: true))
         end
       end
 
@@ -40,8 +40,8 @@ module MiniDefender
         required = rule_set.any? { |r| r.implicit?(self) }
 
         if !@data.key?(k) || @data[k].blank?
-          rule_set.filter{ |r| r.defaults?(self) }.each do |r|
-            @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
+          rule_set.filter { |r| r.defaults?(self) }.each do |r|
+            @data.merge!({ k => r.default_value(self) }.flatten_keys(keep_roots: true))
           end
         end
 
@@ -56,9 +56,7 @@ module MiniDefender
 
           value_included &= !rule.excluded?(self)
 
-          unless rule.passes?(k, value, self)
-            @errors[k] << rule.message(k, value, self)
-          end
+          @errors[k] << rule.message(k, value, self) unless rule.passes?(k, value, self)
         end
 
         if @errors[k].empty? && value_included
@@ -111,12 +109,13 @@ module MiniDefender
     private
 
     def leveled_search_pattern(key, level = 1)
-      search_key = key.split('.').map{ |part| Regexp.quote(part) }.reverse
+      search_key = key.split('.').map { |part| Regexp.quote(part) }.reverse
 
       # Change array indexes to digits pattern according to the desired level
       while level > 0
         target_index = search_key.index { |p| p.match?(/\A\d+\z/) }
         break if target_index.nil?
+
         search_key[target_index] = '\d+'
         level -= 1
       end

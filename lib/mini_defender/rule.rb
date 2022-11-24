@@ -7,8 +7,8 @@ class MiniDefender::Rule
 
   # @param [Array] args Set of positional arguments
   # @return [MiniDefender::Rule]
-  def self.make(args)
-    self.new
+  def self.make(_args)
+    new
   end
 
   # @return [Boolean]
@@ -18,19 +18,19 @@ class MiniDefender::Rule
 
   # @param [MiniDefender::Validator] validator
   # @return [Boolean]
-  def implicit?(validator)
+  def implicit?(_validator)
     false
   end
 
   # @param [MiniDefender::Validator] validator
   # @return [Boolean]
-  def defaults?(validator)
+  def defaults?(_validator)
     false
   end
 
   # @param [MiniDefender::Validator] validator
   # @return [?Object]
-  def default_value(validator)
+  def default_value(_validator)
     nil
   end
 
@@ -47,13 +47,13 @@ class MiniDefender::Rule
 
   # @param [MiniDefender::Validator] validator
   # @return [Boolean]
-  def active?(validator)
+  def active?(_validator)
     true
   end
 
   # @param [MiniDefender::Validator]
   # @return [Boolean]
-  def excluded?(validator)
+  def excluded?(_validator)
     false
   end
 

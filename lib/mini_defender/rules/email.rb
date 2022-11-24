@@ -9,11 +9,11 @@ class MiniDefender::Rules::Email < MiniDefender::Rule
     value.strip.downcase
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.to_s.match?(URI::MailTo::EMAIL_REGEXP)
   end
 
-  def message(attribute, value, validator)
-    "The value should be a valid email address."
+  def message(_attribute, _value, _validator)
+    'The value should be a valid email address.'
   end
 end

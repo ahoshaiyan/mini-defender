@@ -9,11 +9,11 @@ class MiniDefender::Rules::Bail < MiniDefender::Rule
     true
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, _value, _validator)
     true
   end
 
-  def message(attribute, value, validator)
-    "i can haz turkey?."
+  def message(_attribute, _value, _validator)
+    'i can haz turkey?.'
   end
 end

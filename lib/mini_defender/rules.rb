@@ -4,5 +4,5 @@ module MiniDefender::Rules
 end
 
 Dir["#{__dir__}/rules/*.rb"].each do |path|
-    require_relative path
+  require_relative path
 end

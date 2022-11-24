@@ -7,13 +7,13 @@ class MiniDefender::Rules::Json < MiniDefender::Rule
     'json'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     JSON.parse(value)
   rescue JSON::ParserError
     false
   end
 
-  def message(attribute, value, validator)
-    "The value should be a valid JSON string."
+  def message(_attribute, _value, _validator)
+    'The value should be a valid JSON string.'
   end
 end

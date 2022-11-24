@@ -5,15 +5,15 @@ class MiniDefender::Rules::Present < MiniDefender::Rule
     'present'
   end
 
-  def implicit?(validator)
+  def implicit?(_validator)
     true
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, _value, _validator)
     true
   end
 
-  def message(attribute, value, validator)
-    "The field should be present."
+  def message(_attribute, _value, _validator)
+    'The field should be present.'
   end
 end

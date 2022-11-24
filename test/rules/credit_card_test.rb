@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class CreditCardTest < Minitest::Test
-
 end

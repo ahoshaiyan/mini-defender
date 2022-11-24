@@ -6,7 +6,7 @@ class RulesExpanderTest < Minitest::Test
   def setup
     @rules = {
       'username' => 'required|string',
-      'password' => ['required', 'string'],
+      'password' => %w[required string],
       'addresses' => 'array',
       'addresses.*.streets' => 'array|max:3',
       'addresses.*.streets.*' => 'string',
@@ -14,7 +14,7 @@ class RulesExpanderTest < Minitest::Test
       'addresses.*.province' => 'string',
       'addresses.*.country' => 'required|string',
       'books' => 'array',
-      'books.*' => ['string', 'max:255'],
+      'books.*' => ['string', 'max:255']
     }
 
     @data = {
@@ -37,7 +37,7 @@ class RulesExpanderTest < Minitest::Test
 
     expected = {
       'username' => 'required|string',
-      'password' => ['required', 'string'],
+      'password' => %w[required string],
       'addresses' => 'array',
       'addresses.0.streets' => 'array|max:3',
       'addresses.0.streets.0' => 'string',
@@ -47,7 +47,7 @@ class RulesExpanderTest < Minitest::Test
       'addresses.0.province' => 'string',
       'addresses.0.country' => 'required|string',
       'books' => 'array',
-      'books.0' => ['string', 'max:255'],
+      'books.0' => ['string', 'max:255']
     }
 
     assert_equal expected.keys.sort, expanded_rules.keys.sort

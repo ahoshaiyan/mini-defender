@@ -18,7 +18,7 @@ end
 
 # Register Library Rules
 MiniDefender::Rules.constants
-  .map    { |id| MiniDefender::Rules.const_get(id) }
-  .filter { |const| const.ancestors.include?(MiniDefender::Rule) }
-  .filter { |const| const.available? }
-  .each   { |klass| MiniDefender::RulesFactory.register(klass) }
+                   .map    { |id| MiniDefender::Rules.const_get(id) }
+                   .filter { |const| const.ancestors.include?(MiniDefender::Rule) }
+                   .filter { |const| const.available? }
+                   .each   { |klass| MiniDefender::RulesFactory.register(klass) }

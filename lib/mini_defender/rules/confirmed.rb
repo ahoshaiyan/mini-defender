@@ -14,7 +14,7 @@ class MiniDefender::Rules::Confirmed < MiniDefender::Rule
     (@found = validator.data.key?(key)) && value == validator.data[key]
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     if @found
       'The value confirmation does not match.'
     else

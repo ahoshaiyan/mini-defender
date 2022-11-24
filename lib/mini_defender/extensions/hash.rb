@@ -4,7 +4,7 @@ class Hash
   def expand
     expanded = {}
 
-    reject{ |_, v| v.is_a?(Hash) || v.is_a?(Array) }.each do |k, v|
+    reject { |_, v| v.is_a?(Hash) || v.is_a?(Array) }.each do |k, v|
       keys = k.split('.')
       node = expanded
       node = (node[keys.shift] ||= {}) while keys.length > 1

@@ -17,7 +17,7 @@ class MiniDefender::Rules::InField < MiniDefender::Rule
     new(args[0])
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, validator)
     @field_value = nil
     return false unless validator.data.key(@field)
 
@@ -27,7 +27,7 @@ class MiniDefender::Rules::InField < MiniDefender::Rule
     @field_value.include?(value)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     case @field_value
     when nil
       "The field (#{@field}) is missing."

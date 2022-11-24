@@ -9,11 +9,13 @@ class MiniDefender::Rules::Numeric < MiniDefender::Rule
     value.is_a?(Numeric) ? value : Float(value.to_s)
   end
 
-  def passes?(attribute, value, validator)
-    value.is_a?(Numeric) || Float(value.to_s) rescue false
+  def passes?(_attribute, value, _validator)
+    value.is_a?(Numeric) || Float(value.to_s)
+  rescue StandardError
+    false
   end
 
-  def message(attribute, value, validator)
-    "The field must contain a numeric value."
+  def message(_attribute, _value, _validator)
+    'The field must contain a numeric value.'
   end
 end

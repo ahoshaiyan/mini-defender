@@ -5,11 +5,11 @@ class MiniDefender::Rules::Hash < MiniDefender::Rule
     'hash'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(Hash)
   end
 
-  def message(attribute, value, validator)
-    "The field must be an object."
+  def message(_attribute, _value, _validator)
+    'The field must be an object.'
   end
 end

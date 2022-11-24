@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class ImageTest < Minitest::Test
-
 end

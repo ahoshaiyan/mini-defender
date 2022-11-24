@@ -7,13 +7,13 @@ class MiniDefender::Rules::Timezone < MiniDefender::Rule
     'timezone'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(String) && !!TZInfo::Timezone.get(value)
   rescue TZInfo::InvalidTimezoneIdentifier
     false
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The field should contain a valid time zone value.'
   end
 end

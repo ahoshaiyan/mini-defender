@@ -15,10 +15,10 @@ class MiniDefender::Rules::DateEq < MiniDefender::Rule
   def self.make(args)
     raise ArgumentError, 'Target date is required for date rules.' unless args == 1
 
-    self.new(args[0])
+    new(args[0])
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value = parse_date(value)
     @valid_value = true
 
@@ -27,8 +27,8 @@ class MiniDefender::Rules::DateEq < MiniDefender::Rule
     false
   end
 
-  def message(attribute, value, validator)
-    return "The given value is not a valid date." unless @valid_value
+  def message(_attribute, _value, _validator)
+    return 'The given value is not a valid date.' unless @valid_value
 
     "The value must be equal to #{@target_date}."
   end

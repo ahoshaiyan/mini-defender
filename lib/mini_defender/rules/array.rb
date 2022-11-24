@@ -5,11 +5,11 @@ class MiniDefender::Rules::Array < MiniDefender::Rule
     'array'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(Array)
   end
 
-  def message(attribute, value, validator)
-    "The field must be an array."
+  def message(_attribute, _value, _validator)
+    'The field must be an array.'
   end
 end

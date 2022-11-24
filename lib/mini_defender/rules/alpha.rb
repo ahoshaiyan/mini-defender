@@ -5,11 +5,11 @@ class MiniDefender::Rules::Alpha < MiniDefender::Rule
     'alpha'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(String) && /^[a-zA-Z]+$/.match?(value)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The field must only contain alphabetical characters.'
   end
 end

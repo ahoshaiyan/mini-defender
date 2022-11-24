@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class RequiredTest < Minitest::Test
-
 end

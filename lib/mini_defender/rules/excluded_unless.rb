@@ -15,14 +15,14 @@ class MiniDefender::Rules::ExcludedUnless < MiniDefender::Rule
   def self.make(args)
     raise ArgumentError, 'Target and expected value are required.' unless args.length == 2
 
-    self.new(args[0], args[1])
+    new(args[0], args[1])
   end
 
   def excluded?(validator)
-    ! (validator.data.key?(@target) && validator.data[@target] == @value)
+    !(validator.data.key?(@target) && validator.data[@target] == @value)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, _value, _validator)
     true
   end
 end

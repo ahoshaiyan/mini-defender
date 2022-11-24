@@ -6,7 +6,7 @@ class ValidatorTest < Minitest::Test
   def test_should_report_errors_for_invalid_data_1
     v = MiniDefender::Validator.new(
       { 'username' => 'required|string' },
-      { 'username' => 123123 }
+      { 'username' => 123_123 }
     )
 
     assert v.fails?
@@ -15,7 +15,7 @@ class ValidatorTest < Minitest::Test
   def test_should_report_errors_for_invalid_data_2
     v = MiniDefender::Validator.new(
       { 'username' => 'required|string' },
-      {  }
+      {}
     )
 
     assert v.fails?
@@ -27,7 +27,7 @@ class ValidatorTest < Minitest::Test
         'address' => 'required|hash',
         'address.city' => 'required|string'
       },
-      {  }
+      {}
     )
 
     assert v.fails?
@@ -82,7 +82,7 @@ class ValidatorTest < Minitest::Test
   def test_should_succeed_when_non_implicit_is_missing
     v = MiniDefender::Validator.new(
       { 'username' => 'string' },
-      {  }
+      {}
     )
 
     assert v.passes?
@@ -97,7 +97,7 @@ class ValidatorTest < Minitest::Test
       },
       {
         'address' => {
-          'streets' => ['1', '2', '3']
+          'streets' => %w[1 2 3]
         }
       }
     )
@@ -110,7 +110,7 @@ class ValidatorTest < Minitest::Test
       {},
       {
         'address' => {
-          'streets' => ['1', '2', '3']
+          'streets' => %w[1 2 3]
         }
       }
     )

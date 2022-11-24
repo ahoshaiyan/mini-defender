@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class MaxTest < Minitest::Test
-
 end

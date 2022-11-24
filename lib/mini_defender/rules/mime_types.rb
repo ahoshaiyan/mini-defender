@@ -4,9 +4,7 @@ require 'action_dispatch'
 
 class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   def initialize(types)
-    unless types.is_a?(Array) && types.all?{ |t| t.is_a?(String) }
-      raise ArgumentError, 'Expected an array of strings.'
-    end
+    raise ArgumentError, 'Expected an array of strings.' unless types.is_a?(Array) && types.all? { |t| t.is_a?(String) }
 
     @types = types
     @file = false
@@ -22,12 +20,12 @@ class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
     new(args.split(',').map(&:downcase).map(&:strip))
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     @file = value.is_a?(ActionDispatch::Http::UploadedFile)
     @file && @types.include?(@file.content_type)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     if @file
       "The file should be one of the following types #{@types.to_sentence}"
     else

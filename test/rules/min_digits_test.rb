@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class MinDigitsTest < Minitest::Test
-
 end

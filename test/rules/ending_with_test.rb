@@ -3,5 +3,4 @@
 require 'test_helper'
 
 class EndingWithTest < Minitest::Test
-
 end

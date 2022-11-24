@@ -8,7 +8,7 @@ class MiniDefender::Rules::LessThan < MiniDefender::Rules::Size
     'lt'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     case value
     when String, Array, Hash
       value.length < @size
@@ -21,7 +21,7 @@ class MiniDefender::Rules::LessThan < MiniDefender::Rules::Size
     end
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, value, _validator)
     case value
     when ActionDispatch::Http::UploadedFile
       "The file size must be less than #{@size} bytes."

@@ -8,11 +8,11 @@ class MiniDefender::Rules::Distinct < MiniDefender::Rule
   def passes?(attribute, value, validator)
     validator
       .neighbors(attribute)
-      .reject { |k, v| k == attribute }
+      .reject { |k, _v| k == attribute }
       .none? { |_, v| v == value }
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The value should be unique.'
   end
 end

@@ -8,13 +8,9 @@ module Enumerable
   private
 
   def flatten_keys_recurse(root, keep_roots: false)
-    unless root.is_a?(Enumerable)
-      return {}
-    end
+    return {} unless root.is_a?(Enumerable)
 
-    unless root.is_a?(Hash)
-      root = root.each_with_index.to_h { |v, k| [k, v] }
-    end
+    root = root.each_with_index.to_h { |v, k| [k, v] } unless root.is_a?(Hash)
 
     result = {}
     root.each do |k, v|

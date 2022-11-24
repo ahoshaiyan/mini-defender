@@ -17,11 +17,11 @@ class MiniDefender::Rules::In < MiniDefender::Rule
     new(args)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     @values.include?(value)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     "The value must be one of #{@values.to_sentence}."
   end
 end

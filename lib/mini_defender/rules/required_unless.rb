@@ -17,7 +17,7 @@ class MiniDefender::Rules::RequiredUnless < MiniDefender::Rules::Required
   def self.make(args)
     raise ArgumentError, 'Target and expected value are required.' unless args.length == 2
 
-    self.new(args[0], args[1])
+    new(args[0], args[1])
   end
 
   def implicit?(validator)

@@ -19,7 +19,7 @@ class MiniDefender::Rules::Ipv6 < MiniDefender::Rule
     new(args[0] || 'any')
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     ip = IPAddr.new(value.to_s)
     ip.ipv6? && (
       @mode == 'any' ||
@@ -30,14 +30,14 @@ class MiniDefender::Rules::Ipv6 < MiniDefender::Rule
     false
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     case @mode
     when 'public'
-      "The value must be a valid public IPv6 address."
+      'The value must be a valid public IPv6 address.'
     when 'private'
-      "The value must be a valid private IPv6 address."
+      'The value must be a valid private IPv6 address.'
     else
-      "The value must be a valid IPv6 address."
+      'The value must be a valid IPv6 address.'
     end
   end
 end

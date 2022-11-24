@@ -15,19 +15,19 @@ class MiniDefender::Rules::Default < MiniDefender::Rule
     new(args[0])
   end
 
-  def defaults?(validator)
+  def defaults?(_validator)
     true
   end
 
-  def default_value(validator)
+  def default_value(_validator)
     @default
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, _value, _validator)
     true
   end
 
-  def message(attribute, value, validator)
-    "i can haz valuo?."
+  def message(_attribute, _value, _validator)
+    'i can haz valuo?.'
   end
 end

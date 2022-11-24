@@ -13,15 +13,16 @@ class MiniDefender::Rules::Different < MiniDefender::Rule
   end
 
   def self.make(args)
-    self.new(args[0])
+    new(args[0])
   end
 
-  def passes?(attribute, value, validator)
-    @found, @other = validator.data.key?(@other_field), validator.data[@other_field]
+  def passes?(_attribute, value, validator)
+    @found = validator.data.key?(@other_field)
+    @other = validator.data[@other_field]
     @found && value == @other
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     if @found
       "The field does not match \"#{@other}\"."
     else

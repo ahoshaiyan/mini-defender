@@ -21,13 +21,13 @@ class MiniDefender::Rules::Uuid < MiniDefender::Rule
     value.downcase
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.is_a?(String) &&
       /^\h{8}-(\h{4}-){3}\h{12}$/i.match?(value) &&
       (@version.nil? || value[14].to_i(16) == @version)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     if @version
       "The value should be a valid UUID v#{@version}."
     else

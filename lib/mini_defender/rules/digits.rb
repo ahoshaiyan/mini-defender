@@ -12,15 +12,15 @@ class MiniDefender::Rules::Digits < MiniDefender::Rule
   end
 
   def self.make(args)
-    self.new(args[0].to_i)
+    new(args[0].to_i)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value = value&.to_s
     value.is_a?(String) && /\A[0-9]+\z/.match?(value) && value.length == @size
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     "The field must contain #{size} digits."
   end
 end

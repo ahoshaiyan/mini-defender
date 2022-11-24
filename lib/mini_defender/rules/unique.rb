@@ -22,16 +22,16 @@ class MiniDefender::Rules::Unique < MiniDefender::Rule
   def self.make(args)
     raise ArgumentError, 'Model and column are required.' unless args.length == 2
 
-    self.new(args[0], args[1])
+    new(args[0], args[1])
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     query = @model.where(@column => value)
     query = query.where.not(@column, @ignore) unless @ignore.nil?
     query.exists?
   end
 
-  def message(attribute, value, validator)
-    "The value already exists."
+  def message(_attribute, _value, _validator)
+    'The value already exists.'
   end
 end

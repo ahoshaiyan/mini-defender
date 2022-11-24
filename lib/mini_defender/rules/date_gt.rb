@@ -7,7 +7,7 @@ class MiniDefender::Rules::DateGt < MiniDefender::Rules::DateEq
     'date_gt'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value = parse_date(value)
     @valid_value = true
 
@@ -16,8 +16,8 @@ class MiniDefender::Rules::DateGt < MiniDefender::Rules::DateEq
     false
   end
 
-  def message(attribute, value, validator)
-    return "The given value is not a valid date." unless @valid_value
+  def message(_attribute, _value, _validator)
+    return 'The given value is not a valid date.' unless @valid_value
 
     "The value must be greater than #{@target_date}."
   end

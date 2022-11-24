@@ -19,7 +19,7 @@ class MiniDefender::Rules::Ip < MiniDefender::Rule
     new(args[0] || 'any')
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     ip = IPAddr.new(value.to_s)
     (
       @mode == 'any' ||
@@ -30,14 +30,14 @@ class MiniDefender::Rules::Ip < MiniDefender::Rule
     false
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     case @mode
     when 'public'
-      "The value must be a valid public IP address."
+      'The value must be a valid public IP address.'
     when 'private'
-      "The value must be a valid private IP address."
+      'The value must be a valid private IP address.'
     else
-      "The value must be a valid IP address."
+      'The value must be a valid IP address.'
     end
   end
 end

@@ -17,7 +17,7 @@ class MiniDefender::Rules::MacAddress < MiniDefender::Rule
     new(args[0] || 'any')
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     clean = value.to_s.gsub(/[-:]/)
     clean.match?(/[0-9A-F]{12}/i) && (
       @mode == 'any' ||
@@ -26,14 +26,14 @@ class MiniDefender::Rules::MacAddress < MiniDefender::Rule
     )
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     case @mode
     when 'local'
-      "The value must be a locally administrated MAC address."
+      'The value must be a locally administrated MAC address.'
     when 'universal'
-      "The value must be a universally administrated MAC address."
+      'The value must be a universally administrated MAC address.'
     else
-      "The value must be a properly formatted mac address."
+      'The value must be a properly formatted mac address.'
     end
   end
 end

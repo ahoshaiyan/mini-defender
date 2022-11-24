@@ -17,11 +17,11 @@ class MiniDefender::Rules::Regex < MiniDefender::Rule
     new(Regexp.compile(args[0]))
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     value.to_s.match?(@pattern)
   end
 
-  def message(attribute, value, validator)
-    "The value must match #{@pattern.to_s}."
+  def message(_attribute, _value, _validator)
+    "The value must match #{@pattern}."
   end
 end

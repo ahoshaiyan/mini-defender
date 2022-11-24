@@ -16,10 +16,10 @@ class MiniDefender::Rules::Size < MiniDefender::Rule
   def self.make(args)
     raise ArgumentError, 'Expected exactly one argument.' unless args.length == 1
 
-    self.new(args[0].to_i)
+    new(args[0].to_i)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     case value
     when String, Array, Hash
       value.length == @size
@@ -32,7 +32,7 @@ class MiniDefender::Rules::Size < MiniDefender::Rule
     end
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, value, _validator)
     case value
     when ActionDispatch::Http::UploadedFile
       "The file size must be equal to #{@size} bytes."

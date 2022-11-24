@@ -5,7 +5,7 @@ class MiniDefender::Rules::Filled < MiniDefender::Rule
     'filled'
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     case value
     when String
       !value.strip.empty?
@@ -16,7 +16,7 @@ class MiniDefender::Rules::Filled < MiniDefender::Rule
     end
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The field should not be empty.'
   end
 end

@@ -7,11 +7,11 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
     'url'
   end
 
-  def passes?(attribute, value, validator)
-    value.is_a?(String) && URI.regexp(%w[http https]).match?(value)
+  def passes?(_attribute, value, _validator)
+    value.is_a?(String) && URI::DEFAULT_PARSER.make_regexp(%w[http https]).match?(value)
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     'The field must contain a valid URL.'
   end
 end

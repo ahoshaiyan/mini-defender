@@ -11,10 +11,10 @@ class MiniDefender::Rules::Between < MiniDefender::Rule
   end
 
   def self.make(args)
-    self.new(args[0].to_i, args[1].to_i)
+    new(args[0].to_i, args[1].to_i)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     case value
     when String, Array, Hash
       @min <= value.length && value.length <= @max
@@ -23,7 +23,7 @@ class MiniDefender::Rules::Between < MiniDefender::Rule
     end
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     "The value length must be between #{@min} and #{@max}."
   end
 end

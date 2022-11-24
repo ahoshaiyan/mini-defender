@@ -4,7 +4,7 @@ require_relative 'required'
 
 class MiniDefender::Rules::RequiredWith < MiniDefender::Rules::Required
   def initialize(targets)
-    unless targets.is_a?(Array) && targets.all?{ |t| t.is_a?(String) }
+    unless targets.is_a?(Array) && targets.all? { |t| t.is_a?(String) }
       raise ArgumentError, 'Expected an array of strings.'
     end
 
@@ -18,7 +18,7 @@ class MiniDefender::Rules::RequiredWith < MiniDefender::Rules::Required
   def self.make(args)
     raise ArgumentError, 'Expected at least one argument.' unless args.length >= 1
 
-    self.new(args)
+    new(args)
   end
 
   def implicit?(validator)

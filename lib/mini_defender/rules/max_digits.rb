@@ -17,12 +17,12 @@ class MiniDefender::Rules::MaxDigits < MiniDefender::Rule
     new(args[0].to_i)
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, value, _validator)
     @integers = valid = value.is_a?(Integer) || value.is_a?(String) && value.match?(/^\d+$/)
     valid && value.to_s.length <= @limit
   end
 
-  def message(attribute, value, validator)
+  def message(_attribute, _value, _validator)
     if @integers
       'The field should only contain digits.'
     else

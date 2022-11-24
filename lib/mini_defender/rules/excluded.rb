@@ -5,11 +5,11 @@ class MiniDefender::Rules::Excluded < MiniDefender::Rule
     'excluded'
   end
 
-  def excluded?(validator)
+  def excluded?(_validator)
     true
   end
 
-  def passes?(attribute, value, validator)
+  def passes?(_attribute, _value, _validator)
     true
   end
 end
