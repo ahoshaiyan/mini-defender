@@ -46,7 +46,7 @@ module MiniDefender
         end
 
         unless @data.key?(k)
-          @errors[k] << 'The field is missing' if required
+          @errors[k] << 'This field is missing.' if required
           next
         end
 
