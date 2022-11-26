@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mini_defender (0.1.2)
+    mini_defender (0.1.3)
       actionpack (>= 6.0)
       activemodel (>= 6.0)
       activesupport (>= 6.0)
