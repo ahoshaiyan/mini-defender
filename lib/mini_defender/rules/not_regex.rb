@@ -12,9 +12,9 @@ class MiniDefender::Rules::NotRegex < MiniDefender::Rule
   end
 
   def self.make(args)
-    raise ArgumentError, 'Expected a pattern as input.' unless args.length == 1
+    raise ArgumentError, 'Expected a pattern as input.' unless args.length > 0
 
-    new(Regexp.compile(args[0]))
+    new(Regexp.compile(args.join(',')))
   end
 
   def passes?(attribute, value, validator)
