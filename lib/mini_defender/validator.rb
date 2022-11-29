@@ -57,7 +57,7 @@ module MiniDefender
           value_included &= !rule.excluded?(self)
 
           unless rule.passes?(k, value, self)
-            @errors[k] << rule.message(k, value, self)
+            @errors[k] << rule.error_message(k, value, self)
           end
         end
 

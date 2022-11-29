@@ -74,4 +74,16 @@ class MiniDefender::Rule
   def message(attribute, value, validator)
     raise NotImplementedError, 'Use a concrete implementation.'
   end
+
+  def with_message(message)
+    @message = message
+    self
+  end
+
+  # @param [Object] attribute
+  # @param [Object] value
+  # @param [MiniDefender::Validator] validator
+  def error_message(attribute, value, validator)
+    @message || message(attribute, value, validator)
+  end
 end
