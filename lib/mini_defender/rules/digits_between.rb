@@ -24,6 +24,6 @@ class MiniDefender::Rules::DigitsBetween < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The field must contain digits between #{min} and #{max}."
+    "The field must contain digits between #{@min} and #{@max}."
   end
 end
