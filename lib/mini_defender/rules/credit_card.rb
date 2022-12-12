@@ -7,6 +7,10 @@ class MiniDefender::Rules::CreditCard < MiniDefender::Rules::Luhn
     'credit_card'
   end
 
+  def passes?(attribute, value, validator)
+    super(attribute, value, validator) && value.length >= 8 && value.length <= 19
+  end
+
   def message(attribute, value, validator)
     'The value must be a proper credit/debit card number.'
   end
