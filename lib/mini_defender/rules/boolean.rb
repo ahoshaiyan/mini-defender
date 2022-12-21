@@ -6,10 +6,11 @@ class MiniDefender::Rules::Boolean < MiniDefender::Rule
   end
 
   def coerce(value)
+    value = value.downcase if value.is_a?(String)
     case value
-    when 0, '0'
+    when 0, '0', 'no', 'off', 'false'
       false
-    when 1, '1'
+    when 1, '1', 'yes', 'on', 'true'
       true
     else
       value
@@ -17,10 +18,12 @@ class MiniDefender::Rules::Boolean < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
-    value.is_a?(TrueClass) || value.is_a?(FalseClass) || [1, 0, '1', '0'].include?(value)
+    value = value.downcase if value.is_a?(String)
+    value.is_a?(TrueClass) || value.is_a?(FalseClass) ||
+      [1, 0, '1', '0', 'yes', 'no', 'on', 'off', 'true', 'false'].include?(value)
   end
 
   def message(attribute, value, validator)
-    "The value must be a boolean."
+    'The value must be a boolean, yes, no, on, off, 0 or 1.'
   end
 end
