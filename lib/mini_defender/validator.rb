@@ -50,20 +50,22 @@ module MiniDefender
           next
         end
 
-        value = @data[k]
+        value = coerced = @data[k]
         rule_set.each do |rule|
           next unless rule.active?(self)
 
           value_included &= !rule.excluded?(self)
 
-          unless rule.passes?(k, value, self)
+          if rule.passes?(k, coerced, self)
+            coerced = rule.coerce(coerced)
+          else
             @errors[k] << rule.error_message(k, value, self)
           end
         end
 
         if @errors[k].empty? && value_included
           @validated[k] = value
-          @coerced[k] = rule_set.inject(value) { |coerced, rule| rule.coerce(coerced) }
+          @coerced[k] = coerced
         end
       end
 
