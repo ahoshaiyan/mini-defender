@@ -12,13 +12,20 @@ module MiniDefender::ValidatesInput
 
   private
 
-  def cleanse_data(data)
-    data = data.to_h do |k, v|
-      v = v.strip
-      v = nil if v.blank?
-      [k, v]
-    end
+  def cleanse_data(data, depth = 1)
+    return data if depth > 16
 
-    data.compact
+    case data
+      when Array
+        data.map{ |v| cleanse_data(v, depth + 1) }.reject(&:nil?)
+      when Hash
+        data.to_h{ |k, v| [k, cleanse_data(v, depth + 1)] }.compact
+      when Numeric, TrueClass, FalseClass, NilClass
+        data
+      else
+        data = data.to_s.strip
+        data = nil if data == ''
+        data
+    end
   end
 end
