@@ -20,11 +20,11 @@ module MiniDefender::ValidatesInput
         data.map{ |v| cleanse_data(v, depth + 1) }.reject(&:nil?)
       when Hash
         data.to_h{ |k, v| [k, cleanse_data(v, depth + 1)] }.compact
-      when Numeric, TrueClass, FalseClass, NilClass
+      when String
+        data = data.strip
+        data = nil if data == ''
         data
       else
-        data = data.to_s.strip
-        data = nil if data == ''
         data
     end
   end
