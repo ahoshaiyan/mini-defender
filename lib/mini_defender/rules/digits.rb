@@ -21,6 +21,6 @@ class MiniDefender::Rules::Digits < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The field must contain #{size} digits."
+    "The field must contain #{@size} digits."
   end
 end
