@@ -46,7 +46,7 @@ module MiniDefender
         end
 
         unless @data.key?(k)
-          @errors[k] << 'This field is missing.' if required
+          @errors[k] << I18n.t('mini_defender.required', filed: k.humanize) if required
           next
         end
 

@@ -1,0 +1,14 @@
+en:
+  mini_defender:
+    password:
+      special_characters: "Password must contain at least one special character"
+      upper_case: "Password must contain at least one upper case character"
+      lower_case: "Password must contain at least one lower case character"
+      digit: "Password must contain at least one digit"
+      length: "Password must be at least 8 characters long"
+
+    email:
+      invalid: "Email is invalid"
+
+    filled: "%{field} must not be empty"
+    required: "%{field} is required"

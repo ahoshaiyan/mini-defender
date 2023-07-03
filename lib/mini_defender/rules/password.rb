@@ -9,10 +9,11 @@ class MiniDefender::Rules::Password < MiniDefender::Rule
     @errors = []
 
     # Password requirements
-    @errors << 'The password must have an uppercase letter' unless /[A-Z]/.match?(value)
-    @errors << 'The password must have a lowercase letter' unless /[a-z]/.match?(value)
-    @errors << 'The password must have a digit' unless /\d/.match?(value)
-    @errors << 'The password must have a special characters (#?!@$%^&*-)' unless /[#?!@$%^&*-]+/.match?(value)
+    @errors << I18n.t('mini_defender.password.upper_case') unless /[A-Z]/.match?(value)
+    @errors << I18n.t('mini_defender.password.lower_case') unless /[a-z]/.match?(value)
+    @errors << I18n.t('mini_defender.password.digit') unless /\d/.match?(value)
+    @errors << I18n.t('mini_defender.password.special_characters') unless /[#?!@$%^&*-]+/.match?(value)
+    @errors << I18n.t('mini_defender.password.length', min: 8) unless value.length >= 8
 
     @errors.empty?
   end

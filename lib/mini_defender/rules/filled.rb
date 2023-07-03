@@ -17,6 +17,6 @@ class MiniDefender::Rules::Filled < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The field should not be empty.'
+    I18n.t('mini_defender.filled', filed: attribute.humanize)
   end
 end

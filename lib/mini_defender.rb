@@ -14,6 +14,7 @@ require_relative 'mini_defender/extensions/enumerable'
 require_relative 'mini_defender/extensions/hash'
 
 module MiniDefender
+  I18n.load_path += Dir[File.join(__dir__, 'mini_defender', 'locales', '*.yml')]
 end
 
 # Register Library Rules
