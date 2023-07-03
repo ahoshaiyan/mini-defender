@@ -18,6 +18,6 @@ class MiniDefender::Rules::CountryCode < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The value must be a valid ISO3166 country code.'
+    I18n.t('mini_defender.country_code', attribute: attribute.humanize)
   end
 end

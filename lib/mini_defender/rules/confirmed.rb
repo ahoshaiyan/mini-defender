@@ -16,9 +16,9 @@ class MiniDefender::Rules::Confirmed < MiniDefender::Rule
 
   def message(attribute, value, validator)
     if @found
-      'The value confirmation does not match.'
+      I18n.t('mini_defender.confirmed.found', attribute: attribute.humanize)
     else
-      'The value must be confirmed.'
+      I18n.t('mini_defender.confirmed.not_found', attribute: attribute.humanize)
     end
   end
 end

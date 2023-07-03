@@ -24,6 +24,6 @@ class MiniDefender::Rules::Boolean < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The value must be a boolean, yes, no, on, off, 0 or 1.'
+    I18n.t('mini_defender.boolean', attribute: attribute.humanize)
   end
 end

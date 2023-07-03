@@ -1,14 +1,27 @@
 ar:
   mini_defender:
-    password:
-      special_characters: "يجب أن تحتوي الكلمة السرية على حرف خاص واحد على الأقل"
-      upper_case: "يجب أن تحتوي الكلمة السرية على حرف كبير واحد على الأقل"
-      lower_case: "يجب أن تحتوي الكلمة السرية على حرف صغير واحد على الأقل"
-      digit: "يجب أن تحتوي الكلمة السرية على رقم واحد على الأقل"
-      length: "يجب أن تكون الكلمة السرية طويلة بمقدار 8 أحرف على الأقل"
-
     email:
       invalid: "البريد الإلكتروني غير صالح"
 
-    filled: "يجب ألا يكون %{filed} فارغًا"
-    required: "مطلوب %{filed}"
+    filled: "يجب ألا يكون %{field} فارغًا"
+    required: "%{field} مطلوب"
+    accepted: "يجب قبول %{attribute}."
+    alpha: "يجب أن يحتوي %{attribute} على الأحرف فقط."
+    alpha_dash: "يجب أن يحتوي %{attribute} على الأحرف والشرطات والشرطات السفلية فقط."
+    alpha_num: "يجب أن يحتوي %{attribute} على الأحرف والأرقام فقط."
+    array: "يجب أن يكون %{attribute} مصفوفة."
+    between: "يجب أن يكون %{attribute} بين %{min} و %{max}."
+    boolean: "يجب أن يكون %{attribute} نعم، لا، 0 أو 1."
+    confirmed:
+      found: "لا يتطابق تأكيد %{attribute}."
+      not_found: "يجب تأكيد %{attribute}."
+    country_code: "يجب أن يكون %{attribute} رمز دولة صالح حسب ISO3166."
+    credit_card: "يجب أن يكون %{attribute} رقم بطاقة ائتمان/خصم صحيح."
+    date: "يجب أن يكون %{attribute} تاريخًا صالحًا."
+    date_format: "يجب أن يكون %{attribute} في الصيغة %{format}."
+    date_eq: "يجب أن يكون %{attribute} مساويًا لـ %{target_date}."
+    date_gt: "يجب أن يكون %{attribute} أكبر من %{target_date}."
+    date_gte: "يجب أن يكون %{attribute} أكبر من أو يساوي %{target_date}."
+    date_lt: "يجب أن يكون %{attribute} أقل من %{target_date}."
+    date_lte: "يجب أن يكون %{attribute} أقل من أو يساوي %{target_date}."
+    declined: "يجب رفض %{attribute}."

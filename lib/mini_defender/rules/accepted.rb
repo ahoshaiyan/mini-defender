@@ -12,6 +12,6 @@ class MiniDefender::Rules::Accepted < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "Must be accepted."
+    I18n.t('mini_defender.accepted', attribute: attribute.humanize)
   end
 end

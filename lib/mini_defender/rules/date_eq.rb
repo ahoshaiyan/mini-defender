@@ -28,9 +28,9 @@ class MiniDefender::Rules::DateEq < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    return "The given value is not a valid date." unless @valid_value
+    return I18n.t('mini_defender.date') unless @valid_value
 
-    "The value must be equal to #{@target_date}."
+    I18n.t('mini_defender.date_eq', attribute: attribute.humanize, target_date: @target_date)
   end
 
   protected
