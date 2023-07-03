@@ -3,9 +3,9 @@
 module MiniDefender::ValidatesInput
   extend ActiveSupport::Concern
 
-  def validate!(rules, coerced = false)
+  def validate!(rules, coerced = false, translations: nil)
     data = cleanse_data(params.to_unsafe_hash.deep_stringify_keys)
-    validator = MiniDefender::Validator.new(rules, data)
+    validator = MiniDefender::Validator.new(rules, data, translations)
     validator.validate!
     coerced ? validator.coerced : validator.data
   end

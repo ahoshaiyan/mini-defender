@@ -25,3 +25,6 @@ ar:
     date_lt: "يجب أن يكون %{attribute} أقل من %{target_date}."
     date_lte: "يجب أن يكون %{attribute} أقل من أو يساوي %{target_date}."
     declined: "يجب رفض %{attribute}."
+    numeric: "يجب أن يكون %{attribute} رقمًا."
+    gt: "يجب أن يكون %{attribute} أكبر من %{value}."
+    gte: "يجب أن يكون %{attribute} أكبر من أو يساوي %{value}."

@@ -28,6 +28,6 @@ class MiniDefender::Rules::Required < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    I18n.t('mini_defender.required', filed: attribute.humanize)
+    I18n.t('mini_defender.required', field: attribute.humanize)
   end
 end

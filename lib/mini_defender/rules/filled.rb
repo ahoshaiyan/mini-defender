@@ -17,6 +17,6 @@ class MiniDefender::Rules::Filled < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    I18n.t('mini_defender.filled', filed: attribute.humanize)
+    I18n.t('mini_defender.filled', field: attribute.humanize)
   end
 end
