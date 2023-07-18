@@ -40,7 +40,7 @@ class MiniDefender::Rules::Unique < MiniDefender::Rule
 
     query = @model.where(@column => value)
     query = @additional_scope.call(query) unless @additional_scope.nil?
-    query = query.where.not(@column, @ignore) unless @ignore.nil?
+    query = query.where.not(@column => @ignore) unless @ignore.nil?
 
     !query.exists?
   end
