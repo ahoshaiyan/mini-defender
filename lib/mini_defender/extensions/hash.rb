@@ -19,7 +19,7 @@ class Hash
       [k, v.is_a?(Hash) ? v.compact_keys : v]
     end
 
-    if result.all? { |k, _v| k.match?(/\A\d+\z/) }
+    if !result.empty? && result.all? { |k, _v| k.match?(/\A\d+\z/) }
       result.values
     else
       result
