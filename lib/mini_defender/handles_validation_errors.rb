@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HandlesValidationErrors
+module MiniDefender::HandlesValidationErrors
   extend ActiveSupport::Concern
 
   included do

@@ -2,7 +2,7 @@
 
 require 'active_support/core_ext/hash'
 
-module ValidationHelpers
+module MiniDefender::ValidationHelpers
   extend ActiveSupport::Concern
 
   def validation_errors
