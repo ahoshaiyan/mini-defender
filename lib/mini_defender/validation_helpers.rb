@@ -36,9 +36,17 @@ module MiniDefender::ValidationHelpers
   end
 
   def field_errors(field)
-    raise ArgumentError, 'Expected a block.' unless block_given?
+    # Transform Rails foo[bar] convention to foo.bar
+    field = field.gsub('[', '.').gsub(']', '')
 
-    errors = validation_errors[field] || []
-    errors.each { |e| yield(e) }
+    validation_errors[field] || []
+  end
+
+  def render_field_errors(field)
+    unless block_given?
+      raise ArgumentError, 'Expected a block.'
+    end
+
+    field_errors(field).each { |e| yield(e) }
   end
 end
