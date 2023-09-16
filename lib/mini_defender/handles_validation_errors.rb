@@ -11,7 +11,7 @@ module MiniDefender::HandlesValidationErrors
 
   def handle_validation_error(error)
     unless self.respond_to?(:respond_to)
-      render json: { message: error.message, errors: error.errors }, status: :unprocessable_entity
+      return render json: { message: error.message, errors: error.errors }, status: :unprocessable_entity
     end
 
     respond_to do |format|
