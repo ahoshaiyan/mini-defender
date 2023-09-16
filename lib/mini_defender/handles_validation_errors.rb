@@ -10,13 +10,17 @@ module MiniDefender::HandlesValidationErrors
   private
 
   def handle_validation_error(error)
+    unless self.respond_to?(:respond_to)
+      render json: { message: error.message, errors: error.errors }, status: :unprocessable_entity
+    end
+
     respond_to do |format|
       format.html do
         flash[:error] = error.message
         flash[:validation_errors] = error.errors
         flash[:old_values] = safe_values
 
-        redirect_back fallback_location: root_path
+        redirect_back fallback_location: '/'
       end
 
       format.json do
