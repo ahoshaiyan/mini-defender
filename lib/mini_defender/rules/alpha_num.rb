@@ -10,6 +10,6 @@ class MiniDefender::Rules::AlphaNum < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The field must only contain alpha-num characters.'
+    I18n.t('mini_defender.alpha_num', attribute: attribute.humanize)
   end
 end

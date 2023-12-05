@@ -10,6 +10,6 @@ class MiniDefender::Rules::Alpha < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The field must only contain alphabetical characters.'
+    I18n.t('mini_defender.alpha', attribute: attribute.humanize)
   end
 end

@@ -1,0 +1,37 @@
+en:
+  mini_defender:
+    password:
+      special_characters: "Password must contain at least one special character"
+      upper_case: "Password must contain at least one upper case character"
+      lower_case: "Password must contain at least one lower case character"
+      digit: "Password must contain at least one digit"
+      length: "Password must be at least 8 characters long"
+
+    email:
+      invalid: "Email is invalid"
+
+    filled: "%{field} must not be empty"
+    required: "%{field} is required"
+    accepted: "%{attribute} Must be accepted."
+    alpha: "%{attribute} Must only contain letters."
+    alpha_dash: "%{attribute} Must only contain letters, dashes and underscores."
+    alpha_num: "%{attribute} Must only contain letters and numbers."
+    array: "%{attribute} Must be an array."
+    between: "%{attribute} Must be between %{min} and %{max}."
+    boolean: "%{attribute} must be a boolean, yes, no, on, off, 0 or 1."
+    confirmed:
+      found: "%{attribute} confirmation does not match."
+      not_found: "%{attribute} must be confirmed."
+    country_code: "%{attribute} must be a valid ISO3166 country code."
+    credit_card: "%{attribute} must be a proper credit/debit card number."
+    date: "%{attribute} must be a valid date."
+    date_format: "%{attribute} must be in the format %{format}."
+    date_eq: "%{attribute} must be equal to %{target_date}."
+    date_gt: "%{attribute} must be greater than %{target_date}."
+    date_gte: "%{attribute} must be greater than or equal to %{target_date}."
+    date_lt: "%{attribute} must be less than %{target_date}."
+    date_lte: "%{attribute} must be less than or equal to %{target_date}."
+    declined: "%{attribute} must be declined."
+    numeric: "%{attribute} must be a number."
+    gt: "%{attribute} must be greater than %{value}."
+    gte: "%{attribute} must be greater than or equal to %{value}."

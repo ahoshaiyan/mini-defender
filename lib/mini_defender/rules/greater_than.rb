@@ -28,7 +28,7 @@ class MiniDefender::Rules::GreaterThan < MiniDefender::Rules::Size
     when Numeric
       "The value must be greater than #{@size}."
     else
-      "The value length must be greater than #{@size}."
+      I18n.t('mini_defender.gt', attribute: attribute, value: @size)
     end
   end
 end

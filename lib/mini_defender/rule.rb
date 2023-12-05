@@ -71,7 +71,7 @@ class MiniDefender::Rule
   # @param [Object] attribute
   # @param [Object] value
   # @param [MiniDefender::Validator] validator
-  def message(attribute, value, validator)
+  def message(attribute, value, validator, translation = nil)
     raise NotImplementedError, 'Use a concrete implementation.'
   end
 
@@ -83,7 +83,8 @@ class MiniDefender::Rule
   # @param [Object] attribute
   # @param [Object] value
   # @param [MiniDefender::Validator] validator
-  def error_message(attribute, value, validator)
+  def error_message(attribute, value, validator, translation)
+    attribute = translation || attribute.humanize
     @message || message(attribute, value, validator)
   end
 end

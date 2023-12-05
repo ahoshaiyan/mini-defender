@@ -12,6 +12,7 @@ class MiniDefender::Rules::Required < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
+    p value
     case value
     when nil
       false
@@ -27,6 +28,6 @@ class MiniDefender::Rules::Required < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "This field is required."
+    I18n.t('mini_defender.required', field: attribute.humanize)
   end
 end

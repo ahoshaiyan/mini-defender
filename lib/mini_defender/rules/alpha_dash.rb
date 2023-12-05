@@ -10,6 +10,6 @@ class MiniDefender::Rules::AlphaDash < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The field must only contain alphabetical characters, dashes and underscores.'
+    I18n.t('mini_defender.alpha_dash', attribute: attribute.humanize)
   end
 end

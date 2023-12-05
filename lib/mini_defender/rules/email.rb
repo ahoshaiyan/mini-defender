@@ -14,6 +14,6 @@ class MiniDefender::Rules::Email < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The value should be a valid email address."
+    I18n.t('mini_defender.email.invalid')
   end
 end

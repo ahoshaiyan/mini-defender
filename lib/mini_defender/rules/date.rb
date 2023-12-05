@@ -14,7 +14,7 @@ class MiniDefender::Rules::Date < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    'The given value is not a valid date.'
+    I18n.t('mini_defender.date', attribute: attribute.humanize)
   end
 
   protected

@@ -12,6 +12,6 @@ class MiniDefender::Rules::Declined < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "Must be declined."
+    I18n.t('mini_defender.declined', attribute: attribute.humanize)
   end
 end

@@ -14,6 +14,6 @@ class MiniDefender::Rules::Numeric < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The field must contain a numeric value."
+    I18n.t('mini_defender.numeric', attribute: attribute)
   end
 end

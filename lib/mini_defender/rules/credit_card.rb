@@ -12,6 +12,6 @@ class MiniDefender::Rules::CreditCard < MiniDefender::Rules::Luhn
   end
 
   def message(attribute, value, validator)
-    'The value must be a proper credit/debit card number.'
+    I18n.t('mini_defender.credit_card', attribute: attribute.humanize)
   end
 end

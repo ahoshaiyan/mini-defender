@@ -24,6 +24,6 @@ class MiniDefender::Rules::Between < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The value length must be between #{@min} and #{@max}."
+    I18n.t('mini_defender.between', attribute: attribute.humanize, min: @min, max: @max)
   end
 end

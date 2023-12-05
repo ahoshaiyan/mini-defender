@@ -2,11 +2,12 @@
 
 module MiniDefender
   class Validator
-    attr_reader :rules, :data, :errors
+    attr_reader :rules, :data, :errors, :translations
 
-    def initialize(rules, data)
+    def initialize(rules, data, translations)
       @rules = rules
       @data = data.flatten_keys(keep_roots: true)
+      @translations = translations.flatten_keys(keep_roots: true) unless translations.nil?
       @errors = nil
       @validated = {}
       @coerced = {}
@@ -46,11 +47,12 @@ module MiniDefender
         end
 
         unless @data.key?(k)
-          @errors[k] << 'This field is missing.' if required
+          @errors[k] << I18n.t('mini_defender.required', field: k.humanize) if required
           next
         end
 
         value = coerced = @data[k]
+        translation = @translations[k] if @translations
         rule_set.each do |rule|
           next unless rule.active?(self)
 
@@ -59,7 +61,7 @@ module MiniDefender
           if rule.passes?(k, coerced, self)
             coerced = rule.coerce(coerced)
           else
-            @errors[k] << rule.error_message(k, value, self)
+            @errors[k] << rule.error_message(k, value, self, translation)
           end
         end
 

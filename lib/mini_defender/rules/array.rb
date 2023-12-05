@@ -10,6 +10,6 @@ class MiniDefender::Rules::Array < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The field must be an array."
+    I18n.t('mini_defender.array', attribute: attribute.humanize)
   end
 end
