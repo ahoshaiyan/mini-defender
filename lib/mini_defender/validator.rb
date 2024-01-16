@@ -23,6 +23,7 @@ module MiniDefender
         [k, @factory.init_set(set)]
       end
 
+      # Set default values for missing data key compared to rules
       data_rules.each do |k, set|
         if !@data.key?(k) || @data[k].blank?
           set.filter{ |r| r.defaults?(self) }.each do |r|
@@ -51,16 +52,23 @@ module MiniDefender
         end
 
         value = coerced = @data[k]
+        force_coerce = false
+
         rule_set.each do |rule|
           next unless rule.active?(self)
 
           value_included &= !rule.excluded?(self)
 
-          if rule.passes?(k, coerced, self)
+          if rule.passes?(k, value, self)
             coerced = rule.coerce(coerced)
+            force_coerce = rule.force_coerce?
           else
             @errors[k] << rule.error_message(k, value, self)
           end
+        end
+
+        if force_coerce
+          value = coerced
         end
 
         if @errors[k].empty? && value_included

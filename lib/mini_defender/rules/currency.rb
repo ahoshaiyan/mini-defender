@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'countries'
+require 'money'
 
 class MiniDefender::Rules::Currency < MiniDefender::Rule
   CURRENCIES = Money::Currency.map(&:iso_code).map(&:upcase).uniq

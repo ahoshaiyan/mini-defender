@@ -61,6 +61,12 @@ class MiniDefender::Rule
     value
   end
 
+  # This method is used to change the value
+  # regardless if coercion is required
+  def force_coerce?
+    false
+  end
+
   # @param [Object] attribute
   # @param [Object] value
   # @param [MiniDefender::Validator] validator

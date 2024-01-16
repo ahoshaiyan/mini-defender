@@ -4,10 +4,21 @@ class Hash
   def expand
     expanded = {}
 
-    reject{ |_, v| v.is_a?(Hash) || v.is_a?(Array) }.each do |k, v|
+    each do |k, v|
       keys = k.split('.')
       node = expanded
-      node = (node[keys.shift] ||= {}) while keys.length > 1
+
+      while keys.length > 1
+        next_key = keys.shift
+        next_node = (node[next_key] ||= {})
+
+        if next_node.is_a?(Array)
+          node[next_key] = next_node = next_node.each_with_index.to_h { |value, index| [index.to_s, value] }
+        end
+
+        node = next_node
+      end
+
       node[keys.shift] = v
     end
 
