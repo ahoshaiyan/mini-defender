@@ -13,7 +13,6 @@ require_relative 'mini_defender/validation_helpers'
 
 # Extensions to Ruby Core
 require_relative 'mini_defender/extensions/enumerable'
-require_relative 'mini_defender/extensions/hash'
 
 module MiniDefender
 end
