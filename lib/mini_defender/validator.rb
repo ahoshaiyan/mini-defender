@@ -12,10 +12,13 @@ module MiniDefender
       @coerced = {}
       @expander = RulesExpander.new
       @factory = RulesFactory.new
+      @array_patterns = @expander.array_patterns(rules)
     end
 
     def validate
-      return unless @errors.nil?
+      unless @errors.nil?
+        return
+      end
 
       @errors = {}
 
@@ -77,15 +80,15 @@ module MiniDefender
         end
       end
 
-      @validated = @validated.expand
-      @coerced = @coerced.expand
-
       @errors.reject! { |_, v| v.empty? }
     end
 
     def validate!
       validate if @errors.nil?
-      raise ValidationError.new('Data validation failed', @errors) unless @errors.empty?
+
+      unless @errors.empty?
+        raise ValidationError.new('Data validation failed', @errors)
+      end
     end
 
     def passes?
@@ -99,12 +102,12 @@ module MiniDefender
 
     def validated
       validate! if @errors.nil?
-      @validated
+      @validated_compacted ||= compact_expanded(@validated)
     end
 
     def coerced
       validate! if @errors.nil?
-      @coerced
+      @coerced_compacted = compact_expanded(@coerced)
     end
 
     # @return [Hash]
@@ -132,6 +135,58 @@ module MiniDefender
       end
 
       Regexp.compile("\\A#{search_key.reverse.join('\.')}\\z")
+    end
+
+    def compact_expanded(hash)
+      expanded = {}
+
+      hash.each do |k, v|
+        keys = k.split('.')
+        node = expanded
+
+        while keys.length > 1
+          next_key = keys.shift
+          next_node = (node[next_key] ||= {})
+
+          if next_node.is_a?(Array)
+            node[next_key] = next_node = next_node.each_with_index.to_h do |value, index|
+              [index.to_s, value]
+            end
+          end
+
+          node = next_node
+        end
+
+        node[keys.shift] = v
+      end
+
+      compact_keys(expanded)
+    end
+
+    def compact_keys(hash, current_key = '')
+      current_key_suffixed = if current_key == ''
+        ''
+      else
+        "#{current_key}."
+      end
+
+      result = hash.to_h do |k, v|
+        [k, v.is_a?(Hash) ? compact_keys(v, current_key_suffixed + k) : v]
+      end
+
+      if result.empty?
+        return result
+      end
+
+      unless @array_patterns.any? { |p| p.match?("#{current_key_suffixed}#{result.keys.first}") }
+        return result
+      end
+
+      if result.all? { |k, _v| k.match?(/\A\d+\z/) }
+        return result.values
+      end
+
+      result
     end
   end
 end

@@ -107,4 +107,44 @@ class HashTest < Minitest::Test
 
     assert validator.passes?
   end
+
+  def test_hash_must_return_all_elements_when_all_mode_is_used
+    validator = MiniDefender::Validator.new(
+      {
+        'metadata' => 'required|hash:all,string,integer'
+      },
+      {
+        'metadata' => {
+          'foo' => 1,
+          'zee' => 2
+        }
+      }
+    )
+
+    assert validator.coerced['metadata'].is_a?(Hash)
+    assert_equal 2, validator.coerced['metadata'].length
+
+    assert_equal 1, validator.coerced['metadata']['foo']
+    assert_equal 2, validator.coerced['metadata']['zee']
+  end
+
+  def test_hash_must_return_all_elements_when_all_mode_is_used_2
+    validator = MiniDefender::Validator.new(
+      {
+        'metadata' => 'required|hash:all,string,string'
+      },
+      {
+        'metadata' => {
+          '1' => 'foo',
+          '2' => 'bar'
+        }
+      }
+    )
+
+    assert validator.coerced['metadata'].is_a?(Hash)
+    assert_equal 2, validator.coerced['metadata'].length
+
+    assert_equal 'foo', validator.coerced['metadata']['1']
+    assert_equal 'bar', validator.coerced['metadata']['2']
+  end
 end

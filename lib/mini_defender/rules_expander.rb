@@ -15,14 +15,27 @@ module MiniDefender
         end
 
         k_pattern = Regexp.compile('\A' + rule_key.gsub(/\*/, '\d+') + '\Z')
+        k_pattern_result = {}
 
         flat_data.each do |value_key, _|
           next unless k_pattern.match?(value_key)
-          result[value_key] = rule_set
+          k_pattern_result[value_key] = rule_set
         end
+
+        if k_pattern_result.empty?
+          k_pattern_result[k_pattern.source.gsub(/\\[AZ]/, '').gsub('\d+', '0')] = rule_set
+        end
+
+        result.merge!(k_pattern_result)
       end
 
       result
+    end
+
+    def array_patterns(rules)
+      rules
+        .filter { |key, _| key.include?('*') }
+        .map { |key, _| Regexp.compile('\A' + key.gsub(/\*/, '\d+') + '\Z') }
     end
   end
 end
