@@ -13,6 +13,10 @@ class MiniDefender::Rules::Array < MiniDefender::Rule
     new(args[0] || 'none')
   end
 
+  def priority
+    500
+  end
+
   def coerce(value)
     @data_mode == 'all' ? value : []
   end
