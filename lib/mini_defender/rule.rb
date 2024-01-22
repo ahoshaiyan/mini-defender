@@ -16,6 +16,13 @@ class MiniDefender::Rule
     true
   end
 
+  # Priority is used to sort rules in a rule set to allow rules to validate data
+  # before rules that will radically change data
+  # @return [Integer]
+  def priority
+    100
+  end
+
   # @param [MiniDefender::Validator] validator
   # @return [Boolean]
   def implicit?(validator)

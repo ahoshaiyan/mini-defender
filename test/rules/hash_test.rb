@@ -147,4 +147,25 @@ class HashTest < Minitest::Test
     assert_equal 'foo', validator.coerced['metadata']['1']
     assert_equal 'bar', validator.coerced['metadata']['2']
   end
+
+  def test_hash_should_be_delayed_to_all_size_rules_validation
+    validator = MiniDefender::Validator.new(
+      {
+        'metadata' => 'required|hash|size:2|max:2|min:2',
+        'metadata.foo' => 'required|string',
+        'metadata.zee' => 'required|string'
+      },
+      {
+        'metadata' => {
+          'foo' => 'bar',
+          'zee' => 'mee'
+        }
+      }
+    )
+
+    assert validator.passes?
+
+    assert_equal 2, validator.coerced['metadata'].length
+    assert_equal 'bar', validator.coerced['metadata']['foo']
+  end
 end

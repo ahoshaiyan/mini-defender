@@ -62,7 +62,7 @@ module MiniDefender
 
           value_included &= !rule.excluded?(self)
 
-          if rule.passes?(k, value, self)
+          if rule.passes?(k, coerced, self)
             coerced = rule.coerce(coerced)
             force_coerce = rule.force_coerce?
           else

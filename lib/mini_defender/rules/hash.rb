@@ -19,6 +19,10 @@ class MiniDefender::Rules::Hash < MiniDefender::Rule
     )
   end
 
+  def priority
+    500
+  end
+
   def coerce(value)
     @data_mode == 'all' ? value : {}
   end

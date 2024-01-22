@@ -11,16 +11,23 @@ module MiniDefender
     end
 
     def init_set(rule_set)
-      rule_set = rule_set.split('|') if rule_set.is_a?(String)
-      raise ArgumentError, 'Rule set must be a string or an array' unless rule_set.is_a?(Array)
+      if rule_set.is_a?(String)
+        rule_set = rule_set.split('|')
+      end
 
-      rule_set.map do |rule|
+      unless rule_set.is_a?(Array)
+        raise ArgumentError, 'Rule set must be a string or an array'
+      end
+
+      rule_set = rule_set.map do |rule|
         unless rule.is_a?(String) || rule.is_a?(Rule)
           raise ArgumentError, 'Rule must be a string or an instance of MiniDefender::Rule'
         end
 
         rule.is_a?(String) ? init_rule(rule) : rule
       end
+
+      rule_set.sort_by! { |r| r.priority }
     end
 
     def init_rule(signature)
