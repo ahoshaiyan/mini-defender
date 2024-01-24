@@ -9,6 +9,10 @@ class MiniDefender::Rules::String < MiniDefender::Rule
     'string'
   end
 
+  def self.make(args)
+    new(args[0] || 'strict')
+  end
+
   def coerce(value)
     value.to_s
   end
