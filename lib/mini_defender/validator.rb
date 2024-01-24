@@ -66,7 +66,7 @@ module MiniDefender
             coerced = rule.coerce(coerced)
             force_coerce = rule.force_coerce?
           else
-            @errors[k] << rule.error_message(k, value, self)
+            @errors[k] << rule.error_message(k, coerced, self)
           end
         end
 
