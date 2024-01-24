@@ -34,6 +34,10 @@ class MiniDefender::Rules::Hash < MiniDefender::Rule
   def passes?(attribute, value, validator)
     passes = value.is_a?(Hash)
 
+    unless passes
+      return false
+    end
+
     if @key_type == 'string'
       passes &= value.all? { |k, _| k.is_a?(String) }
     end
