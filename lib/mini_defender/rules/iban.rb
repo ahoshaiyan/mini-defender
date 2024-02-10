@@ -5,6 +5,14 @@ class MiniDefender::Rules::Iban < MiniDefender::Rule
     'SA' => 24
   }
 
+  REPLACEMENTS = {
+    'A' => '10', 'B' => '11', 'C' => '12', 'D' => '13', 'E' => '14', 'F' => '15',
+    'G' => '16', 'H' => '17', 'I' => '18', 'J' => '19', 'K' => '20', 'L' => '21',
+    'M' => '22', 'N' => '23', 'O' => '24', 'P' => '25', 'Q' => '26', 'R' => '27',
+    'S' => '28', 'T' => '29', 'U' => '30', 'V' => '31', 'W' => '32', 'X' => '33',
+    'Y' => '34', 'Z' => '35'
+  }
+
   def self.signature
     'iban'
   end
@@ -19,8 +27,9 @@ class MiniDefender::Rules::Iban < MiniDefender::Rule
   end
 
   def valid_checksum?(iban)
-    iban = "#{iban[4..]}#{letter_code(iban[0])}#{letter_code(iban[1])}#{iban[2..3]}".to_i
-    iban % 97 === 1
+    iban = "#{iban[4..]}#{iban[0..1]}#{iban[2..3]}"
+    iban = iban.gsub(Regexp.union(REPLACEMENTS.keys), REPLACEMENTS)
+    iban.to_i % 97 === 1
   end
 
   def valid_length?(iban)
@@ -29,12 +38,5 @@ class MiniDefender::Rules::Iban < MiniDefender::Rule
 
   def message(attribute, value, validator)
     "The value should be a valid IBAN."
-  end
-
-  private
-
-  def letter_code(letter)
-    # letter is assumed to be an upcase ASCII alphabet letter (A-Z)
-    letter.ord - 55
   end
 end
