@@ -4,7 +4,7 @@ require 'test_helper'
 
 class DateEqTest < Minitest::Test
   def setup
-    @validator = MiniDefender::Validator.new([], [])
+    @validator = MiniDefender::Validator.new({}, {})
     @rule = MiniDefender::Rules::DateEq.new('2022-09-10')
   end
 
