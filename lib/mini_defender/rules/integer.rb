@@ -6,12 +6,14 @@ class MiniDefender::Rules::Integer < MiniDefender::Rule
   end
 
   def coerce(value)
-    value.to_i
+    Integer(value)
   end
 
   def passes?(attribute, value, validator)
-    value.is_a?(Integer) || value.is_a?(String) && value.match?(/^\d+$/)
-  end
+    Integer(value.to_s)
+  rescue
+    false
+  end  
 
   def message(attribute, value, validator)
     "The value must be an integer."
