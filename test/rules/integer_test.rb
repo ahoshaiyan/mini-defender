@@ -5,6 +5,7 @@ require 'test_helper'
 class IntegerTest < Minitest::Test
   def setup
     @rule = MiniDefender::Rules::Integer.new
+    @rule_relax = MiniDefender::Rules::Integer.new('relaxed')
   end
 
   def test_passes_with_string_positive_integer
@@ -37,5 +38,24 @@ class IntegerTest < Minitest::Test
 
   def test_fails_with_hash
     refute(@rule.passes?("test", {}, nil))
+  end
+
+  def test_passes_with_integer
+    assert @rule.passes?('amount', 1, nil)
+    assert_equal 1, @rule.coerce(1)
+  end
+
+  def test_strict_fails_with_arabic_digits
+    refute @rule.passes?('amount', '٣', nil)
+  end
+
+  def test_relaxed_passes_with_arabic_digits
+    assert @rule_relax.passes?('amount', '٣', nil)
+    assert_equal 3, @rule_relax.coerce('٣')
+  end
+
+  def test_relaxed_passes_with_mixed_digits
+    assert @rule_relax.passes?('amount', '2٣', nil)
+    assert_equal 23, @rule_relax.coerce('2٣')
   end
 end
