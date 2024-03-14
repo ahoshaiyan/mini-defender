@@ -53,7 +53,10 @@ class MiniDefender::Rules::Integer < MiniDefender::Rule
       return true
     end
 
-    value = value.to_s
+    # Remove leading zero so Integer will not treat it as octal
+    value = value
+      .to_s
+      .gsub(/^0+/, '')
 
     if @mode == 'relaxed'
       value = normalize_digits(value)

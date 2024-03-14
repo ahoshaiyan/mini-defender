@@ -58,4 +58,8 @@ class IntegerTest < Minitest::Test
     assert @rule_relax.passes?('amount', '2٣', nil)
     assert_equal 23, @rule_relax.coerce('2٣')
   end
+
+  def test_passes_with_integer_with_leading_zero
+    assert @rule_relax.passes?('amount', '08', nil)
+  end
 end
