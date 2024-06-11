@@ -7,7 +7,7 @@ module MiniDefender::ValidatesInput
     data = cleanse_data(params.to_unsafe_hash.deep_stringify_keys)
     validator = MiniDefender::Validator.new(rules, data)
     validator.validate!
-    coerced ? validator.coerced : validator.data
+    coerced ? validator.coerced : validator.validated
   end
 
   private

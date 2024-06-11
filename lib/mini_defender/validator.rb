@@ -28,7 +28,7 @@ module MiniDefender
 
       # Set default values for missing data key compared to rules
       data_rules.each do |k, set|
-        if !@data.key?(k) || @data[k].blank?
+        if !@data.key?(k) || missing_value?(@data[k])
           set.filter{ |r| r.defaults?(self) }.each do |r|
             @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
           end
@@ -43,7 +43,7 @@ module MiniDefender
         value_included = true
         required = rule_set.any? { |r| r.implicit?(self) }
 
-        if !@data.key?(k) || @data[k].blank?
+        if !@data.key?(k) || missing_value?(@data[k])
           rule_set.filter{ |r| r.defaults?(self) }.each do |r|
             @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
           end
@@ -187,6 +187,13 @@ module MiniDefender
       end
 
       result
+    end
+
+    def missing_value?(value)
+      value.nil? ||
+        value.is_a?(String) && value.strip.empty? ||
+        value.is_a?(Hash) && value.empty? ||
+        value.is_a?(Array) && value.empty?
     end
   end
 end
