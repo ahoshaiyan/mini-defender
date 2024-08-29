@@ -26,7 +26,7 @@ class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
 
   def passes?(attribute, value, validator)
     @file = value.is_a?(ActionDispatch::Http::UploadedFile)
-    @file && @types.include?(@file.content_type)
+    @file && @types.include?(value.content_type)
   end
 
   def message(attribute, value, validator)
