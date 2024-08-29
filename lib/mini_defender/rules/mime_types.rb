@@ -17,9 +17,11 @@ class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   end
 
   def self.make(args)
-    raise ArgumentError, 'Expected at least one MIME type.' unless args.length > 0
+    unless args.length > 0
+      raise ArgumentError, 'Expected at least one MIME type.'
+    end
 
-    new(args.split(',').map(&:downcase).map(&:strip))
+    new(args.map(&:downcase).map(&:strip))
   end
 
   def passes?(attribute, value, validator)
