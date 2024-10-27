@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'actionpack', '>= 6.0'
   spec.add_runtime_dependency 'countries'
   spec.add_runtime_dependency 'money'
+  spec.add_runtime_dependency 'marcel'
 end

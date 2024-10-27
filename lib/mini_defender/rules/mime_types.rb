@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'action_dispatch'
+require 'marcel'
 
 class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   def initialize(types)
@@ -26,7 +27,10 @@ class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
 
   def passes?(attribute, value, validator)
     @file = value.is_a?(ActionDispatch::Http::UploadedFile)
-    @file && @types.include?(value.content_type)
+    content_type = Marcel::MimeType.for(value.read)
+    value.rewind
+
+    @file && @types.include?(content_type)
   end
 
   def message(attribute, value, validator)
