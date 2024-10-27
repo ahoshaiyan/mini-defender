@@ -127,10 +127,10 @@ any of the methods on it, see [validator.rb](./lib/mini_defender/validator.rb) f
 
 ## Rules
 
-Mini Defender tries to implement the same set of rules provided by Laravel, you can see the available rules here at
-[lib/mini_defender/rules](./lib/mini_defender/rules)
+Mini Defender tries to implement the same set of rules provided by Laravel, you can explore the available rules in two ways:
 
-
+- Browse the source code: [lib/mini_defender/rules](./lib/mini_defender/rules)
+- View the rules list: [RULES-LIST.md](RULES-LIST.md)
 ## Add a Custom Rule
 
 To implement your custom rules, you need to create a new class that inherent from `MiniDefender::Rule` and implement
