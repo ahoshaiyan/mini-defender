@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class NotIPURL < MiniDefender::Rule
+class MiniDefender::Rules::NotIPURL < MiniDefender::Rule
   PUBLIC_TLDS = %w[
     # Generic
     com org net edu gov mil int
@@ -20,7 +20,11 @@ class NotIPURL < MiniDefender::Rule
     corp private lan intranet
   ]
 
-  def passes?(_attribute, value, _validator)
+  def self.signature
+    'not_ip_url'
+  end
+
+  def passes?(attribute, value, validator)
     uri = URI.parse(value.to_s)
     host = uri.host.to_s
 
