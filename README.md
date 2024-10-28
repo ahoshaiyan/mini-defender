@@ -1,4 +1,8 @@
 # MiniDefender
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-yellowgreen.svg)](http://makeapullrequest.com)
+[![Ruby Version](https://img.shields.io/badge/ruby-%3E%3D%202.7.0-red.svg)](https://www.ruby-lang.org/)
+[![Gem Version](https://img.shields.io/badge/gem-v0.6.5-lightblue.svg)](https://rubygems.org/gems/mini_defender/versions/0.6.5)
 
 A pragmatic approach to validation in Rails inspired by Laravel's Validator.
 
