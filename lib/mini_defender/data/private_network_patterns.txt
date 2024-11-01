@@ -1,0 +1,89 @@
+# Basic localhost patterns
+localhost
+127.
+::1
+0.0.0.0
+::
+*.local
+local.*
+localhost.*
+
+# IPv4 patterns
+127.0.0.[0-9]+
+
+# Private networks
+10.*
+172.(1[6-9]|2[0-9]|3[0-1]).*
+192.168.*
+169.254.*
+
+# Alternative representations
+0177.0000.0000.0001
+0x7f000001
+
+# Dotless decimal
+2130706433  # 127.0.0.1
+3232235521  # 192.168.0.1
+3232235777  # 192.168.1.1
+
+# IPv6 patterns
+0:0:0:0:0:0:0:1
+::0:1
+[0:]+:[0:]*:[0:]*:[0:]*:[0:]*:[0:]*:[0:]*:1
+fe80:*
+fc00:*
+fd*
+2001:db8:*
+::ffff:127.*
+::ffff:0:127.*
+64:ff9b::127.*
+::ffff:0:0:0
+::
+::*
+
+# Domain variants
+intranet
+internal
+*.internal
+*.localhost
+*.workgroup
+*.corp
+*.lan
+*.private
+*.home
+site
+*.dev
+*.test
+*.example
+*.invalid
+*.localdomain
+*.domain.local
+
+# mDNS and Bonjour
+*.local.mesh
+*.local.net
+*.local.home
+
+# Additional internal patterns
+*.virtual
+*.vmware
+*.virtualbox
+*.docker
+*.vagrant
+*.vm
+*.development
+*.staging
+*.testing
+*.sandbox
+
+# Encoded variants
+%6C%6F%63%61%6C%68%6F%73%74
+%6c%6f%63%61%6c%68%6f%73%74
+bG9jYWxob3N0
+
+# DNS rebinding protection
+*.0sngrc.*
+*.1u0n.*
+*.10minutemail.*
+*.burpcollaborator.*
+*.interact.sh

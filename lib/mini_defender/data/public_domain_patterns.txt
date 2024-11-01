@@ -1,0 +1,130 @@
+# Generic TLDs
+*.com
+*.net
+*.org
+*.edu
+*.gov
+*.mil
+*.int
+*.info
+*.biz
+*.name
+*.pro
+
+# Country Code TLDs
+*.ae     # United Arab Emirates
+*.bh     # Bahrain
+*.dz     # Algeria
+*.eg     # Egypt
+*.iq     # Iraq
+*.jo     # Jordan
+*.kw     # Kuwait
+*.kwt    # Kuwait alternative
+*.lb     # Lebanon
+*.ly     # Libya
+*.ma     # Morocco
+*.om     # Oman
+*.ps     # Palestine
+*.qa     # Qatar
+*.sa     # Saudi Arabia
+*.sd     # Sudan
+*.sy     # Syria
+*.tn     # Tunisia
+*.ye     # Yemen
+
+# New gTLDs
+*.academy
+*.agency
+*.app
+*.cloud
+*.dev
+*.io
+*.tech
+*.xyz
+*.online
+*.store
+*.shop
+*.site
+*.website
+*.digital
+*.network
+*.systems
+*.services
+
+# Common Multi-Level Domains
+*.co.uk
+*.co.jp
+*.com.au
+*.co.nz
+*.com.sg
+*.com.my
+*.com.br
+
+# Cloud Platforms
+*.amazonaws.com
+*.s3.amazonaws.com
+*.cloudfront.net
+*.azurewebsites.net
+*.blob.core.windows.net
+*.googleusercontent.com
+*.storage.googleapis.com
+*.appspot.com
+*.web.app
+*.firebaseapp.com
+*.azure-api.net
+*.cloudfunctions.net
+*.lambda-url.*.amazonaws.com
+*.compute.amazonaws.com
+*.elasticbeanstalk.com
+
+# Content Delivery Networks
+*.akamai.net
+*.akamaized.net
+*.cloudflare.com
+*.cloudflare.net
+*.fastly.net
+*.edgecast.net
+*.cdn77.org
+*.cdn.cloudflare.net
+*.githubusercontent.com
+*.wp.com
+*.edgesuite.net
+*.jsdelivr.net
+*.unpkg.com
+
+# Dynamic DNS Providers
+*.ddns.net
+*.dyndns.org
+*.no-ip.org
+*.no-ip.com
+*.sslip.io
+*.nip.io
+*.duckdns.org
+*.freedns.afraid.org
+*.hopto.org
+*.zapto.org
+
+# Special Cases from Mozilla Public Suffix
+*.github.io
+*.pages.dev
+*.vercel.app
+*.netlify.app
+*.herokuapp.com
+*.workers.dev
+*.surge.sh
+*.gitlab.io
+*.sourceforge.io
+*.readthedocs.io
+*.bitbucket.io
+*.blogspot.com
+*.wordpress.com
+*.squarespace.com
+*.medium.com
+*.wixsite.com
+
+# Block Patterns (start with !)
+!xn--.*     # Block punycode domains not explicitly allowed
+
+# Domain Part Length Requirements
+MIN_PART_LENGTH=2    # Minimum length for each domain part
+MAX_PART_LENGTH=63   # Maximum length per DNS spec
