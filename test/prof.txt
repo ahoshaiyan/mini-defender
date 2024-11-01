@@ -1,0 +1,887 @@
+Loading data...
+Validating...
+{}
+Measure Mode: allocations
+Thread ID: 640
+Fiber ID: 620
+Total: 0.000000
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+   NaN      0.000     0.000     0.000     0.000        1   RubyProf::Cmd#run              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/ruby-prof-1.7.0/bin/ruby-prof:303
+   NaN      0.000     0.000     0.000     0.000        1   JSON::Ext::Generator::State#generate 
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#pretty_generate /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:390
+   NaN      0.000     0.000     0.000     0.000   119948   String#match?                  
+   NaN      0.000     0.000     0.000     0.000    85029   Enumerable#all?                
+   NaN      0.000     0.000     0.000     0.000    85031  *MiniDefender::Validator#compact_keys /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/validator.rb:166
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::Validator#compact_expanded /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/validator.rb:140
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::Validator#coerced /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/validator.rb:108
+   NaN      0.000     0.000     0.000     0.000        1   Array#clear                    
+   NaN      0.000     0.000     0.000     0.000        1   PrettyPrint#flush              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:288
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#pop_inspect_key  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:176
+   NaN      0.000     0.000     0.000     0.000        1   <Class::PP>#sharing_detection  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:120
+   NaN      0.000     0.000     0.000     0.000        2   PrettyPrint::GroupQueue#delete /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:477
+   NaN      0.000     0.000     0.000     0.000        2   PrettyPrint::Group#breakables  
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#seplist          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:251
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#pp_hash          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:281
+   NaN      0.000     0.000     0.000     0.000        1   Hash#pretty_print              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:380
+   NaN      0.000     0.000     0.000     0.000        2  *PrettyPrint#nest               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:277
+   NaN      0.000     0.000     0.000     0.000        2  *PrettyPrint#group_sub          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:260
+   NaN      0.000     0.000     0.000     0.000        5   IO#<<                          
+   NaN      0.000     0.000     0.000     0.000        4   PrettyPrint#text               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:180
+   NaN      0.000     0.000     0.000     0.000        2  *PrettyPrint#group              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:249
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#push_inspect_key /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:171
+   NaN      0.000     0.000     0.000     0.000        1   Hash#include?                  
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#check_inspect_key /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:163
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#pp               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:185
+   NaN      0.000     0.000     0.000     0.000        2   Hash#==                        
+   NaN      0.000     0.000     0.000     0.000        1   PP::PPMethods#guard_inspect_key /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:141
+   NaN      0.000     0.000     0.000     0.000        6   Integer#<                      
+   NaN      0.000     0.000     0.000     0.000        7   PrettyPrint::Group#depth       
+   NaN      0.000     0.000     0.000     0.000        3   PrettyPrint::GroupQueue#enq    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:454
+   NaN      0.000     0.000     0.000     0.000        1   PrettyPrint::GroupQueue#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:445
+   NaN      0.000     0.000     0.000     0.000        3   PrettyPrint::Group#initialize  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:399
+   NaN      0.000     0.000     0.000     0.000        1   PrettyPrint#initialize         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/prettyprint.rb:82
+   NaN      0.000     0.000     0.000     0.000        1   <Class::PP>#pp                 /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:91
+   NaN      0.000     0.000     0.000     0.000        1   <Class::SystemCallError>#===   
+   NaN      0.000     0.000     0.000     0.000        1   SystemCallError#initialize     
+   NaN      0.000     0.000     0.000     0.000        1   IO#winsize                     
+   NaN      0.000     0.000     0.000     0.000        1   <Class::PP>#width_for          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/pp.rb:74
+   NaN      0.000     0.000     0.000     0.000        2  *Kernel#pp                      <internal:prelude>:13
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::Validator#errors 
+   NaN      0.000     0.000     0.000     0.000        1   Hash#reject!                   
+   NaN      0.000     0.000     0.000     0.000    29974   Integer#to_i                   <internal:numeric>:210
+   NaN      0.000     0.000     0.000     0.000    29974   MiniDefender::Rules::Integer#coerce /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/integer.rb:8
+   NaN      0.000     0.000     0.000     0.000    29974   MiniDefender::Rules::Integer#passes? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/integer.rb:12
+   NaN      0.000     0.000     0.000     0.000    29974   Numeric#blank?                 /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/object/blank.rb:141
+   NaN      0.000     0.000     0.000     0.000   119948   MiniDefender::Rule#implicit?   /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:21
+   NaN      0.000     0.000     0.000     0.000    20001   MiniDefender::Rules::Array#force_coerce? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/array.rb:20
+   NaN      0.000     0.000     0.000     0.000    20001   MiniDefender::Rules::Array#coerce /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/array.rb:16
+   NaN      0.000     0.000     0.000     0.000    20001   MiniDefender::Rules::Array#passes? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/array.rb:24
+   NaN      0.000     0.000     0.000     0.000    80004   MiniDefender::Rules::LessThanOrEqual#passes? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/less_than_or_equal.rb:11
+   NaN      0.000     0.000     0.000     0.000    69975   MiniDefender::Rules::Hash#force_coerce? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/hash.rb:26
+   NaN      0.000     0.000     0.000     0.000    69975   MiniDefender::Rules::Hash#coerce /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/hash.rb:22
+   NaN      0.000     0.000     0.000     0.000    69975   MiniDefender::Rules::Hash#passes? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/hash.rb:30
+   NaN      0.000     0.000     0.000     0.000    20001   Hash#length                    
+   NaN      0.000     0.000     0.000     0.000   239955   MiniDefender::Rules::String#passes? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/string.rb:8
+   NaN      0.000     0.000     0.000     0.000   589890   MiniDefender::Rule#force_coerce? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:66
+   NaN      0.000     0.000     0.000     0.000   559916   MiniDefender::Rule#coerce      /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:60
+   NaN      0.000     0.000     0.000     0.000   299963   String#length                  
+   NaN      0.000     0.000     0.000     0.000   239957   MiniDefender::Rules::Required#passes? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required.rb:14
+   NaN      0.000     0.000     0.000     0.000   679866   TrueClass#&                    
+   NaN      0.000     0.000     0.000     0.000   679866   MiniDefender::Rule#excluded?   /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:56
+   NaN      0.000     0.000     0.000     0.000   679866   MiniDefender::Rule#active?     /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:50
+   NaN      0.000     0.000     0.000     0.000   239957   MiniDefender::Rules::Required#implicit? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required.rb:10
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::RulesExpander#expand /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules_expander.rb:8
+   NaN      0.000     0.000     0.000     0.000     4977   MiniDefender::Rule#defaults?   /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:27
+   NaN      0.000     0.000     0.000     0.000    20002   Array#blank?                   
+   NaN      0.000     0.000     0.000     0.000    69976   Hash#blank?                    
+   NaN      0.000     0.000     0.000     0.000   239962   String#blank?                  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/object/blank.rb:121
+   NaN      0.000     0.000     0.000     0.000        2   MiniDefender::Rules::Array#initialize /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/array.rb:8
+   NaN      0.000     0.000     0.000     0.000        2   <Class::MiniDefender::Rules::Array>#make /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/array.rb:12
+   NaN      0.000     0.000     0.000     0.000        8   MiniDefender::Rules::Size#initialize /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/size.rb:6
+   NaN      0.000     0.000     0.000     0.000        8   <Class::MiniDefender::Rules::Size>#make /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/size.rb:16
+   NaN      0.000     0.000     0.000     0.000        4   MiniDefender::Rules::Hash#initialize /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/hash.rb:8
+   NaN      0.000     0.000     0.000     0.000        4   <Class::MiniDefender::Rules::Hash>#make /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/hash.rb:14
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::String>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/string.rb:4
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::Timezone>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/timezone.rb:6
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::StartingWith>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/starting_with.rb:12
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::RequiredWithoutAll>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required_without_all.rb:14
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::Default>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/default.rb:8
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::RequiredWithAll>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required_with_all.rb:14
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::Regex>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/regex.rb:10
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::RequiredWith>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required_with.rb:14
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::RequiredUnless>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required_unless.rb:13
+   NaN      0.000     0.000     0.000     0.000       18   <Class::MiniDefender::Rules::RequiredIf>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required_if.rb:13
+   NaN      0.000     0.000     0.000     0.000       39   <Class::MiniDefender::Rule>#make /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:10
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::Required>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/required.rb:6
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::NotStartingWith>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/not_starting_with.rb:12
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::ProhibitedUnless>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/prohibited_unless.rb:11
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::ProhibitedIf>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/prohibited_if.rb:11
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::Prohibited>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/prohibited.rb:4
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::MerchantCategoryCode>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/merchant_category_code.rb:988
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::MinDigits>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/min_digits.rb:10
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::NotRegex>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/not_regex.rb:10
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::NotIn>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/not_in.rb:10
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::Present>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/present.rb:4
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::NationalId>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/national_id.rb:6
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::MacAddress>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/mac_address.rb:12
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::Min>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/min.rb:6
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::NotEndingWith>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/not_ending_with.rb:12
+   NaN      0.000     0.000     0.000     0.000       38   <Class::MiniDefender::Rules::MimeTypes>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/mime_types.rb:15
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Max>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/max.rb:6
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Size>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/size.rb:12
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Equal>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/equal.rb:6
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::LessThanOrEqual>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/less_than_or_equal.rb:7
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::MaxDigits>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/max_digits.rb:10
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::EndingWith>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/ending_with.rb:12
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Ipv6>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/ipv6.rb:14
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Ipv4>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/ipv4.rb:14
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Email>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/email.rb:4
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::Distinct>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/distinct.rb:4
+   NaN      0.000     0.000     0.000     0.000       46   <Class::MiniDefender::Rules::DigitsBetween>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/digits_between.rb:12
+   NaN      0.000     0.000     0.000     0.000       47   <Class::MiniDefender::Rules::Integer>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/integer.rb:4
+   NaN      0.000     0.000     0.000     0.000       47   <Class::MiniDefender::Rules::Digits>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/digits.rb:10
+   NaN      0.000     0.000     0.000     0.000       47   <Class::MiniDefender::Rules::LessThan>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/less_than.rb:7
+   NaN      0.000     0.000     0.000     0.000       47   <Class::MiniDefender::Rules::Json>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/json.rb:6
+   NaN      0.000     0.000     0.000     0.000       51   <Class::MiniDefender::Rules::Hash>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/hash.rb:4
+   NaN      0.000     0.000     0.000     0.000       51   <Class::MiniDefender::Rules::Different>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/different.rb:11
+   NaN      0.000     0.000     0.000     0.000       51   <Class::MiniDefender::Rules::DeclinedIf>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/declined_if.rb:13
+   NaN      0.000     0.000     0.000     0.000       51   <Class::MiniDefender::Rules::Declined>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/declined.rb:6
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::Array>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/array.rb:4
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::DateLte>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/date_lte.rb:6
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::DateLt>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/date_lt.rb:6
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::DateGte>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/date_gte.rb:6
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::DateGt>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/date_gt.rb:6
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::DateFormat>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/date_format.rb:13
+   NaN      0.000     0.000     0.000     0.000       53   <Class::MiniDefender::Rules::DateEq>#signature /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules/date_eq.rb:11
+   NaN      0.000     0.000     0.000     0.000       53   MiniDefender::RulesFactory#init_rule /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules_factory.rb:26
+   NaN      0.000     0.000     0.000     0.000       25   MiniDefender::RulesFactory#init_set /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules_factory.rb:13
+   NaN      0.000     0.000     0.000     0.000    85032  *Hash#to_h                      
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::Validator#validate /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/validator.rb:18
+   NaN      0.000     0.000     0.000     0.000       32   <Class::Regexp>#compile        
+   NaN      0.000     0.000     0.000     0.000       50   String#include?                
+   NaN      0.000     0.000     0.000     0.000        1   Hash#filter                    
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::RulesExpander#array_patterns /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules_expander.rb:35
+   NaN      0.000     0.000     0.000     0.000    35056   Enumerable#to_h                
+   NaN      0.000     0.000     0.000     0.000    89977  *Enumerable#flatten_keys_recurse /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/extensions/enumerable.rb:10
+   NaN      0.000     0.000     0.000     0.000        1   Enumerable#flatten_keys        /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/extensions/enumerable.rb:4
+   NaN      0.000     0.000     0.000     0.000        1   MiniDefender::Validator#initialize /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/validator.rb:7
+   NaN      0.000     0.000     0.000     0.000        7   IO#write                       
+   NaN      0.000     0.000     0.000     0.000        2   IO#puts                        
+   NaN      0.000     0.000     0.000     0.000        2   Kernel#puts                    
+   NaN      0.000     0.000     0.000     0.000       90   <Class::MiniDefender::RulesFactory>#blueprints /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules_factory.rb:5
+   NaN      0.000     0.000     0.000     0.000       89   <Class::MiniDefender::RulesFactory>#register /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rules_factory.rb:9
+   NaN      0.000     0.000     0.000     0.000     2108   <Class::MiniDefender::Rule>#available? /Users/ali/develop/personal/libs/mini_defender/lib/mini_defender/rule.rb:15
+   NaN      0.000     0.000     0.000     0.000       89   Module#ancestors               
+   NaN      0.000     0.000     0.000     0.000     4964   Array#filter                   
+   NaN      0.000     0.000     0.000     0.000        8   <Module::URI>#register_scheme  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/common.rb:71
+   NaN      0.000     0.000     0.000     0.000      256   Integer#&                      
+   NaN      0.000     0.000     0.000     0.000      256   Integer#>>                     
+   NaN      0.000     0.000     0.000     0.000     1280   String#%                       
+   NaN      0.000     0.000     0.000     0.000     1280   Integer#chr                    
+   NaN      0.000     0.000     0.000     0.000        2   Integer#times                  
+   NaN      0.000     0.000     0.000     0.000        1   Array#to_h                     
+   NaN      0.000     0.000     0.000     0.000        1   <Module::URI>#scheme_list      /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/common.rb:76
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC2396_Parser#regexp     
+   NaN      0.000     0.000     0.000     0.000        3   Hash#each_pair                 
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC2396_Parser#pattern    
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC2396_Parser#initialize_regexp /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/rfc2396_parser.rb:496
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC2396_Parser#initialize_pattern /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/rfc2396_parser.rb:338
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC2396_Parser#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/rfc2396_parser.rb:99
+   NaN      0.000     0.000     0.000     0.000        3   Hash#each_value                
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC3986_Parser#default_regexp /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/rfc3986_parser.rb:94
+   NaN      0.000     0.000     0.000     0.000        1   URI::RFC3986_Parser#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/uri/rfc3986_parser.rb:10
+   NaN      0.000     0.000     0.000     0.000        1   Array#collect                  
+   NaN      0.000     0.000     0.000     0.000        1   Time#year                      
+   NaN      0.000     0.000     0.000     0.000        1   Time#utc                       
+   NaN      0.000     0.000     0.000     0.000        1   Time#initialize                <internal:timev>:297
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Time>#now              <internal:timev>:223
+   NaN      0.000     0.000     0.000     0.000        2   Kernel#object_id               
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::Promises::InternalStates::Fulfilled#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/promises.rb:399
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::ReInclude#include  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/re_include.rb:50
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::ReInclude#extended /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/re_include.rb:44
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::LockFreeStack::Node#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/lock_free_stack.rb:23
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Concurrent::LockFreeStack::Node>#[] 
+   NaN      0.000     0.000     0.000     0.000        1   Class#superclass               
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Concurrent::ThreadSafe::Util>#make_synchronized_on_cruby /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/thread_safe/util/data_structures.rb:16
+   NaN      0.000     0.000     0.000     0.000        6   <Class::Concurrent::Synchronization::Object>#define_initialize_atomic_fields /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/object.rb:131
+   NaN      0.000     0.000     0.000     0.000        6   <Class::Concurrent::Synchronization::Object>#attr_atomic /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/object.rb:84
+   NaN      0.000     0.000     0.000     0.000        1   Fiber#resume                   
+   NaN      0.000     0.000     0.000     0.000        1   Fiber#initialize               
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Concurrent>#mutex_owned_per_thread? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/lock_local_var.rb:7
+   NaN      0.000     0.000     0.000     0.000        5   Integer#<<                     
+   NaN      0.000     0.000     0.000     0.000        1   Integer#-@                     <internal:numeric>:52
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::ImmediateExecutor#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/executor/immediate_executor.rb:21
+   NaN      0.000     0.000     0.000     0.000        5   Concurrent::Concern::Dereferenceable#ns_set_deref_options /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/concern/dereferenceable.rb:54
+   NaN      0.000     0.000     0.000     0.000        5   Concurrent::Concern::Dereferenceable#set_deref_options /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/concern/dereferenceable.rb:48
+   NaN      0.000     0.000     0.000     0.000        6   Concurrent::Event#ns_initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/event.rb:104
+   NaN      0.000     0.000     0.000     0.000        6   Concurrent::Event#initialize   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/event.rb:40
+   NaN      0.000     0.000     0.000     0.000        5   Concurrent::Concern::Obligation#init_obligation /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/concern/obligation.rb:139
+   NaN      0.000     0.000     0.000     0.000        5   Concurrent::Delay#ns_initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/delay.rb:160
+   NaN      0.000     0.000     0.000     0.000       16  *Concurrent::Synchronization::MutexLockableObject#synchronize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:44
+   NaN      0.000     0.000     0.000     0.000       14   Thread::ConditionVariable#initialize 
+   NaN      0.000     0.000     0.000     0.000       14   Concurrent::Synchronization::Object#__initialize_atomic_fields__ /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/object.rb:146
+   NaN      0.000     0.000     0.000     0.000       14   Concurrent::Synchronization::AbstractObject#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/abstract_object.rb:7
+   NaN      0.000     0.000     0.000     0.000       14   Concurrent::Synchronization::Object#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/object.rb:28
+   NaN      0.000     0.000     0.000     0.000       14   Concurrent::Synchronization::MutexLockableObject#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:30
+   NaN      0.000     0.000     0.000     0.000        5   Concurrent::Delay#initialize   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/delay.rb:62
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::Utility::ProcessorCounter#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/processor_counter.rb:11
+   NaN      0.000     0.000     0.000     0.000       16   <Module::Concurrent::Synchronization>#full_memory_barrier /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/full_memory_barrier.rb:7
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::MutexAtomicReference#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic_reference/mutex_atomic.rb:16
+   NaN      0.000     0.000     0.000     0.000       16  *Concurrent::Synchronization::SafeInitialization#new /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/safe_initialization.rb:29
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Concurrent>#create_simple_logger /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/concern/logging.rb:37
+   NaN      0.000     0.000     0.000     0.000       22   <Class::Concurrent::Synchronization::Object>#safe_initialization? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/object.rb:37
+   NaN      0.000     0.000     0.000     0.000       22   <Class::Concurrent::Synchronization::Object>#safe_initialization! /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/object.rb:33
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Concurrent::Synchronization::Volatile>#included /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/synchronization/volatile.rb:29
+   NaN      0.000     0.000     0.000     0.000        4   Concurrent::Utility::EngineDetector#on_truffleruby? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/engine.rb:15
+   NaN      0.000     0.000     0.000     0.000        2   Exception#respond_to?          
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::Utility::NativeExtensionLoader#load_error_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/native_extension_loader.rb:38
+   NaN      0.000     0.000     0.000     0.000        2   Kernel#raise                   
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::Utility::NativeExtensionLoader#try_load_c_extension /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/native_extension_loader.rb:58
+   NaN      0.000     0.000     0.000     0.000        4   Concurrent::Utility::NativeExtensionLoader#c_extensions_loaded? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/native_extension_loader.rb:15
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::Utility::NativeExtensionLoader#load_native_extensions /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/native_extension_loader.rb:19
+   NaN      0.000     0.000     0.000     0.000        1   Kernel#caller                  
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Regexp>#quote          
+   NaN      0.000     0.000     0.000     0.000       17   Class#initialize               
+   NaN      0.000     0.000     0.000     0.000        1   Integer#>=                     
+   NaN      0.000     0.000     0.000     0.000        1   Array#*                        
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::LazyLoadHooks#on_load /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/lazy_load_hooks.rb:60
+   NaN      0.000     0.000     0.000     0.000        3   ActiveSupport::Autoload#autoload_under /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/dependencies/autoload.rb:56
+   NaN      0.000     0.000     0.000     0.000        1   Module#class_variable_get      
+   NaN      0.000     0.000     0.000     0.000        1   #<Module:0x00000001041c65b0>#deprecate_constant /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/deprecation/constant_accessor.rb:42
+   NaN      0.000     0.000     0.000     0.000        2   Binding#receiver               
+   NaN      0.000     0.000     0.000     0.000        2   <Module::ObjectSpace>#define_finalizer 
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::AbstractLocals#local_finalizer /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/locals.rb:112
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::AbstractLocals#synchronize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/locals.rb:43
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::AbstractLocals#next_index /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/locals.rb:55
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::ThreadLocalVar#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/thread_local_var.rb:51
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Deprecation::Behavior#debug= 
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Deprecation::Reporting#silenced= 
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Deprecation#deprecation_horizon= 
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Deprecation::Reporting#gem_name= 
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Deprecation#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/deprecation.rb:68
+   NaN      0.000     0.000     0.000     0.000        1   <Module::ActionDispatch>#deprecator /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/actionpack-7.1.2/lib/action_dispatch/deprecator.rb:4
+   NaN      0.000     0.000     0.000     0.000        1   Module#initialize              
+   NaN      0.000     0.000     0.000     0.000        1   <Module::ActiveSupport::Deprecation::DeprecatedConstantAccessor>#included /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/deprecation/constant_accessor.rb:28
+   NaN      0.000     0.000     0.000     0.000       22   ActiveSupport::Deprecation::InstanceDelegator::ClassMethods#method_added /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/deprecation/instance_delegator.rb:20
+   NaN      0.000     0.000     0.000     0.000        4   ActiveSupport::Deprecation::InstanceDelegator::ClassMethods#include /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/deprecation/instance_delegator.rb:15
+   NaN      0.000     0.000     0.000     0.000        2   Module#prepended               
+   NaN      0.000     0.000     0.000     0.000        2   Module#prepend_features        
+   NaN      0.000     0.000     0.000     0.000        2   Module#prepend                 
+   NaN      0.000     0.000     0.000     0.000        1   <Module::ActiveSupport::Deprecation::InstanceDelegator>#included /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/deprecation/instance_delegator.rb:6
+   NaN      0.000     0.000     0.000     0.000        2   Concurrent::AbstractLocals#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/locals.rb:36
+   NaN      0.000     0.000     0.000     0.000        1   <Module::ActiveSupport::Notifications>#notifier= 
+   NaN      0.000     0.000     0.000     0.000        1   Mutex_m#mu_initialize          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/mutex_m-0.2.0/lib/mutex_m.rb:107
+   NaN      0.000     0.000     0.000     0.000        1   Mutex_m#initialize             /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/mutex_m-0.2.0/lib/mutex_m.rb:111
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Notifications::Fanout#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/notifications/fanout.rb:54
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Mutex_m>#define_aliases /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/mutex_m-0.2.0/lib/mutex_m.rb:46
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Mutex_m>#append_features /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/mutex_m-0.2.0/lib/mutex_m.rb:54
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Delegator>#const_missing /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/delegate.rb:60
+   NaN      0.000     0.000     0.000     0.000        1   Module#public_instance_methods 
+   NaN      0.000     0.000     0.000     0.000        3   Module#instance_method         
+   NaN      0.000     0.000     0.000     0.000        1   Module#private_instance_methods 
+   NaN      0.000     0.000     0.000     0.000        1   Module#initialize_copy         
+   NaN      0.000     0.000     0.000     0.000        5   <Class::Ractor>#make_shareable <internal:ractor>:814
+   NaN      0.000     0.000     0.000     0.000        1   <Module::GC>#stat              <internal:gc>:195
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Process>#clock_gettime 
+   NaN      0.000     0.000     0.000     0.000        2   Module#delegate                /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/module/delegation.rb:171
+   NaN      0.000     0.000     0.000     0.000        1   BasicObject#singleton_method_undefined 
+   NaN      0.000     0.000     0.000     0.000      263   Module#undef_method            
+   NaN      0.000     0.000     0.000     0.000        1   Set#freeze                     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/set.rb:305
+   NaN      0.000     0.000     0.000     0.000        1   Enumerable#each_entry          
+   NaN      0.000     0.000     0.000     0.000        1   Set#do_with_enum               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/set.rb:274
+   NaN      0.000     0.000     0.000     0.000        2   Kernel#instance_of?            
+   NaN      0.000     0.000     0.000     0.000        1   Set#merge                      /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/set.rb:605
+   NaN      0.000     0.000     0.000     0.000        4   Kernel#autoload                
+   NaN      0.000     0.000     0.000     0.000       50   Kernel#singleton_class         
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::ErrorReporter#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/error_reporter.rb:32
+   NaN      0.000     0.000     0.000     0.000        5   Module#class_variable_defined? 
+   NaN      0.000     0.000     0.000     0.000        2   ActiveSupport::Autoload#eager_autoload /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/dependencies/autoload.rb:70
+   NaN      0.000     0.000     0.000     0.000       84   String#downcase!               
+   NaN      0.000     0.000     0.000     0.000       84   String#tr!                     
+   NaN      0.000     0.000     0.000     0.000      168   String#gsub!                   
+   NaN      0.000     0.000     0.000     0.000       84   ActiveSupport::Inflector::Inflections#acronyms_underscore_regex 
+   NaN      0.000     0.000     0.000     0.000       84   Concurrent::Collection::NonConcurrentMapBackend#key? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:77
+   NaN      0.000     0.000     0.000     0.000        1   Hash#store                     
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Fallbacks#defaults 
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Simple#to_sym /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/simple.rb:25
+   NaN      0.000     0.000     0.000     0.000        2   I18n::Locale::Tag::Simple#tag  
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Simple#subtags /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/simple.rb:21
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Simple#to_a /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/simple.rb:33
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Parents#parent /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/parents.rb:5
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Parents#parents /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/parents.rb:18
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Parents#self_and_parents /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/parents.rb:14
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Tag::Simple#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/simple.rb:17
+   NaN      0.000     0.000     0.000     0.000        1   <Class::I18n::Locale::Tag::Simple>#tag /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag/simple.rb:8
+   NaN      0.000     0.000     0.000     0.000        1   <Module::I18n::Locale::Tag>#implementation /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag.rb:12
+   NaN      0.000     0.000     0.000     0.000        1   <Module::I18n::Locale::Tag>#tag /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/tag.rb:22
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Fallbacks#compute /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/fallbacks.rb:84
+   NaN      0.000     0.000     0.000     0.000       84   I18n::Locale::Fallbacks#[]     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/fallbacks.rb:60
+   NaN      0.000     0.000     0.000     0.000        8   Enumerable#flat_map            
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Fallbacks#defaults= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/fallbacks.rb:55
+   NaN      0.000     0.000     0.000     0.000        1   I18n::Locale::Fallbacks#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/locale/fallbacks.rb:49
+   NaN      0.000     0.000     0.000     0.000       84   <Module::I18n>#fallbacks       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/backend/fallbacks.rb:17
+   NaN      0.000     0.000     0.000     0.000       84   <Class::ActiveSupport::Inflector::Inflections>#instance_or_fallback /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:69
+   NaN      0.000     0.000     0.000     0.000       84   ActiveSupport::Inflector#underscore /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/methods.rb:99
+   NaN      0.000     0.000     0.000     0.000       84   Module#name                    
+   NaN      0.000     0.000     0.000     0.000       89   ActiveSupport::Autoload#autoload /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/dependencies/autoload.rb:42
+   NaN      0.000     0.000     0.000     0.000        3   <Module::ActiveSupport::Autoload>#extended /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/dependencies/autoload.rb:30
+   NaN      0.000     0.000     0.000     0.000        3   Module#mattr_accessor          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/module/attribute_accessors.rb:208
+   NaN      0.000     0.000     0.000     0.000        7   Module#mattr_writer            /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/module/attribute_accessors.rb:121
+   NaN      0.000     0.000     0.000     0.000       13   Module#class_variable_set      
+   NaN      0.000     0.000     0.000     0.000  6774132   Regexp#match?                  
+   NaN      0.000     0.000     0.000     0.000       14   Module#singleton_class?        
+   NaN      0.000     0.000     0.000     0.000        7   Module#mattr_reader            /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/module/attribute_accessors.rb:55
+   NaN      0.000     0.000     0.000     0.000        4   Module#cattr_accessor          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/core_ext/module/attribute_accessors.rb:208
+   NaN      0.000     0.000     0.000     0.000        4  *ActiveSupport::Concern#append_features /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/concern.rb:129
+   NaN      0.000     0.000     0.000     0.000        6   ActiveSupport::Concern#included /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/concern.rb:158
+   NaN      0.000     0.000     0.000     0.000        6   Symbol#downcase                
+   NaN      0.000     0.000     0.000     0.000        6   Kernel#instance_variable_set   
+   NaN      0.000     0.000     0.000     0.000        5   <Module::ActiveSupport::Concern>#extended /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/concern.rb:125
+   NaN      0.000     0.000     0.000     0.000        1   <Class::File>#basename         
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector::Inflections::Uncountables#add /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:48
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector::Inflections#uncountable /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:208
+   NaN      0.000     0.000     0.000     0.000       25   String#[]                      
+   NaN      0.000     0.000     0.000     0.000        6   ActiveSupport::Inflector::Inflections#irregular /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:174
+   NaN      0.000     0.000     0.000     0.000       39   ActiveSupport::Inflector::Inflections#singular /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:161
+   NaN      0.000     0.000     0.000     0.000       72   Array#prepend                  
+   NaN      0.000     0.000     0.000     0.000       94   <Class::Regexp>#escape         
+   NaN      0.000     0.000     0.000     0.000       94   ActiveSupport::Inflector::Inflections::Uncountables#to_regex /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:60
+   NaN      0.000     0.000     0.000     0.000      170   Array#delete                   
+   NaN      0.000     0.000     0.000     0.000       84   ActiveSupport::Inflector::Inflections::Uncountables#delete /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:39
+   NaN      0.000     0.000     0.000     0.000       33   ActiveSupport::Inflector::Inflections#plural /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:151
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::Collection::NonConcurrentMapBackend#[]= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:25
+   NaN      0.000     0.000     0.000     0.000        1   Concurrent::Collection::MriMapBackend#[]= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:17
+   NaN      0.000     0.000     0.000     0.000        2   Regexp#to_s                    
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector::Inflections#define_acronym_regex_patterns /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:250
+   NaN      0.000     0.000     0.000     0.000        1   Array#initialize               
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector::Inflections::Uncountables#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:34
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector::Inflections#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:80
+   NaN      0.000     0.000     0.000     0.000       85   Concurrent::Collection::NonConcurrentMapBackend#[] /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:21
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ActiveSupport::Inflector::Inflections>#instance /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:65
+   NaN      0.000     0.000     0.000     0.000       85   ActiveSupport::Inflector#inflections /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/inflector/inflections.rb:265
+   NaN      0.000     0.000     0.000     0.000        2   I18n::Config#load_path         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n/config.rb:126
+   NaN      0.000     0.000     0.000     0.000        1   Thread#[]=                     
+   NaN      0.000     0.000     0.000     0.000        2   I18n::Base#config              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n.rb:56
+   NaN      0.000     0.000     0.000     0.000        2   I18n::Base#load_path           /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n.rb:69
+   NaN      0.000     0.000     0.000     0.000        1   ActiveSupport::LazyLoadHooks#run_load_hooks /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/lazy_load_hooks.rb:75
+   NaN      0.000     0.000     0.000     0.000        1   <Module::ActiveSupport::LazyLoadHooks>#extended /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/activesupport-7.1.2/lib/active_support/lazy_load_hooks.rb:44
+   NaN      0.000     0.000     0.000     0.000        8   Module#public                  
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Random>#urandom        
+   NaN      0.000     0.000     0.000     0.000        3   Range#each                     
+   NaN      0.000     0.000     0.000     0.000        3   Enumerable#to_a                
+   NaN      0.000     0.000     0.000     0.000        3   Range#to_a                     
+   NaN      0.000     0.000     0.000     0.000      100   Gem::Specification#conficts_when_loaded_with? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1684
+   NaN      0.000     0.000     0.000     0.000      100   Integer#^                      
+   NaN      0.000     0.000     0.000     0.000      100   String#hash                    
+   NaN      0.000     0.000     0.000     0.000      100   Gem::Specification#hash        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1998
+   NaN      0.000     0.000     0.000     0.000      100   Hash#has_key?                  
+   NaN      0.000     0.000     0.000     0.000      521   Array#push                     
+   NaN      0.000     0.000     0.000     0.000      418  *Gem::Specification#traverse    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2597
+   NaN      0.000     0.000     0.000     0.000       50   <Class::Gem::Specification>#find_in_unresolved_tree /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1065
+   NaN      0.000     0.000     0.000     0.000      418   Gem::Specification#missing_extensions? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2171
+   NaN      0.000     0.000     0.000     0.000      636   Gem::Specification#respond_to_missing? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2320
+   NaN      0.000     0.000     0.000     0.000      100   <Class::Gem::Specification>#unresolved_specs /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1079
+   NaN      0.000     0.000     0.000     0.000       50   <Class::Gem::Specification>#find_in_unresolved /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1057
+   NaN      0.000     0.000     0.000     0.000      392   Gem::BasicSpecification#this   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:326
+   NaN      0.000     0.000     0.000     0.000     4946   Gem::StubSpecification#activated? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:85
+   NaN      0.000     0.000     0.000     0.000      442   <Class::Gem::Specification>#find_active_stub_by_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1047
+   NaN      0.000     0.000     0.000     0.000        1   Gem::Platform#os               
+   NaN      0.000     0.000     0.000     0.000        3   Gem::Platform#cpu              
+   NaN      0.000     0.000     0.000     0.000        1   Gem::Platform#===              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:170
+   NaN      0.000     0.000     0.000     0.000        1   Gem::Platform#=~               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:208
+   NaN      0.000     0.000     0.000     0.000        2   Gem::Specification#executables= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1892
+   NaN      0.000     0.000     0.000     0.000        4   Regexp#===                     
+   NaN      0.000     0.000     0.000     0.000        1   Gem::Platform#initialize       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:67
+   NaN      0.000     0.000     0.000     0.000   239959   NilClass#===                   
+   NaN      0.000     0.000     0.000     0.000        1   Gem::Specification#platform=   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:475
+   NaN      0.000     0.000     0.000     0.000        5   Gem::Requirement#_tilde_requirements /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:283
+   NaN      0.000     0.000     0.000     0.000       11   Gem::Version#version           /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:164
+   NaN      0.000     0.000     0.000     0.000       11   Gem::Version#inspect           /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:266
+   NaN      0.000     0.000     0.000     0.000       11   Array#to_s                     
+   NaN      0.000     0.000     0.000     0.000       17   Gem::Requirement#_sorted_requirements /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:279
+   NaN      0.000     0.000     0.000     0.000        6   Gem::Requirement#==            /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:263
+   NaN      0.000     0.000     0.000     0.000        5   <Class::Gem::Requirement>#default /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:75
+   NaN      0.000     0.000     0.000     0.000        5   Gem::Dependency#merge          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:258
+   NaN      0.000     0.000     0.000     0.000        2   Gem::Specification#bindir=     
+   NaN      0.000     0.000     0.000     0.000        2   Gem::Specification#cert_chain= 
+   NaN      0.000     0.000     0.000     0.000      114   Gem::Specification#satisfies_requirement? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2376
+   NaN      0.000     0.000     0.000     0.000        7   Gem::Specification#rdoc_options= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2295
+   NaN      0.000     0.000     0.000     0.000        2   Gem::Specification#requirements= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2316
+   NaN      0.000     0.000     0.000     0.000      191   Money::Currency#iso_code       
+   NaN      0.000     0.000     0.000     0.000       12   Enumerable#sort_by             
+   NaN      0.000     0.000     0.000     0.000      382   Money::Currency#priority       
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money::Currency>#all   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:133
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money::Currency>#each  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:205
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#conversion_precision= 
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#rounding_mode=  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/money.rb:184
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#default_infinite_precision= 
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#use_i18n        
+   NaN      0.000     0.000     0.000     0.000        1   Money::LocaleBackend::Legacy#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/locale_backend/legacy.rb:7
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Money::LocaleBackend>#find /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/money/locale_backend.rb:16
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#locale_backend= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/money.rb:179
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#default_currency= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/money.rb:166
+   NaN      0.000     0.000     0.000     0.000      191   Money::Currency#initialize_data! /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:432
+   NaN      0.000     0.000     0.000     0.000      192   String#to_sym                  
+   NaN      0.000     0.000     0.000     0.000      191   Money::Currency#initialize     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:275
+   NaN      0.000     0.000     0.000     0.000      383   <Class::Money::Currency>#_instances /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:46
+   NaN      0.000     0.000     0.000     0.000      194   Set#include?                   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/set.rb:403
+   NaN      0.000     0.000     0.000     0.000      236   Set#add                        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/set.rb:521
+   NaN      0.000     0.000     0.000     0.000        1   Enumerable#each_with_object    
+   NaN      0.000     0.000     0.000     0.000       10   NilClass#nil?                  
+   NaN      0.000     0.000     0.000     0.000        2   Set#initialize                 /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/set.rb:245
+   NaN      0.000     0.000     0.000     0.000       18   Hash#merge!                    
+   NaN      0.000     0.000     0.000     0.000        3   String#force_encoding          
+   NaN      0.000     0.000     0.000     0.000        4   <Class::IO>#read               
+   NaN      0.000     0.000     0.000     0.000        3   <Module::Money::Currency::Loader>#parse_currency_file /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency/loader.rb:18
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Money::Currency::Loader>#load_currencies /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency/loader.rb:10
+   NaN      0.000     0.000     0.000     0.000      193   <Class::Money::Currency>#table /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:123
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money::Currency>#stringify_keys /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:216
+   NaN      0.000     0.000     0.000     0.000      192   <Class::Money::Currency>#stringified_keys /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:149
+   NaN      0.000     0.000     0.000     0.000      192   <Class::Money::Currency>#new   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/currency.rb:37
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#default_bank=   
+   NaN      0.000     0.000     0.000     0.000        1   Money::Bank::Base#setup        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/bank/base.rb:82
+   NaN      0.000     0.000     0.000     0.000        1   Money::Bank::Base#initialize   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/bank/base.rb:70
+   NaN      0.000     0.000     0.000     0.000        1   Money::Bank::VariableExchange#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/bank/variable_exchange.rb:59
+   NaN      0.000     0.000     0.000     0.000        1   Money::RatesStore::Memory#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/rates_store/memory.rb:23
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money::Bank::Base>#instance /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/bank/base.rb:45
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Money>#setup_defaults  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/money-6.16.0/lib/money/money.rb:199
+   NaN      0.000     0.000     0.000     0.000        6   Kernel#lambda                  
+   NaN      0.000     0.000     0.000     0.000        7   Concurrent::Collection::NonConcurrentMapBackend#set_backend /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:116
+   NaN      0.000     0.000     0.000     0.000        7   Concurrent::Collection::NonConcurrentMapBackend#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:15
+   NaN      0.000     0.000     0.000     0.000        7   Concurrent::Collection::MriMapBackend#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:12
+   NaN      0.000     0.000     0.000     0.000        1   <Module::I18n>#new_double_nested_cache /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/i18n-1.14.1/lib/i18n.rb:37
+   NaN      0.000     0.000     0.000     0.000        3   Module#deprecate_constant      
+   NaN      0.000     0.000     0.000     0.000       50   Regexp#initialize              
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Regexp>#union          
+   NaN      0.000     0.000     0.000     0.000       28   String#delete_prefix           
+   NaN      0.000     0.000     0.000     0.000        3   Integer#**                     
+   NaN      0.000     0.000     0.000     0.000        9   Integer#*                      
+   NaN      0.000     0.000     0.000     0.000        3   Integer#size                   <internal:numeric>:199
+   NaN      0.000     0.000     0.000     0.000      265   Module#method_undefined        
+   NaN      0.000     0.000     0.000     0.000      105   Module#alias_method            
+   NaN      0.000     0.000     0.000     0.000       27   Module#<                       
+   NaN      0.000     0.000     0.000     0.000       12   Concurrent::Utility::EngineDetector#on_cruby? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/engine.rb:7
+   NaN      0.000     0.000     0.000     0.000       21   Concurrent::Utility::EngineDetector#on_jruby? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/utility/engine.rb:11
+   NaN      0.000     0.000     0.000     0.000       57   BasicObject#initialize         
+   NaN      0.000     0.000     0.000     0.000       16   Gem::Requirement#none?         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:172
+   NaN      0.000     0.000     0.000     0.000       16   Gem::Dependency#matches_spec?  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:248
+   NaN      0.000     0.000     0.000     0.000        2   <Module::Gem>#ruby_api_version /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:818
+   NaN      0.000     0.000     0.000     0.000        2   <Module::Gem>#extension_api_version /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:468
+   NaN      0.000     0.000     0.000     0.000        4   Gem::Platform#to_s             /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:134
+   NaN      0.000     0.000     0.000     0.000        2   <Module::Gem>#default_ext_dir_for /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/defaults.rb:47
+   NaN      0.000     0.000     0.000     0.000        2   Gem::BasicSpecification#extensions_dir /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:104
+   NaN      0.000     0.000     0.000     0.000        2   Gem::Specification#extensions= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1899
+   NaN      0.000     0.000     0.000     0.000        9   Gem::Specification#files=      /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1922
+   NaN      0.000     0.000     0.000     0.000        8   Gem::Specification#extra_rdoc_files= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1906
+   NaN      0.000     0.000     0.000     0.000        1   Comparable#<=                  
+   NaN      0.000     0.000     0.000     0.000      249   Hash#fetch_values              
+   NaN      0.000     0.000     0.000     0.000      249   ISO3166::Country#data          
+   NaN      0.000     0.000     0.000     0.000      249   ISO3166::Country#reload        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/country.rb:214
+   NaN      0.000     0.000     0.000     0.000      249   ISO3166::Country#initialize    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/country.rb:23
+   NaN      0.000     0.000     0.000     0.000      249   ISO3166::CountryClassMethods#new /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/country/class_methods.rb:20
+   NaN      0.000     0.000     0.000     0.000        3   Enumerable#map                 
+   NaN      0.000     0.000     0.000     0.000    15404   Hash#values                    
+   NaN      0.000     0.000     0.000     0.000      258   Hash#initialize                
+   NaN      0.000     0.000     0.000     0.000      249   <Class::ISO3166::Data>#load_alpha2_translation_for_locale /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:139
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#internal_codes /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:121
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#load_translations /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:129
+   NaN      0.000     0.000     0.000     0.000        1   ISO3166::LocalesMethods#locales_to_remove /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data/locales_methods.rb:11
+   NaN      0.000     0.000     0.000     0.000        5   Array#-                        
+   NaN      0.000     0.000     0.000     0.000        4   ISO3166::Configuration#loaded_locales 
+   NaN      0.000     0.000     0.000     0.000        3   ISO3166::LocalesMethods#loaded_locales /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data/locales_methods.rb:19
+   NaN      0.000     0.000     0.000     0.000        3   ISO3166::Configuration#locales 
+   NaN      0.000     0.000     0.000     0.000        1   ISO3166::Configuration#default_locales /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/configuration.rb:49
+   NaN      0.000     0.000     0.000     0.000        1   ISO3166::Configuration#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/configuration.rb:24
+   NaN      0.000     0.000     0.000     0.000        7   <Module::ISO3166>#configuration /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/configuration.rb:8
+   NaN      0.000     0.000     0.000     0.000        3   ISO3166::LocalesMethods#requested_locales /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data/locales_methods.rb:15
+   NaN      0.000     0.000     0.000     0.000        2   ISO3166::LocalesMethods#locales_to_load /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data/locales_methods.rb:7
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#cache_flush_required? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:125
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#sync_translations! /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:87
+   NaN      0.000     0.000     0.000     0.000        1   Hash#merge                     
+   NaN      0.000     0.000     0.000     0.000   775375   Hash#keys                      
+   NaN      0.000     0.000     0.000     0.000        6   JSON::Ext::Parser#parse        
+   NaN      0.000     0.000     0.000     0.000      102   Thread#[]                      
+   NaN      0.000     0.000     0.000     0.000      102   <Class::Thread>#current        
+   NaN      0.000     0.000     0.000     0.000        6   <Module::JSON>#create_id       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:126
+   NaN      0.000     0.000     0.000     0.000        6   JSON::Ext::Parser#initialize   
+   NaN      0.000     0.000     0.000     0.000        6   <Module::JSON>#parse           /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:215
+   NaN      0.000     0.000     0.000     0.000        2   <Class::IO>#binread            
+   NaN      0.000     0.000     0.000     0.000       10   Array#+                        
+   NaN      0.000     0.000     0.000     0.000        2   <Class::ISO3166::Data>#datafile_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:70
+   NaN      0.000     0.000     0.000     0.000        2   <Class::ISO3166::Data>#load_cache /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:159
+   NaN      0.000     0.000     0.000     0.000        3   <Class::ISO3166::Data>#use_mutex? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:107
+   NaN      0.000     0.000     0.000     0.000        3   <Class::ISO3166::Data>#synchronized /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:99
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#load_required? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:112
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#load_data! /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:76
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#update_cache /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:59
+   NaN      0.000     0.000     0.000     0.000        1   <Class::ISO3166::Data>#cache   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/data.rb:42
+   NaN      0.000     0.000     0.000     0.000        1   ISO3166::CountryClassMethods#all /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/country/class_methods.rb:28
+   NaN      0.000     0.000     0.000     0.000        1   ISO3166::CountryClassMethods#pluck /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/countries-5.7.1/lib/countries/country/class_methods.rb:42
+   NaN      0.000     0.000     0.000     0.000       68   Module#define_method           
+   NaN      0.000     0.000     0.000     0.000   265006  *Hash#each                      
+   NaN      0.000     0.000     0.000     0.000       72   Module#protected               
+   NaN      0.000     0.000     0.000     0.000      178   Module#autoload                
+   NaN      0.000     0.000     0.000     0.000       30   Thread::Mutex#initialize       
+   NaN      0.000     0.000     0.000     0.000        2   <Module::JSON>#create_pretty_state /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:91
+   NaN      0.000     0.000     0.000     0.000   719960   Hash#key?                      
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#create_fast_state /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:81
+   NaN      0.000     0.000     0.000     0.000        4   JSON::Ext::Generator::State#initialize 
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#state           
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#state=          
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON::Ext::Generator::GeneratorMethods::String>#included 
+   NaN      0.000     0.000     0.000     0.000       16   Module#instance_methods        
+   NaN      0.000     0.000     0.000     0.000   239971   String#empty?                  
+   NaN      0.000     0.000     0.000     0.000        9   Enumerable#inject              
+   NaN      0.000     0.000     0.000     0.000        9   <Module::JSON>#deep_const_get  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:42
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#generator=      /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:58
+   NaN      0.000     0.000     0.000     0.000       55   Module#const_set               
+   NaN      0.000     0.000     0.000     0.000       48   Module#const_defined?          
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#parser=         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/json/common.rb:32
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#dump_default_options= 
+   NaN      0.000     0.000     0.000     0.000        1   <Module::JSON>#load_default_options= 
+   NaN      0.000     0.000     0.000     0.000       17   Module#module_function         
+   NaN      0.000     0.000     0.000     0.000        1   Float#-@                       <internal:numeric>:294
+   NaN      0.000     0.000     0.000     0.000        2   Float#/                        
+   NaN      0.000     0.000     0.000     0.000       71   Module#private_constant        
+   NaN      0.000     0.000     0.000     0.000        1   <Class::JSON::GenericObject>#json_creatable= 
+   NaN      0.000     0.000     0.000     0.000        1   #<Class:0x000000010037da60>::Config#domain_types= 
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Psych>#domain_types=  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable.rb:229
+   NaN      0.000     0.000     0.000     0.000        1   #<Class:0x000000010037da60>::Config#dump_tags= 
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Psych>#dump_tags=     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable.rb:229
+   NaN      0.000     0.000     0.000     0.000        1   #<Class:0x000000010037da60>::Config#load_tags= 
+   NaN      0.000     0.000     0.000     0.000        1   Ractor#[]=                     <internal:ractor>:832
+   NaN      0.000     0.000     0.000     0.000        1   #<Class:0x000000010037da60>::Config#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/psych.rb:719
+   NaN      0.000     0.000     0.000     0.000        4   Ractor#[]                      <internal:ractor>:827
+   NaN      0.000     0.000     0.000     0.000        4   <Class::Ractor>#current        <internal:ractor>:277
+   NaN      0.000     0.000     0.000     0.000        3   <Module::Psych>#config         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/psych.rb:726
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Psych>#load_tags=     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable.rb:229
+   NaN      0.000     0.000     0.000     0.000       11   Module#ruby2_keywords          
+   NaN      0.000     0.000     0.000     0.000       52   Module#module_eval             
+   NaN      0.000     0.000     0.000     0.000        9   Kernel#proc                    
+   NaN      0.000     0.000     0.000     0.000        6   RubyVM::InstructionSequence#eval 
+   NaN      0.000     0.000     0.000     0.000        6   <Module::Forwardable>#_compile_method /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable/impl.rb:11
+   NaN      0.000     0.000     0.000     0.000        3   String#chomp                   
+   NaN      0.000     0.000     0.000     0.000        3   String#dump                    
+   NaN      0.000     0.000     0.000     0.000       19   Thread::Backtrace::Location#lineno 
+   NaN      0.000     0.000     0.000     0.000       19   Thread::Backtrace::Location#path 
+   NaN      0.000     0.000     0.000     0.000        3   Module#inspect                 
+   NaN      0.000     0.000     0.000     0.000       12   Kernel#caller_locations        
+   NaN      0.000     0.000     0.000     0.000       93   Symbol#to_sym                  
+   NaN      0.000     0.000     0.000     0.000        3   Array#dig                      
+   NaN      0.000     0.000     0.000     0.000        3   RubyVM::InstructionSequence#to_a 
+   NaN      0.000     0.000     0.000     0.000       12   <Class::RubyVM::InstructionSequence>#compile 
+   NaN      0.000     0.000     0.000     0.000        6   <Module::Forwardable>#_valid_method? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable/impl.rb:3
+   NaN      0.000     0.000     0.000     0.000       22   Module#method_defined?         
+   NaN      0.000     0.000     0.000     0.000        6   <Module::Forwardable>#_delegator_method /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable.rb:201
+   NaN      0.000     0.000     0.000     0.000        6   Forwardable#def_instance_delegator /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable.rb:186
+   NaN      0.000     0.000     0.000     0.000        1   Forwardable#def_delegators     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/forwardable.rb:154
+   NaN      0.000     0.000     0.000     0.000        5   Module#private_class_method    
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Psych>#libyaml_version 
+   NaN      0.000     0.000     0.000     0.000       46   Module#extended                
+   NaN      0.000     0.000     0.000     0.000       55   Module#extend_object           
+   NaN      0.000     0.000     0.000     0.000       55   Kernel#extend                  
+   NaN      0.000     0.000     0.000     0.000        7   Module#attr_writer             
+   NaN      0.000     0.000     0.000     0.000        6   <Class::Struct>#new            
+   NaN      0.000     0.000     0.000     0.000        2   Hash#compare_by_identity       
+   NaN      0.000     0.000     0.000     0.000       16   Kernel#hash                    
+   NaN      0.000     0.000     0.000     0.000        1   Psych::Handler::DumperOptions#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/psych/handler.rb:19
+   NaN      0.000     0.000     0.000     0.000       13   String#<=>                     
+   NaN      0.000     0.000     0.000     0.000       49   Module#attr_accessor           
+   NaN      0.000     0.000     0.000     0.000       95   Module#included                
+   NaN      0.000     0.000     0.000     0.000       99   Module#append_features         
+   NaN      0.000     0.000     0.000     0.000       99  *Module#include                 
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Hash>#[]               
+   NaN      0.000     0.000     0.000     0.000        1   Module#const_missing           
+   NaN      0.000     0.000     0.000     0.000      118   Module#class_eval              
+   NaN      0.000     0.000     0.000     0.000       35   String#inspect                 
+   NaN      0.000     0.000     0.000     0.000      441   String#downcase                
+   NaN      0.000     0.000     0.000     0.000     1215   Symbol#to_s                    
+   NaN      0.000     0.000     0.000     0.000      147   Module#const_get               
+   NaN      0.000     0.000     0.000     0.000        6   Module#constants               
+   NaN      0.000     0.000     0.000     0.000      267   Comparable#==                  
+   NaN      0.000     0.000     0.000     0.000       40   Gem::Specification#==          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1369
+   NaN      0.000     0.000     0.000     0.000       36   Thread::Mutex#owned?           
+   NaN      0.000     0.000     0.000     0.000       20   Gem::Requirement#prerelease?   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:228
+   NaN      0.000     0.000     0.000     0.000       20   Gem::Dependency#prerelease?    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:87
+   NaN      0.000     0.000     0.000     0.000      111   Array#compact                  
+   NaN      0.000     0.000     0.000     0.000       20   Gem::Dependency#to_spec        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:322
+   NaN      0.000     0.000     0.000     0.000       29   Kernel#kind_of?                
+   NaN      0.000     0.000     0.000     0.000   360070   String#split                   
+   NaN      0.000     0.000     0.000     0.000       22   Kernel#gem                     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/core_ext/kernel_gem.rb:41
+   NaN      0.000     0.000     0.000     0.000       22   <Class::Gem::Requirement>#default_prerelease /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:79
+   NaN      0.000     0.000     0.000     0.000      132   <Class::File>#symlink?         
+   NaN      0.000     0.000     0.000     0.000      660   BasicObject#==                 
+   NaN      0.000     0.000     0.000     0.000       23   Array#insert                   
+   NaN      0.000     0.000     0.000     0.000    70157   Enumerable#each_with_index     
+   NaN      0.000     0.000     0.000     0.000       45   <Module::Gem>#load_path_insert_index /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:574
+   NaN      0.000     0.000     0.000     0.000       45   <Module::Gem>#activated_gem_paths /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:588
+   NaN      0.000     0.000     0.000     0.000       23   <Module::Gem>#add_to_load_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:595
+   NaN      0.000     0.000     0.000     0.000      859   Gem::Specification#extensions  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:609
+   NaN      0.000     0.000     0.000     0.000       30   Gem::Version#to_s              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:164
+   NaN      0.000     0.000     0.000     0.000       30   Gem::BasicSpecification#full_name /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:133
+   NaN      0.000     0.000     0.000     0.000      443   Gem::Specification#full_name   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1949
+   NaN      0.000     0.000     0.000     0.000       35   Gem::Specification#base_dir    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2076
+   NaN      0.000     0.000     0.000     0.000      441   Gem::Specification#gems_dir    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1960
+   NaN      0.000     0.000     0.000     0.000       23   Gem::BasicSpecification#find_full_gem_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:110
+   NaN      0.000     0.000     0.000     0.000       23   Gem::BasicSpecification#full_gem_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:122
+   NaN      0.000     0.000     0.000     0.000      441   Gem::Specification#raw_require_paths /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2728
+   NaN      0.000     0.000     0.000     0.000       23   Gem::BasicSpecification#full_require_paths /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:145
+   NaN      0.000     0.000     0.000     0.000      174   <Module::Gem>#default_specifications_dir /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/defaults.rb:61
+   NaN      0.000     0.000     0.000     0.000      239   <Class::File>#dirname          
+   NaN      0.000     0.000     0.000     0.000      174   Gem::BasicSpecification#default_gem? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:89
+   NaN      0.000     0.000     0.000     0.000       44   Gem::Specification#add_self_to_load_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1548
+   NaN      0.000     0.000     0.000     0.000       51   Hash#delete                    
+   NaN      0.000     0.000     0.000     0.000      789   <Class::Gem::Platform>#new     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:56
+   NaN      0.000     0.000     0.000     0.000      789   <Class::Gem::Platform>#match_platforms? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:24
+   NaN      0.000     0.000     0.000     0.000      789   <Class::Gem::Platform>#match_gem? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:38
+   NaN      0.000     0.000     0.000     0.000      897   Gem::Specification#platform    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2228
+   NaN      0.000     0.000     0.000     0.000      789   <Class::Gem::Platform>#match_spec? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:34
+   NaN      0.000     0.000     0.000     0.000      464   Array#reject!                  
+   NaN      0.000     0.000     0.000     0.000      464   Gem::Dependency#prioritizes_bundler? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:298
+   NaN      0.000     0.000     0.000     0.000       14   Gem::Version#eql?              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:254
+   NaN      0.000     0.000     0.000     0.000      227   Comparable#<                   
+   NaN      0.000     0.000     0.000     0.000       26   Integer#to_s                   
+   NaN      0.000     0.000     0.000     0.000      181   Array#join                     
+   NaN      0.000     0.000     0.000     0.000       11   Array#[]=                      
+   NaN      0.000     0.000     0.000     0.000       11   Integer#succ                   
+   NaN      0.000     0.000     0.000     0.000      221   Gem::Version#bump              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:239
+   NaN      0.000     0.000     0.000     0.000     1794   Gem::StubSpecification::StubLine#version 
+   NaN      0.000     0.000     0.000     0.000     1794   Gem::StubSpecification#version /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:175
+   NaN      0.000     0.000     0.000     0.000      963   Gem::Dependency#requirement    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:117
+   NaN      0.000     0.000     0.000     0.000      514   Enumerable#find_all            
+   NaN      0.000     0.000     0.000     0.000      464   <Class::Gem::Specification>#stubs_for /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:841
+   NaN      0.000     0.000     0.000     0.000      464   Gem::Dependency#matching_specs /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:274
+   NaN      0.000     0.000     0.000     0.000      364   Gem::Dependency#to_specs       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:302
+   NaN      0.000     0.000     0.000     0.000       49   Array#select                   
+   NaN      0.000     0.000     0.000     0.000       44   Gem::Specification#runtime_dependencies /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2360
+   NaN      0.000     0.000     0.000     0.000       44  *Gem::Specification#activate_dependencies /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1436
+   NaN      0.000     0.000     0.000     0.000     1722   Gem::Dependency#name           
+   NaN      0.000     0.000     0.000     0.000      517   Symbol#==                      
+   NaN      0.000     0.000     0.000     0.000      430   Gem::Dependency#runtime?       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:165
+   NaN      0.000     0.000     0.000     0.000       60   Array#concat                   
+   NaN      0.000     0.000     0.000     0.000       58   Enumerable#reduce              
+   NaN      0.000     0.000     0.000     0.000      117   Array#reverse                  
+   NaN      0.000     0.000     0.000     0.000    35172   Enumerator#each                
+   NaN      0.000     0.000     0.000     0.000      116   Enumerable#drop_while          
+   NaN      0.000     0.000     0.000     0.000      232   Array#reverse_each             
+   NaN      0.000     0.000     0.000     0.000       58   Array#slice!                   
+   NaN      0.000     0.000     0.000     0.000       58   Array#index                    
+   NaN      0.000     0.000     0.000     0.000      380   Kernel#freeze                  
+   NaN      0.000     0.000     0.000     0.000      941  *Array#map                      
+   NaN      0.000     0.000     0.000     0.000       60   String#scan                    
+   NaN      0.000     0.000     0.000     0.000       58   Gem::Version#_split_segments   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:411
+   NaN      0.000     0.000     0.000     0.000     1850   Array#all?                     
+   NaN      0.000     0.000     0.000     0.000     1850   Gem::Requirement#satisfied_by? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:241
+   NaN      0.000     0.000     0.000     0.000      584   Gem::Specification#version     
+   NaN      0.000     0.000     0.000     0.000       48   String#to_str                  
+   NaN      0.000     0.000     0.000     0.000     1648   String#===                     
+   NaN      0.000     0.000     0.000     0.000       71   #<Class:0x00000001000ce5a8>#[] 
+   NaN      0.000     0.000     0.000     0.000      265   String#upcase                  
+   NaN      0.000     0.000     0.000     0.000      608   <Module::Gem>#env_requirement  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:822
+   NaN      0.000     0.000     0.000     0.000      144   Gem::Specification#has_conflicts? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1694
+   NaN      0.000     0.000     0.000     0.000       44   Gem::Specification#raise_if_conflicts /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2286
+   NaN      0.000     0.000     0.000     0.000     1673   Gem::Specification#name        
+   NaN      0.000     0.000     0.000     0.000       44  *Gem::Specification#activate    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1412
+   NaN      0.000     0.000     0.000     0.000       25   Gem::Specification#activated?  
+   NaN      0.000     0.000     0.000     0.000       26   Gem::BasicSpecification#loaded_from= 
+   NaN      0.000     0.000     0.000     0.000       40   Gem::Specification#add_development_dependency /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:558
+   NaN      0.000     0.000     0.000     0.000      304   Array#<<                       
+   NaN      0.000     0.000     0.000     0.000      884   Gem::Specification#dependencies /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1784
+   NaN      0.000     0.000     0.000     0.000  2291004   Kernel#is_a?                   
+   NaN      0.000     0.000     0.000     0.000       38   <Class::Gem::Version>#correct? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:173
+   NaN      0.000     0.000     0.000     0.000       38   Gem::Version#initialize        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:221
+   NaN      0.000     0.000     0.000     0.000      222   Array#include?                 
+   NaN      0.000     0.000     0.000     0.000   775532   Array#first                    
+   NaN      0.000     0.000     0.000     0.000      610   Array#pop                      
+   NaN      0.000     0.000     0.000     0.000      109   Gem::Dependency#initialize     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/dependency.rb:35
+   NaN      0.000     0.000     0.000     0.000       78   Gem::Specification#add_dependency_with_type /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1526
+   NaN      0.000     0.000     0.000     0.000       39   Array#uniq                     
+   NaN      0.000     0.000     0.000     0.000       38   Gem::Specification#add_runtime_dependency /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:569
+   NaN      0.000     0.000     0.000     0.000       21   Gem::Specification#specification_version= 
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#installed_by_version= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:642
+   NaN      0.000     0.000     0.000     0.000      218   String#gsub                    
+   NaN      0.000     0.000     0.000     0.000   220019   String#strip                   
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#summary=    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2423
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#rubygems_version= 
+   NaN      0.000     0.000     0.000     0.000      150   Gem::Version#_segments         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:401
+   NaN      0.000     0.000     0.000     0.000       92   Gem::Version#segments          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:328
+   NaN      0.000     0.000     0.000     0.000      598   Array#hash                     
+   NaN      0.000     0.000     0.000     0.000      598   Gem::Version#hash              /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:258
+   NaN      0.000     0.000     0.000     0.000      243   Gem::Version#release           /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:318
+   NaN      0.000     0.000     0.000     0.000     2238   Integer#<=>                    
+   NaN      0.000     0.000     0.000     0.000     4429   Integer#==                     
+   NaN      0.000     0.000     0.000     0.000     4287   Integer#+                      
+   NaN      0.000     0.000     0.000     0.000    10468   Array#[]                       
+   NaN      0.000     0.000     0.000     0.000    84142   Integer#<=                     
+   NaN      0.000     0.000     0.000     0.000     2301   Integer#-                      
+   NaN      0.000     0.000     0.000     0.000     4760   Array#size                     
+   NaN      0.000     0.000     0.000     0.000     9666   Gem::Version#canonical_segments /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:382
+   NaN      0.000     0.000     0.000     0.000     2284   Gem::Version#_version          /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:397
+   NaN      0.000     0.000     0.000     0.000     2270   Gem::Version#<=>               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:353
+   NaN      0.000     0.000     0.000     0.000     1879   Comparable#>=                  
+   NaN      0.000     0.000     0.000     0.000     1904   Gem::Requirement#requirements  
+   NaN      0.000     0.000     0.000     0.000       23   Gem::Specification#required_ruby_version= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:685
+   NaN      0.000     0.000     0.000     0.000     2644   String#-@                      
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#licenses=   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:377
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#homepage=   
+   NaN      0.000     0.000     0.000     0.000       25   Gem::Specification#email=      
+   NaN      0.000     0.000     0.000     0.000       25   Gem::Specification#description= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1821
+   NaN      0.000     0.000     0.000     0.000       26   <Class::Time>#utc              
+   NaN      0.000     0.000     0.000     0.000      244   String#to_i                    
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#date=       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1734
+   NaN      0.000     0.000     0.000     0.000       26   Enumerable#grep                
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#authors=    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:279
+   NaN      0.000     0.000     0.000     0.000      109   Kernel#Array                   
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#require_paths= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:526
+   NaN      0.000     0.000     0.000     0.000       19   Gem::Specification#metadata=   
+   NaN      0.000     0.000     0.000     0.000  1389728   Array#shift                    
+   NaN      0.000     0.000     0.000     0.000  1631961   Integer#>                      
+   NaN      0.000     0.000     0.000     0.000  1389854   Array#length                   
+   NaN      0.000     0.000     0.000     0.000      206   <Class::Gem::Requirement>#create /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:54
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#required_rubygems_version= /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:700
+   NaN      0.000     0.000     0.000     0.000      467   Regexp#=~                      
+   NaN      0.000     0.000     0.000     0.000      526   String#to_s                    
+   NaN      0.000     0.000     0.000     0.000      208   <Class::Gem::Requirement>#parse /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:102
+   NaN      0.000     0.000     0.000     0.000      285  *Array#map!                     
+   NaN      0.000     0.000     0.000     0.000      207   Array#uniq!                    
+   NaN      0.000     0.000     0.000     0.000      208   Array#compact!                 
+   NaN      0.000     0.000     0.000     0.000      413   Array#flatten                  
+   NaN      0.000     0.000     0.000     0.000      206   Gem::Requirement#initialize    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/requirement.rb:130
+   NaN      0.000     0.000     0.000     0.000       27   Gem::Specification#invalidate_memoized_attributes /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2089
+   NaN      0.000     0.000     0.000     0.000      915   Kernel#instance_variable_defined? 
+   NaN      0.000     0.000     0.000     0.000       61   Gem::Version#prerelease?       /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:303
+   NaN      0.000     0.000     0.000     0.000      146   Module#==                      
+   NaN      0.000     0.000     0.000     0.000      146   <Class::Gem::Version>#new      /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:203
+   NaN      0.000     0.000     0.000     0.000       26   <Class::Gem::Version>#create   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/version.rb:187
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#version=    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2666
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#name=       
+   NaN      0.000     0.000     0.000     0.000      133   Kernel#block_given?            
+   NaN      0.000     0.000     0.000     0.000     2318  *Array#==                       
+   NaN      0.000     0.000     0.000     0.000       58   Gem::Platform#to_a             /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:130
+   NaN      0.000     0.000     0.000     0.000      129   String#=~                      
+   NaN      0.000     0.000     0.000     0.000       28   <Class::Gem::Platform>#local   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:14
+   NaN      0.000     0.000     0.000     0.000      575   Kernel#class                   <internal:kernel>:18
+   NaN      0.000     0.000     0.000     0.000       55   Gem::Platform#==               /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/platform.rb:142
+   NaN      0.000     0.000     0.000     0.000      692   BasicObject#!=                 
+   NaN      0.000     0.000     0.000     0.000      158   Array#last                     
+   NaN      0.000     0.000     0.000     0.000      815   <Module::Gem>#platforms        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:657
+   NaN      0.000     0.000     0.000     0.000       52   Kernel#initialize_copy         
+   NaN      0.000     0.000     0.000     0.000      120   Array#initialize_copy          
+   NaN      0.000     0.000     0.000     0.000       78   Gem::Specification#default_value /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1774
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#set_not_nil_attributes_to_default_values /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2015
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#set_nil_attributes_to_nil /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2010
+   NaN      0.000     0.000     0.000     0.000       26   Gem::BasicSpecification#internal_init /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:204
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#internal_init /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2131
+   NaN      0.000     0.000     0.000     0.000       26   Gem::BasicSpecification#initialize /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:32
+   NaN      0.000     0.000     0.000     0.000       26   Gem::Specification#initialize  /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:2026
+   NaN      0.000     0.000     0.000     0.000     1290  *Class#new                      
+   NaN      0.000     0.000     0.000     0.000       26   Kernel#eval                    
+   NaN      0.000     0.000     0.000     0.000       26   Kernel#binding                 
+   NaN      0.000     0.000     0.000     0.000       26   IO#close                       
+   NaN      0.000     0.000     0.000     0.000       26   IO#closed?                     
+   NaN      0.000     0.000     0.000     0.000       26   IO#read                        
+   NaN      0.000     0.000     0.000     0.000     2042   Kernel#nil?                    
+   NaN      0.000     0.000     0.000     0.000       26   <Module::Gem>#win_platform?    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:993
+   NaN      0.000     0.000     0.000     0.000       26   <Module::Gem>#java_platform?   /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:1005
+   NaN      0.000     0.000     0.000     0.000       26   File#initialize                
+   NaN      0.000     0.000     0.000     0.000       26   <Class::IO>#open               
+   NaN      0.000     0.000     0.000     0.000       26   <Module::Gem>#open_file        /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:782
+   NaN      0.000     0.000     0.000     0.000      308  *Thread::Mutex#synchronize      
+   NaN      0.000     0.000     0.000     0.000       53   <Class::Gem::Specification>#load /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1143
+   NaN      0.000     0.000     0.000     0.000      466   Gem::BasicSpecification#loaded_from 
+   NaN      0.000     0.000     0.000     0.000     2740   Gem::StubSpecification::StubLine#name 
+   NaN      0.000     0.000     0.000     0.000     2740   Gem::StubSpecification#name    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:154
+   NaN      0.000     0.000     0.000     0.000     2990   <Module::Gem>#loaded_specs     
+   NaN      0.000     0.000     0.000     0.000      792   Gem::StubSpecification#to_spec /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:186
+   NaN      0.000     0.000     0.000     0.000  3477041   Hash#[]=                       
+   NaN      0.000     0.000     0.000     0.000      232   <Class::File>#exist?           
+   NaN      0.000     0.000     0.000     0.000      858   Gem::BasicSpecification#extension_dir /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:97
+   NaN      0.000     0.000     0.000     0.000      230   Gem::BasicSpecification#gem_build_complete_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:49
+   NaN      0.000     0.000     0.000     0.000  1043850   BasicObject#!                  
+   NaN      0.000     0.000     0.000     0.000   726255   Array#empty?                   
+   NaN      0.000     0.000     0.000     0.000     4062   Gem::StubSpecification::StubLine#extensions 
+   NaN      0.000     0.000     0.000     0.000     4062   Gem::StubSpecification#extensions /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:168
+   NaN      0.000     0.000     0.000     0.000     2844   Gem::BasicSpecification#have_extensions? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:330
+   NaN      0.000     0.000     0.000     0.000    10858   <Class::File>#file?            
+   NaN      0.000     0.000     0.000     0.000    95826   String#+                       
+   NaN      0.000     0.000     0.000     0.000     4071   <Class::File>#join             
+   NaN      0.000     0.000     0.000     0.000     6260   Kernel#tap                     <internal:kernel>:89
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification::StubLine#full_name 
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification#full_name /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:179
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification#gems_dir 
+   NaN      0.000     0.000     0.000     0.000   452932  *Array#any?                     
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification::StubLine#require_paths 
+   NaN      0.000     0.000     0.000     0.000    13758   Gem::StubSpecification#data    /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:108
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification#raw_require_paths /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:139
+   NaN      0.000     0.000     0.000     0.000     2999   Gem::BasicSpecification#have_file? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:332
+   NaN      0.000     0.000     0.000     0.000     3021   <Module::Gem>#suffixes         /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:942
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification#default_gem? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:93
+   NaN      0.000     0.000     0.000     0.000     2581   Gem::StubSpecification#missing_extensions? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/stub_specification.rb:143
+   NaN      0.000     0.000     0.000     0.000     2999   Gem::BasicSpecification#contains_requirable_file? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/basic_specification.rb:72
+   NaN      0.000     0.000     0.000     0.000      279   Enumerable#find                
+   NaN      0.000     0.000     0.000     0.000      206   <Class::Gem::Specification>#stubs /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:816
+   NaN      0.000     0.000     0.000     0.000      288   String#freeze                  
+   NaN      0.000     0.000     0.000     0.000      236   String#initialize_copy         
+   NaN      0.000     0.000     0.000     0.000      409   Kernel#initialize_dup          
+   NaN      0.000     0.000     0.000     0.000      409   Kernel#dup                     
+   NaN      0.000     0.000     0.000     0.000        5   <Class::Gem::Specification>#find_by_path /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1027
+   NaN      0.000     0.000     0.000     0.000        5   <Module::Gem>#try_activate     /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:193
+   NaN      0.000     0.000     0.000     0.000   252259   String#==                      
+   NaN      0.000     0.000     0.000     0.000        7   LoadError#path                 
+   NaN      0.000     0.000     0.000     0.000   354360   Module#===                     
+   NaN      0.000     0.000     0.000     0.000       14   Exception#backtrace            
+   NaN      0.000     0.000     0.000     0.000       14   Exception#exception            
+   NaN      0.000     0.000     0.000     0.000        6   Exception#initialize           
+   NaN      0.000     0.000     0.000     0.000   401780  *Array#each                     
+   NaN      0.000     0.000     0.000     0.000        1   <Class::Dir>#[]                <internal:dir>:127
+   NaN      0.000     0.000     0.000     0.000      741   BasicObject#singleton_method_added 
+   NaN      0.000     0.000     0.000     0.000      204   Module#private                 
+   NaN      0.000     0.000     0.000     0.000     4221   Module#method_added            
+   NaN      0.000     0.000     0.000     0.000      148   Module#attr_reader             
+   NaN      0.000     0.000     0.000     0.000      490   Class#inherited                
+   NaN      0.000     0.000     0.000     0.000      252  *Kernel#require_relative        
+   NaN      0.000     0.000     0.000     0.000      541  *Kernel#gem_original_require    
+   NaN      0.000     0.000     0.000     0.000      543   Monitor#exit                   
+   NaN      0.000     0.000     0.000     0.000    85587   Hash#empty?                    
+   NaN      0.000     0.000     0.000     0.000      682   <Class::Gem::Specification>#unresolved_deps /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/specification.rb:1287
+   NaN      0.000     0.000     0.000     0.000  2122860   Hash#[]                        
+   NaN      0.000     0.000     0.000     0.000      538   <Module::Gem>#find_unresolved_default_spec /Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems.rb:1216
+   NaN      0.000     0.000     0.000     0.000      543   Monitor#enter                  
+   NaN      0.000     0.000     0.000     0.000     1076   Monitor#mon_owned?             
+   NaN      0.000     0.000     0.000     0.000     1862   Kernel#respond_to?             
+   NaN      0.000     0.000     0.000     0.000      538  *Kernel#require                 <internal:/Users/ali/.rbenv/versions/3.1.3/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:36
+   NaN      0.000     0.000     0.000     0.000        1   Array#unshift                  
+   NaN      0.000     0.000     0.000     0.000      188   <Class::File>#expand_path      
+   NaN      0.000     0.000     0.000     0.000        7   Kernel#__dir__                 
+   NaN      0.000     0.000     0.000     0.000      912   IO#set_encoding                
+   NaN      0.000     0.000     0.000     0.000        1   Kernel#load                    
+   NaN      0.000     0.000     0.000     0.000        1   <Class::IO>#write              
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+
+Measure Mode: allocations
+Thread ID: 640
+Fiber ID: 680
+Total: 0.000000
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+   NaN      0.000     0.000     0.000     0.000        1   Thread::Mutex#owned?           
+   NaN      0.000     0.000     0.000     0.000        1   <Module::Concurrent>#mutex_owned_per_thread? /Users/ali/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.2.3/lib/concurrent-ruby/concurrent/atomic/lock_local_var.rb:14
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+
