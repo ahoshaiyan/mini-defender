@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'action_dispatch'
+require 'marcel'
 
 class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   def initialize(types)
@@ -17,14 +18,19 @@ class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   end
 
   def self.make(args)
-    raise ArgumentError, 'Expected at least one MIME type.' unless args.length > 0
+    unless args.length > 0
+      raise ArgumentError, 'Expected at least one MIME type.'
+    end
 
-    new(args.split(',').map(&:downcase).map(&:strip))
+    new(args.map(&:downcase).map(&:strip))
   end
 
   def passes?(attribute, value, validator)
     @file = value.is_a?(ActionDispatch::Http::UploadedFile)
-    @file && @types.include?(@file.content_type)
+    content_type = Marcel::MimeType.for(value.read)
+    value.rewind
+
+    @file && @types.include?(content_type)
   end
 
   def message(attribute, value, validator)

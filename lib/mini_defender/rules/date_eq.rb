@@ -13,7 +13,7 @@ class MiniDefender::Rules::DateEq < MiniDefender::Rule
   end
 
   def self.make(args)
-    raise ArgumentError, 'Target date is required for date rules.' unless args == 1
+    raise ArgumentError, 'Target date is required for date rules.' unless args.length == 1
 
     self.new(args[0])
   end
