@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'countries'
   spec.add_runtime_dependency 'money'
   spec.add_runtime_dependency 'marcel'
+  spec.add_runtime_dependency 'public_suffix'
 end

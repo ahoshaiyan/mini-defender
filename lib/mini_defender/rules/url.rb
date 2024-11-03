@@ -1,65 +1,77 @@
 # frozen_string_literal: true
 
 require 'uri'
-require 'resolv'
-require_relative '../detectors/public_domain_detector'
+require 'ipaddr'
+require 'public_suffix'
 
+# TODO: ensure rescues
 class MiniDefender::Rules::Url < MiniDefender::Rule
-  ALLOWED_MODIFIERS = %w[https_only public no_ip]
+  ALLOWED_MODIFIERS = %w[https public not_ip not_private]
 
   def initialize(modifiers = [])
     @modifiers = Array(modifiers).map(&:to_s)
+
     validate_modifiers! unless @modifiers.empty?
+
+    @validation_error = "URL modifiers list contains only #{ALLOWED_MODIFIERS.join(', ')}."
   end
 
   def self.signature
     'url'
   end
 
-  def self.make(args)
-    new(args)
+  def self.make(modifiers) # no need to raise an error when no modifier is entered; as 'url' rule checks URL structure on its own
+    new(modifiers)
   end
 
   def passes?(attribute, value, validator)
     # TODO: warning: URI.regexp is obsolete; use URI::DEFAULT_PARSER.make_regexp instead
-    return false unless value.is_a?(String) && URI.regexp(%w[http https]).match?(value)
+
 
     begin
       uri = URI.parse(value)
 
       return true if @modifiers.empty?
 
-      return false if @modifiers.include?('https_only') && uri.scheme != 'https'
-      return false if @modifiers.include?('public') &&
-                      !MiniDefender::Detectors::PublicDomainDetector.public_domain?(uri.host)
-      return false if @modifiers.include?('no_ip') && ip_address?(uri.host)
+      if @modifiers.include?('https') && uri.scheme != 'https'
+        @validation_error = 'The URL must use HTTPS.'
+        return false
+      end
+
+      if @modifiers.include?('public') && (!PublicSuffix.valid?(uri.host) || self.class.private_network?(uri.host))
+        @validation_error = 'The URL must use a valid public domain.'
+        return false
+      end
+
+      if @modifiers.include?('not_ip') && ip_address?(uri.host)
+        @validation_error = 'IP addresses are not allowed in URLs.'
+        return false
+      end
+
+      if @modifiers.include?('not_private') && self.class.private_network?(uri.host)
+        @validation_error = 'Private or reserved resources are not allowed.'
+        return false
+      end
 
       true
     rescue URI::InvalidURIError
+      @validation_error = 'The field must contain a valid URL.'
+      false
+    rescue PublicSuffix::Error
       false
     end
   end
 
-  def message(_attribute, value, _validator)
-    return 'The field must contain a valid URL.' unless value.is_a?(String)
+  def self.private_network?(host)
+    return false unless host
 
-    begin
-      uri = URI.parse(value)
-      return 'The field must contain a valid URL.' if @modifiers.empty?
+    host = host.downcase
 
-      return 'The URL must use HTTPS.' if @modifiers.include?('https_only') && uri.scheme != 'https'
+    private_patterns.any? { |pattern| pattern.match?(host) }
+  end
 
-      if @modifiers.include?('public') &&
-         !MiniDefender::Detectors::PublicDomainDetector.public_domain?(uri.host)
-        return 'The URL must use a valid public domain.'
-      end
-
-      return 'IP addresses are not allowed in URLs.' if @modifiers.include?('no_ip') && ip_address?(uri.host)
-
-      'The field must contain a valid URL.'
-    rescue URI::InvalidURIError
-      'The field must contain a valid URL.'
-    end
+  def message(_attribute, _value, _validator)
+    @validation_error || 'The field must contain a valid URL.'
   end
 
   private
@@ -74,6 +86,31 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
   def ip_address?(host)
     return false unless host
 
-    !!(host =~ Resolv::IPv4::Regex || host =~ Resolv::IPv6::Regex)
+    begin
+      IPAddr.new(host)
+      true
+    rescue IPAddr::InvalidAddressError
+      false
+    end
+  end
+
+  def self.private_patterns
+    @private_patterns ||= begin
+      pattern_file = File.expand_path('../data/private_network_patterns.txt', __dir__)
+      File.readlines(pattern_file).filter_map do |line|
+        line = line.strip
+
+        next if line.empty? || line.start_with?('#')
+
+        # Pattern => regex (once)
+        pattern = line
+                  .gsub('.', '\.')           # escape dots
+                  .gsub('*', '.*')           # wildcards => regex
+                  .gsub('[0-9]+', '\d+')     # convert number ranges
+                  .gsub(/\[(.+?)\]/, '(\1)') # convert chars classes
+
+        Regexp.new("^#{pattern}$", Regexp::IGNORECASE)
+      end
+    end
   end
 end
