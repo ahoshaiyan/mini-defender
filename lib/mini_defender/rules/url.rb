@@ -11,7 +11,9 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
   def initialize(modifiers = [])
     @modifiers = Array(modifiers).map(&:to_s)
 
-    validate_modifiers! unless @modifiers.empty?
+    unless @modifiers.empty?
+      validate_modifiers!
+    end
 
     @validation_error = "URL modifiers list contains only #{ALLOWED_MODIFIERS.join(', ')}."
   end
@@ -26,12 +28,16 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
 
   def passes?(attribute, value, validator)
     # TODO: warning: URI.regexp is obsolete; use URI::DEFAULT_PARSER.make_regexp instead
-
+    unless value.is_a?(String) && URI::DEFAULT_PARSER.make_regexp(%w[http https]).match?(value)
+      return false
+    end
 
     begin
       uri = URI.parse(value)
 
-      return true if @modifiers.empty?
+      if @modifiers.empty?
+        return true
+      end
 
       if @modifiers.include?('https') && uri.scheme != 'https'
         @validation_error = 'The URL must use HTTPS.'
@@ -63,14 +69,16 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
   end
 
   def self.private_network?(host)
-    return false unless host
+    unless host
+      return false
+    end
 
     host = host.downcase
 
     private_patterns.any? { |pattern| pattern.match?(host) }
   end
 
-  def message(_attribute, _value, _validator)
+  def message(attribute, value, validator)
     @validation_error || 'The field must contain a valid URL.'
   end
 
@@ -78,13 +86,17 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
 
   def validate_modifiers!
     invalid_modifiers = @modifiers - ALLOWED_MODIFIERS
-    return if invalid_modifiers.empty?
+    if invalid_modifiers.empty?
+      return
+    end
 
     raise ArgumentError, "Invalid URL modifiers: #{invalid_modifiers.join(', ')}"
   end
 
   def ip_address?(host)
-    return false unless host
+    unless host
+      return false
+    end
 
     begin
       IPAddr.new(host)
@@ -100,7 +112,9 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
       File.readlines(pattern_file).filter_map do |line|
         line = line.strip
 
-        next if line.empty? || line.start_with?('#')
+        if line.empty? || line.start_with?('#')
+          next
+        end
 
         # Pattern => regex (once)
         pattern = line

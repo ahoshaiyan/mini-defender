@@ -35,9 +35,13 @@ class UrlTest < Minitest::Test
     assert validator.passes?(nil, 'https://github.com', nil)
     assert validator.passes?(nil, 'http://google.com', nil)
 
-    # refute validator.passes?(nil, 'http://example.com', nil)
-    # refute validator.passes?(nil, 'http://test.local', nil)
+    refute validator.passes?(nil, 'http://example.com', nil)
     refute validator.passes?(nil, 'http://localhost', nil)
+    refute validator.passes?(nil, 'http://site.example', nil)
+    refute validator.passes?(nil, 'http://demo.example', nil)
+    refute validator.passes?(nil, 'http://test.example', nil)
+    refute validator.passes?(nil, 'http://staging', nil)
+
     assert_equal 'The URL must use a valid public domain.', validator.message(nil, nil, nil)
   end
 
@@ -60,6 +64,7 @@ class UrlTest < Minitest::Test
 
     refute validator.passes?(nil, 'http://localhost', nil)
     refute validator.passes?(nil, 'http://192.168.1.1', nil)
+    refute validator.passes?(nil, 'http://127.0.0.1', nil)
     refute validator.passes?(nil, 'http://test.local', nil)
     assert_equal 'Private or reserved resources are not allowed.', validator.message(nil, nil, nil)
   end
@@ -98,10 +103,7 @@ class UrlTest < Minitest::Test
 
   def test_idn_handling
     validator = @rule.new(['public'])
-    # TODO
-    # Different lang scripts
-    # assert validator.passes?(nil, 'https://café.fr', nil)          # French (ready to buy)
-
+    # TODO: Shall Punycode forms be blocked?
     # Punycode form (encoded form of Chinese--ready to buy)
     assert validator.passes?(nil, 'https://xn--6qq79v.com', nil)
   end
