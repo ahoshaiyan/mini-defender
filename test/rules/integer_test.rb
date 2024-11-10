@@ -62,4 +62,50 @@ class IntegerTest < Minitest::Test
   def test_passes_with_integer_with_leading_zero
     assert @rule_relax.passes?('amount', '08', nil)
   end
+
+  def test_passes_with_single_zero
+    assert @rule.passes?('amount', '0', nil)
+    assert_equal 0, @rule.coerce('0')
+  end
+
+  def test_passes_with_multiple_zeros
+    assert @rule.passes?('amount', '00', nil)
+    assert_equal 0, @rule.coerce('00')
+  end
+
+  # Test for leading zeros before other digits
+  def test_removes_leading_zeros_before_digits
+    assert @rule.passes?('amount', '01', nil)
+    assert_equal 1, @rule.coerce('01')
+
+    assert @rule.passes?('amount', '0123', nil)
+    assert_equal 123, @rule.coerce('0123')
+
+    assert @rule.passes?('amount', '00123', nil)
+    assert_equal 123, @rule.coerce('00123')
+  end
+
+  def test_handles_zeros_with_whitespace
+    assert @rule.passes?('amount', ' 0 ', nil)
+    assert_equal 0, @rule.coerce(' 0 ')
+
+    assert @rule.passes?('amount', ' 00 ', nil)
+    assert_equal 0, @rule.coerce(' 00 ')
+  end
+
+  def test_handles_negative_numbers_with_leading_zeros
+    assert @rule.passes?('amount', '-001', nil)
+    assert_equal(-1, @rule.coerce('-001'))
+
+    assert @rule.passes?('amount', '-00123', nil)
+    assert_equal(-123, @rule.coerce('-00123'))
+  end
+
+  def test_handles_positve_numbers_with_leading_zeros
+    assert @rule.passes?('amount', '+001', nil)
+    assert_equal(1, @rule.coerce('+001'))
+
+    assert @rule.passes?('amount', '+00123', nil)
+    assert_equal(123, @rule.coerce('+00123'))
+  end
 end
