@@ -4,7 +4,6 @@ require 'uri'
 require 'ipaddr'
 require 'public_suffix'
 
-# TODO: ensure rescues
 class MiniDefender::Rules::Url < MiniDefender::Rule
   ALLOWED_MODIFIERS = %w[https public not_ip not_private]
 
@@ -15,7 +14,7 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
       validate_modifiers!
     end
 
-    @validation_error = "URL modifiers list contains only #{ALLOWED_MODIFIERS.join(', ')}."
+    @validation_error = nil
   end
 
   def self.signature
@@ -27,13 +26,21 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
-    # TODO: warning: URI.regexp is obsolete; use URI::DEFAULT_PARSER.make_regexp instead
-    unless value.is_a?(String) && URI::DEFAULT_PARSER.make_regexp(%w[http https]).match?(value)
+    unless value.is_a?(String)
       return false
     end
 
     begin
       uri = URI.parse(value)
+
+      if uri.host.blank? || uri.scheme.blank?
+        return false
+      end
+
+      unless %w[http https].include?(uri.scheme)
+        @validation_error = 'URL protocol must be HTTP or HTTPS.'
+        return false
+      end
 
       if @modifiers.empty?
         return true
@@ -44,7 +51,7 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
         return false
       end
 
-      if @modifiers.include?('public') && (!PublicSuffix.valid?(uri.host) || self.class.private_network?(uri.host))
+      if @modifiers.include?('public') && (!PublicSuffix.valid?(uri.host) || private_network?(uri.host))
         @validation_error = 'The URL must use a valid public domain.'
         return false
       end
@@ -54,7 +61,7 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
         return false
       end
 
-      if @modifiers.include?('not_private') && self.class.private_network?(uri.host)
+      if @modifiers.include?('not_private') && private_network?(uri.host)
         @validation_error = 'Private or reserved resources are not allowed.'
         return false
       end
@@ -68,7 +75,11 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
     end
   end
 
-  def self.private_network?(host)
+  def message(attribute, value, validator)
+    @validation_error || 'The field must contain a valid URL.'
+  end
+
+  def private_network?(host)
     unless host
       return false
     end
@@ -76,10 +87,6 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
     host = host.downcase
 
     private_patterns.any? { |pattern| pattern.match?(host) }
-  end
-
-  def message(attribute, value, validator)
-    @validation_error || 'The field must contain a valid URL.'
   end
 
   private
@@ -106,9 +113,12 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
     end
   end
 
-  def self.private_patterns
-    @private_patterns ||= begin
+  def private_patterns
+    # Cache the result in class variable to avoid loading again
+    # across multiple instances
+    @@private_patterns ||= begin
       pattern_file = File.expand_path('../data/private_network_patterns.txt', __dir__)
+
       File.readlines(pattern_file).filter_map do |line|
         line = line.strip
 
@@ -118,10 +128,10 @@ class MiniDefender::Rules::Url < MiniDefender::Rule
 
         # Pattern => regex (once)
         pattern = line
-                  .gsub('.', '\.')           # escape dots
-                  .gsub('*', '.*')           # wildcards => regex
-                  .gsub('[0-9]+', '\d+')     # convert number ranges
-                  .gsub(/\[(.+?)\]/, '(\1)') # convert chars classes
+          .gsub('.', '\.')           # escape dots
+          .gsub('*', '.*')           # wildcards => regex
+          .gsub('[0-9]+', '\d+')     # convert number ranges
+          .gsub(/\[(.+?)\]/, '(\1)') # convert chars classes
 
         Regexp.new("^#{pattern}$", Regexp::IGNORECASE)
       end

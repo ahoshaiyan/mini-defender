@@ -117,24 +117,35 @@ class UrlTest < Minitest::Test
   end
 
   def test_private_network_detection
-    assert @rule.private_network?('localhost')
-    assert @rule.private_network?('127.0.0.1')
-    assert @rule.private_network?('192.168.1.1')
-    assert @rule.private_network?('10.0.0.1')
-    assert @rule.private_network?('test.local')
+    assert @rule.new.private_network?('localhost')
+    assert @rule.new.private_network?('127.0.0.1')
+    assert @rule.new.private_network?('192.168.1.1')
+    assert @rule.new.private_network?('10.0.0.1')
+    assert @rule.new.private_network?('test.local')
 
-    refute @rule.private_network?('github.com')
-    refute @rule.private_network?('8.8.8.8')
+    refute @rule.new.private_network?('github.com')
+    refute @rule.new.private_network?('8.8.8.8')
   end
 
-  def test_error_messages
+  def test_must_return_default_message_when_value_is_not_a_url
     validator = @rule.new(['https'])
 
     refute validator.passes?(nil, 'not_a_url', nil)
-    assert_equal 'URL modifiers list contains only https, public, not_ip, not_private.',
-                 validator.message(nil, nil, nil)
+
+    assert_equal(
+      'The field must contain a valid URL.',
+      validator.message(nil, nil, nil)
+    )
+  end
+
+  def test_validator_returns_an_error_message_for_https_modifier_error
+    validator = @rule.new(['https'])
 
     refute validator.passes?(nil, 'http://github.com', nil)
-    assert_equal 'The URL must use HTTPS.', validator.message(nil, nil, nil)
+
+    assert_equal(
+      'The URL must use HTTPS.',
+      validator.message(nil, nil, nil)
+    )
   end
 end
