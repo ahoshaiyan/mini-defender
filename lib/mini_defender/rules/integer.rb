@@ -54,9 +54,10 @@ class MiniDefender::Rules::Integer < MiniDefender::Rule
     end
 
     # Remove leading zero so Integer will not treat it as octal
+    # Handle leading zeros while preserving both + and - signs
     value = value
       .to_s
-      .gsub(/^0+/, '')
+      .gsub(/^([+-])?0+(?=\d)/, '\1')
 
     if @mode == 'relaxed'
       value = normalize_digits(value)
