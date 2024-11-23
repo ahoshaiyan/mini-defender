@@ -1,5 +1,10 @@
 # MiniDefender
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-yellowgreen.svg)](http://makeapullrequest.com)
+[![Ruby Version](https://img.shields.io/badge/ruby-%3E%3D%202.7.0-red.svg)](https://www.ruby-lang.org/)
+[![Gem Version](https://img.shields.io/badge/gem-v0.6.5-lightblue.svg)](https://rubygems.org/gems/mini_defender/versions/0.6.5)
+
 A pragmatic approach to validation in Rails inspired by Laravel's Validator.
 
 
@@ -127,8 +132,9 @@ any of the methods on it, see [validator.rb](./lib/mini_defender/validator.rb) f
 
 ## Rules
 
-Mini Defender tries to implement the same set of rules provided by Laravel, you can see the available rules here at
-[lib/mini_defender/rules](./lib/mini_defender/rules)
+Mini Defender tries to implement the same set of rules provided by Laravel, you can explore the available rules in two ways:
+- Browse the source code: [lib/mini_defender/rules](./lib/mini_defender/rules)
+- View the rules list: [RULES-LIST.md](RULES-LIST.md)
 
 
 ## Add a Custom Rule
