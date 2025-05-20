@@ -6,11 +6,27 @@ class MiniDefender::Rules::Numeric < MiniDefender::Rule
   end
 
   def coerce(value)
-    value.is_a?(Numeric) ? value : Float(value.to_s)
+    if value.is_a?(Numeric)
+      return value
+    end
+
+    if value.is_a?(String)
+      value = value.gsub(',', '')
+    end
+
+    Float(value.to_s)
   end
 
   def passes?(attribute, value, validator)
-    value.is_a?(Numeric) || Float(value.to_s) rescue false
+    if value.is_a?(Numeric)
+      return true
+    end
+
+    if value.is_a?(String)
+      value = value.gsub(',', '')
+    end
+
+    Float(value.to_s) rescue false
   end
 
   def message(attribute, value, validator)
