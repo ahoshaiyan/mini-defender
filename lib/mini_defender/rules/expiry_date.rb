@@ -17,7 +17,7 @@ class MiniDefender::Rules::ExpiryDate < MiniDefender::Rule
 
     @month = matches[1].to_i
     @year = matches[2].to_i
-    @year += 2000 if year < 100
+    @year += 2000 if @year < 100
 
     @month >= 1 && @month <= 12 && @year >= 1900
   end
