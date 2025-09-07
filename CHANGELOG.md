@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.7.1] - 2025-09-07
+
+- Add password rule
+
 ## [0.3.0] - 2023-04-05
 
 - Add cleansing for data before validation
