@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.7.3] - 2025-09-12
+
+- Fix hostname coercion
+ 
 ## [0.7.1] - 2025-09-07
 
 - Add password rule

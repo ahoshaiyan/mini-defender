@@ -11,7 +11,7 @@ class MiniDefender::Rules::Hostname < MiniDefender::Rule
     value.to_s
       .downcase
       .strip
-      .gsub(/.\z/, '')
+      .gsub(/\.\z/, '')
   end
 
   def passes?(attribute, value, validator)
