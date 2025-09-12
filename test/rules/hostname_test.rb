@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class PasswordTest < Minitest::Test
+class HostnameTest < Minitest::Test
   def setup
     @rule = MiniDefender::Rules::Hostname.new
   end
@@ -15,8 +15,13 @@ class PasswordTest < Minitest::Test
     assert(@rule.passes?('hostname', 'www.example.com.', nil))
   end
 
-  def test_must_remove_trailing_dot
-    assert(@rule.coerce('www.example.com'))
+  def test_must_coerce_valid_host
+    host = 'www.example.com'
+    assert_equal(@rule.coerce(host), host)
+  end
+
+  def test_must_coerce_remove_trailing_dot
+    assert_equal(@rule.coerce('www.example.com.'), 'www.example.com')
   end
 
   def test_fail_for_non_ascii
