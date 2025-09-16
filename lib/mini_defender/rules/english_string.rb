@@ -11,7 +11,7 @@ class MiniDefender::Rules::EnglishString < MiniDefender::Rule
   end
 
   def passes?(attribute, value, validator)
-    if value.to_s.empty? || !value.is_a?(String)
+    if !value.is_a?(String) || value.to_s.empty?
       return false
     end
     value.to_s.match?(ENGLISH_REGEX)
