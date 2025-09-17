@@ -1,5 +1,6 @@
 ## [Unreleased]
-## [0.7.4] - 2025-09-12
+
+## [0.7.4] - 2025-09-17
 
 - Add english string rule
 

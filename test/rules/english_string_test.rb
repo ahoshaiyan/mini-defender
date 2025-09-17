@@ -22,14 +22,17 @@ class EnglishStringTest < Minitest::Test
   def test_coerce_removing_spaces_from_non_empty_string
     assert_equal(@rule.coerce(' Abdullah Ali '),'Abdullah Ali')
   end
+
   def test_must_fail_for_numbers_only_as_string
     refute(@rule.passes?('Name', "111", true))
   end
+
   def test_must_fail_for_value_not_string
     refute(@rule.passes?('Name', 111, true))
     refute(@rule.passes?('Name', true, true))
     refute(@rule.passes?('Name', ['string'], true))
   end
+
   def test_must_fail_for_empty_string
     refute(@rule.passes?('Name', "", true))
   end

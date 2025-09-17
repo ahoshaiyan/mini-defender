@@ -18,6 +18,6 @@ class MiniDefender::Rules::EnglishString < MiniDefender::Rule
   end
 
   def message(attribute, value, validator)
-    "The field must only contain english characters."
+    "The field must only contain English characters."
   end
 end
