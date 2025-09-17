@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.7.4] - 2025-09-17
+
+- Add english string rule
+
 ## [0.7.3] - 2025-09-12
 
 - Fix hostname coercion
