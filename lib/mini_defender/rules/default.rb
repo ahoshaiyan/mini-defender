@@ -10,7 +10,9 @@ class MiniDefender::Rules::Default < MiniDefender::Rule
   end
 
   def self.make(args)
-    raise ArgumentError, 'Expected exactly one argument.' unless args.length == 1
+    unless args.length == 1
+      raise ArgumentError, 'Expected exactly one argument.'
+    end
 
     new(args[0])
   end

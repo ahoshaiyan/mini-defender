@@ -27,30 +27,52 @@ module MiniDefender
       end
 
       # Set default values for missing data key compared to rules
-      data_rules.each do |k, set|
-        if !@data.key?(k) || missing_value?(@data[k])
-          set.filter{ |r| r.defaults?(self) }.each do |r|
-            @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
+      defaults_rules = data_rules.filter { |k, set| set.any? { |r| r.defaults?(self) } }
+      defaults_rules.each do |key_pattern, set|
+        # If element is not inside an array
+        unless key_pattern.match?(/\*/)
+          if missing_value?(@data[key_pattern])
+            @data[key_pattern] = set.map { |r| r.default_value(self) }.reject(&:nil?).first
           end
+
+          next
         end
+
+        parent, sep, child_key = key_pattern.rpartition('*')
+        parent += sep
+
+        # If parent or a sibling exists, add the default value
+        pattern = Regexp.new("\\A#{parent.gsub('*', '\d')}\\z")
+        additions = {}
+        @data.each do |k, _|
+          unless k.match?(pattern)
+            next
+          end
+
+          current_child_key = "#{k}#{child_key}"
+
+          unless missing_value?(@data[current_child_key])
+            next
+          end
+
+          additions[current_child_key] = set.map { |r| r.default_value(self) }.reject(&:nil?).first
+        end
+
+        @data.merge!(additions)
       end
 
       data_rules = @expander.expand(data_rules, @data)
-
       data_rules.each do |k, rule_set|
         @errors[k] = []
 
         value_included = true
         required = rule_set.any? { |r| r.implicit?(self) }
 
-        if !@data.key?(k) || missing_value?(@data[k])
-          rule_set.filter{ |r| r.defaults?(self) }.each do |r|
-            @data.merge!({k => r.default_value(self)}.flatten_keys(keep_roots: true))
-          end
-        end
-
         unless @data.key?(k)
-          @errors[k] << 'This field is missing.' if required
+          if required
+            @errors[k] << 'This field is missing.'
+          end
+
           next
         end
 
