@@ -34,12 +34,12 @@ class MiniDefender::Rules::Size < MiniDefender::Rule
 
   def message(attribute, value, validator)
     case value
-    when ActionDispatch::Http::UploadedFile
-      "The file size must be equal to #{@size} bytes."
-    when Numeric
-      "The value must be equal to #{@size}."
-    else
-      "The value length must be equal to #{@size}."
+      when ActionDispatch::Http::UploadedFile
+        "The file size must be equal to #{@size} bytes."
+      when Numeric
+        "The value must be equal to #{@size}."
+      else
+        "The value length must be equal to #{@size}."
     end
   end
 end
