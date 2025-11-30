@@ -28,9 +28,10 @@ class MiniDefender::Rules::MimeTypes < MiniDefender::Rule
   def passes?(attribute, value, validator)
     @file = value.is_a?(ActionDispatch::Http::UploadedFile)
     content_type = Marcel::MimeType.for(value.read)
+    extension_mime_type = Marcel::MimeType.for(extension: File.extname(value.original_filename))
     value.rewind
 
-    @file && @types.include?(content_type)
+    @file && @types.include?(content_type) && content_type == extension_mime_type
   end
 
   def message(attribute, value, validator)
