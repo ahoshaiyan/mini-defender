@@ -1,0 +1,29 @@
+name: Release Mini Defender
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    name: Release Gem
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # Required for https://guides.rubygems.org/trusted-publishing/
+      contents: write # Allows tag to be written
+
+    steps:
+    - name: Clone Repository
+      uses: actions/checkout@v5
+      with:
+          persist-credentials: false
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ruby
+        bundler-cache: true
+
+    - name: Release
+      uses: rubygems/release-gem@v1
